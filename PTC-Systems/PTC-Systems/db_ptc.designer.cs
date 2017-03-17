@@ -3440,35 +3440,21 @@ namespace PTC_Systems
 	public partial class SearchAppraisalDistrictData
 	{
 		
-		private System.Nullable<int> _DataLoadId;
+		private System.Nullable<int> _initial_dataloadid;
 		
-		private string _County;
+		private System.Nullable<int> _current_dataloadid;
+		
+		private string _prop_county;
 		
 		private System.Nullable<int> _prop_id;
 		
 		private string _prop_type_cd;
 		
-		private System.Nullable<int> _prop_val_yr;
-		
-		private string _sup_num;
-		
-		private string _sup_action;
-		
-		private string _sup_cd;
-		
-		private string _sup_desc;
+		private System.Nullable<decimal> _prop_val_yr;
 		
 		private string _geo_id;
 		
-		private string _py_owner_id;
-		
 		private string _py_owner_name;
-		
-		private System.Nullable<char> _partial_owner;
-		
-		private string _udi_group;
-		
-		private string _udi_group_filler;
 		
 		private string _py_addr_line1;
 		
@@ -3486,812 +3472,132 @@ namespace PTC_Systems
 		
 		private string _py_addr_zip_cass;
 		
-		private string _py_addr_zip_rt;
-		
-		private System.Nullable<char> _py_confidential_flag;
-		
-		private System.Nullable<char> _py_address_suppress_flag;
-		
-		private string _addr_filler;
-		
-		private System.Nullable<char> _py_addr_ml_deliverable;
-		
-		private string _situs_filler;
-		
-		private string _situs_street_prefx;
-		
 		private string _situs_street;
-		
-		private string _situs_street_suffix;
-		
-		private string _situs_city;
-		
-		private string _situs_zip;
 		
 		private string _legal_desc;
 		
-		private string _legal_desc2;
-		
-		private string _legal_acreage;
-		
 		private string _abs_subdv_cd;
+		
+		private string _abs_subdv_desc;
 		
 		private string _hood_cd;
 		
-		private string _block;
-		
-		private string _tract_or_lot;
-		
-		private string _land_hstd_val;
-		
-		private string _land_non_hstd_val;
-		
-		private string _imprv_hstd_val;
-		
-		private string _imprv_non_hstd_val;
-		
-		private string _ag_use_val;
-		
-		private string _ag_market;
-		
-		private string _timber_use;
-		
-		private string _timber_market;
-		
-		private string _appraised_val;
-		
-		private string _ten_percent_cap;
-		
-		private string _assessed_val;
-		
-		private string _value_filler;
-		
-		private System.Nullable<char> _arb_protest_flag;
-		
-		private string _value_filler2;
-		
-		private string _deed_book_id;
-		
-		private string _deed_book_page;
-		
-		private string _deed_dt;
-		
-		private string _mortgage_co_id;
-		
-		private string _mortage_co_name;
-		
-		private string _mortgage_acct_id;
-		
-		private string _jan1_owner_id;
-		
-		private string _jan1_owner_name;
-		
-		private string _jan1_addr_line1;
-		
-		private string _jan1_addr_line2;
-		
-		private string _jan1_addr_line3;
-		
-		private string _jan1_addr_city;
-		
-		private string _jan1_addr_state;
-		
-		private string _jan1_addr_country;
-		
-		private string _jan1_addr_zip;
-		
-		private string _jan1_addr_zip_cass;
-		
-		private string _jan1_addr_zip_rt;
-		
-		private System.Nullable<char> _jan1_confidential_flag;
-		
-		private System.Nullable<char> _jan1_address_suppress_flag;
-		
-		private string _jan1_addr_filler;
-		
-		private System.Nullable<char> _jan1_ml_deliverable;
-		
-		private System.Nullable<char> _hs_exempt;
-		
-		private System.Nullable<char> _ov65_exempt;
-		
-		private string _ov65_prorate_begin;
-		
-		private string _ov65_prorate_end;
-		
-		private System.Nullable<char> _ov65s_exempt;
-		
-		private System.Nullable<char> _dp_exempt;
-		
-		private System.Nullable<char> _dv1_exempt;
-		
-		private System.Nullable<char> _dv1s_exempt;
-		
-		private System.Nullable<char> _dv2_exempt;
-		
-		private System.Nullable<char> _dv2s_exempt;
-		
-		private System.Nullable<char> _dv3_exempt;
-		
-		private System.Nullable<char> _dv3s_exempt;
-		
-		private System.Nullable<char> _dv4_exempt;
-		
-		private System.Nullable<char> _dv4s_exempt;
-		
-		private System.Nullable<char> _ex_exempt;
-		
-		private string _ex_prorate_begin;
-		
-		private string _ex_prorate_end;
-		
-		private System.Nullable<char> _lve_exempt;
-		
-		private System.Nullable<char> _ab_exempt;
-		
-		private System.Nullable<char> _en_exempt;
-		
-		private System.Nullable<char> _fr_exempt;
-		
-		private System.Nullable<char> _ht_exempt;
-		
-		private System.Nullable<char> _pro_exempt;
-		
-		private System.Nullable<char> _pc_exempt;
-		
-		private System.Nullable<char> _so_exempt;
-		
-		private System.Nullable<char> _ex366_exempt;
-		
-		private System.Nullable<char> _ch_exempt;
-		
-		private string _imprv_state_cd;
-		
-		private string _land_state_cd;
-		
-		private string _personal_state_cd;
-		
-		private string _mineral_state_cd;
-		
 		private string _land_acres;
 		
-		private string _entity_agent_id;
+		private System.Nullable<int> _year_built;
 		
-		private string _entity_agent_name;
+		private System.Nullable<int> _effective_year_built;
 		
-		private string _entity_agent_addr_line1;
+		private string _prop_use_cd;
 		
-		private string _entity_agent_addr_line2;
+		private string _prop_use_desc;
 		
-		private string _entity_agent_addr_line3;
+		private string _class;
 		
-		private string _entity_agent_city;
+		private string _gross_building_area;
 		
-		private string _entity_agent_state;
+		private string _net_rentable_area;
 		
-		private string _entity_agent_country;
+		private string _property_name;
 		
-		private string _entity_agent_zip;
+		private System.Nullable<decimal> _proposed_land_hstd_val;
 		
-		private string _entity_agent_cass;
+		private System.Nullable<decimal> _proposed_land_non_hstd_val;
 		
-		private string _entity_agent_rt;
+		private System.Nullable<decimal> _proposed_imprv_hstd_val;
 		
-		private string _ent_agent_filler;
+		private System.Nullable<decimal> _proposed_imprv_non_hstd_val;
 		
-		private string _ca_agent_id;
+		private System.Nullable<decimal> _proposed_ag_use_val;
 		
-		private string _ca_agent_name;
+		private System.Nullable<decimal> _proposed_ag_market;
 		
-		private string _ca_agent_addr_line1;
+		private System.Nullable<decimal> _proposed_timber_use;
 		
-		private string _ca_agent_addr_line2;
+		private System.Nullable<decimal> _proposed_timber_market;
 		
-		private string _ca_agent_addr_line3;
+		private System.Nullable<decimal> _proposed_appraised_val;
 		
-		private string _ca_agent_city;
+		private System.Nullable<decimal> _proposed_ten_percent_cap;
 		
-		private string _ca_agent_state;
+		private System.Nullable<decimal> _proposed_assessed_val;
 		
-		private string _ca_agent_country;
+		private System.Nullable<decimal> _proposed_market_value;
 		
-		private string _ca_agent_zip;
+		private System.Nullable<decimal> _current_land_hstd_val;
 		
-		private string _ca_agent_zip_cass;
+		private System.Nullable<decimal> _current_land_non_hstd_val;
 		
-		private string _ca_agent_zip_rt;
+		private System.Nullable<decimal> _current_imprv_hstd_val;
 		
-		private string _ca_agent_filler;
+		private System.Nullable<decimal> _current_imprv_non_hstd_val;
 		
-		private string _arb_agent_id;
+		private System.Nullable<decimal> _current_ag_use_val;
 		
-		private string _arb_agent_name;
+		private System.Nullable<decimal> _current_ag_market;
 		
-		private string _arb_agent_addr_line1;
+		private System.Nullable<decimal> _current_timber_use;
 		
-		private string _arb_agent_addr_line2;
+		private System.Nullable<decimal> _current_timber_market;
 		
-		private string _arb_agent_addr_line3;
+		private System.Nullable<decimal> _current_appraised_val;
 		
-		private string _arb_agent_city;
+		private System.Nullable<decimal> _current_ten_percent_cap;
 		
-		private string _arb_agent_state;
+		private System.Nullable<decimal> _current_assessed_val;
 		
-		private string _arb_agent_country;
+		private System.Nullable<decimal> _current_market_value;
 		
-		private string _arb_agent_zip;
-		
-		private string _arb_agent_zip_cass;
-		
-		private string _arb_agent_zip_rt;
-		
-		private string _arb_agent_filler;
-		
-		private string _mineral_type_of_int;
-		
-		private string _mineral_int_pct;
-		
-		private string _productivity_use_code;
-		
-		private string _entity_filler;
-		
-		private string _timber_78_market;
-		
-		private string _ag_late_loss;
-		
-		private string _late_freeport_penalty;
-		
-		private string _delivery_point;
-		
-		private string _carrier_route;
-		
-		private string _check_digit;
-		
-		private string _dba;
-		
-		private string _dba_filler;
-		
-		private string _market_value;
-		
-		private string _mh_label;
-		
-		private string _mh_serial;
-		
-		private string _mh_model;
-		
-		private string _flag_filler1;
-		
-		private string _flag_filler2;
-		
-		private string _flag_filler;
-		
-		private string _ov65_deferral_date;
-		
-		private string _dp_deferral_date;
-		
-		private string _ref_id1;
-		
-		private string _ref_id2;
-		
-		private string _situs_num;
-		
-		private string _situs_unit;
-		
-		private string _appr_owner_id;
-		
-		private string _appr_owner_name;
-		
-		private string _appr_addr_line1;
-		
-		private string _appr_addr_line2;
-		
-		private string _appr_addr_line3;
-		
-		private string _appr_addr_city;
-		
-		private string _appr_addr_state;
-		
-		private string _appr_addr_country;
-		
-		private string _appr_addr_zip;
-		
-		private string _appr_addr_zip_cass;
-		
-		private string _appr_addr_zip_cass_route;
-		
-		private System.Nullable<char> _appr_ml_deliverable;
-		
-		private System.Nullable<char> _appr_confidential_flag;
-		
-		private System.Nullable<char> _appr_address_suppress_flag;
-		
-		private string _appr_confidential_name;
-		
-		private string _py_confidential_name;
-		
-		private string _jan1_confidential_name;
-		
-		private string _filler_sic_code;
-		
-		private System.Nullable<char> _rendition_filed;
-		
-		private string _rendition_date;
-		
-		private string _rendition_penalty;
-		
-		private string _rendition_penalty_date_paid;
-		
-		private string _rendition_fraud_penalty;
-		
-		private string _rendition_fraud_penalty_date_paid;
-		
-		private string _deed_num_filler;
-		
-		private string _entities;
-		
-		private System.Nullable<char> _eco_exempt;
-		
-		private string _dataset_id;
-		
-		private string _deed_num;
-		
-		private System.Nullable<char> _chodo_exempt;
-		
-		private System.Nullable<char> _local_option_pct_only_flag_hs;
-		
-		private System.Nullable<char> _local_option_pct_only_flag_ov65;
-		
-		private System.Nullable<char> _local_option_pct_only_flag_ov65s;
-		
-		private System.Nullable<char> _local_option_pct_only_flag_dp;
-		
-		private System.Nullable<char> _freeze_only_flag_ov65;
-		
-		private System.Nullable<char> _freeze_only_flag_ov65s;
-		
-		private System.Nullable<char> _freeze_only_flag_dp;
-		
-		private System.Nullable<char> _apply_percent_exemption_flag;
-		
-		private string _exemption_percentage;
-		
-		private System.Nullable<char> _vit_flag;
-		
-		private System.Nullable<char> _lih_exempt;
-		
-		private System.Nullable<char> _git_exempt;
-		
-		private System.Nullable<char> _dps_exempt;
-		
-		private string _dps_deferral_date;
-		
-		private System.Nullable<char> _local_option_pct_only_flag_dps;
-		
-		private System.Nullable<char> _freeze_only_flag_dps;
-		
-		private System.Nullable<char> _dvhs_exempt;
-		
-		private string _hs_qualify_yr;
-		
-		private string _ov65_qualify_yr;
-		
-		private string _ov65s_qualify_yr;
-		
-		private string _dp_qualify_yr;
-		
-		private string _dps_qualify_yr;
-		
-		private string _dv1_qualify_yr;
-		
-		private string _dv1s_qualify_yr;
-		
-		private string _dv2_qualify_yr;
-		
-		private string _dv2s_qualify_yr;
-		
-		private string _dv3_qualify_yr;
-		
-		private string _dv3s_qualify_yr;
-		
-		private string _dv4_qualify_yr;
-		
-		private string _dv4s_qualify_yr;
-		
-		private string _dvhs_qualify_yr;
-		
-		private string _ex_qualify_yr;
-		
-		private string _ab_qualify_yr;
-		
-		private string _en_qualify_yr;
-		
-		private string _fr_qualify_yr;
-		
-		private string _ht_qualify_yr;
-		
-		private string _pro_qualify_yr;
-		
-		private string _pc_qualify_yr;
-		
-		private string _so_qualify_yr;
-		
-		private string _ex366_qualify_yr;
-		
-		private string _ch_qualify_yr;
-		
-		private string _eco_qualify_yr;
-		
-		private string _chodo_qualify_yr;
-		
-		private string _lih_qualify_yr;
-		
-		private string _git_qualify_yr;
-		
-		private string _mortgage_addr_line1;
-		
-		private string _mortgage_addr_line2;
-		
-		private string _mortgage_addr_line3;
-		
-		private string _mortgage_addr_city;
-		
-		private string _mortgage_addr_state;
-		
-		private string _mortgage_addr_country;
-		
-		private string _mortgage_addr_zip;
-		
-		private string _mortgage_addr_zip_cass;
-		
-		private string _mortgage_addr_zip_rt;
-		
-		private string _mortgage_addr_ml_deliverable;
-		
-		private string _sic_code;
-		
-		private System.Nullable<char> _omitted_property_flag;
-		
-		private string _hs_prorate_begin;
-		
-		private string _hs_prorate_end;
-		
-		private string _ov65s_prorate_begin;
-		
-		private string _ov65s_prorate_end;
-		
-		private string _dp_prorate_begin;
-		
-		private string _dp_prorate_end;
-		
-		private string _dv1_prorate_begin;
-		
-		private string _dv1_prorate_end;
-		
-		private string _dv1s_prorate_begin;
-		
-		private string _dv1s_prorate_end;
-		
-		private string _dv2_prorate_begin;
-		
-		private string _dv2_prorate_end;
-		
-		private string _dv2s_prorate_begin;
-		
-		private string _dv2s_prorate_end;
-		
-		private string _dv3_prorate_begin;
-		
-		private string _dv3_prorate_end;
-		
-		private string _dv3s_prorate_begin;
-		
-		private string _dv3s_prorate_end;
-		
-		private string _dv4_prorate_begin;
-		
-		private string _dv4_prorate_end;
-		
-		private string _dv4s_prorate_begin;
-		
-		private string _dv4s_prorate_end;
-		
-		private string _lve_prorate_begin;
-		
-		private string _lve_prorate_end;
-		
-		private string _ab_prorate_begin;
-		
-		private string _ab_prorate_end;
-		
-		private string _en_prorate_begin;
-		
-		private string _en_prorate_end;
-		
-		private string _fr_prorate_begin;
-		
-		private string _fr_prorate_end;
-		
-		private string _ht_prorate_begin;
-		
-		private string _ht_prorate_end;
-		
-		private string _pro_prorate_begin;
-		
-		private string _pro_prorate_end;
-		
-		private string _pc_prorate_begin;
-		
-		private string _pc_prorate_end;
-		
-		private string _so_prorate_begin;
-		
-		private string _so_prorate_end;
-		
-		private string _ex366_prorate_begin;
-		
-		private string _ex366_prorate_end;
-		
-		private string _ch_prorate_begin;
-		
-		private string _ch_prorate_end;
-		
-		private string _dps_prorate_begin;
-		
-		private string _dps_prorate_end;
-		
-		private string _eco_prorate_begin;
-		
-		private string _eco_prorate_end;
-		
-		private string _chodo_prorate_begin;
-		
-		private string _chodo_prorate_end;
-		
-		private string _lih_prorate_begin;
-		
-		private string _lih_prorate_end;
-		
-		private string _git_prorate_begin;
-		
-		private string _git_prorate_end;
-		
-		private string _clt_exempt;
-		
-		private string _clt_prorate_begin;
-		
-		private string _clt_prorate_end;
-		
-		private string _clt_qualify_yr;
-		
-		private string _dvhss_exempt;
-		
-		private string _dvhss_prorate_begin;
-		
-		private string _dvhss_prorate_end;
-		
-		private string _dvhss_qualify_yr;
-		
-		private string _omitted_imprv_hstd_val;
-		
-		private string _omitted_imprv_non_hstd_val;
-		
-		private string _dvhs_prorate_begin;
-		
-		private string _dvhs_prorate_end;
-		
-		private string _ex_xd_exempt;
-		
-		private string _ex_xd_qualify_yr;
-		
-		private string _ex_xd_prorate_begin;
-		
-		private string _ex_xd_prorate_end;
-		
-		private string _ex_xf_exempt;
-		
-		private string _ex_xf_qualify_yr;
-		
-		private string _ex_xf_prorate_begin;
-		
-		private string _ex_xf_prorate_end;
-		
-		private string _ex_xg_exempt;
-		
-		private string _ex_xg_qualify_yr;
-		
-		private string _ex_xg_prorate_begin;
-		
-		private string _ex_xg_prorate_end;
-		
-		private string _ex_xh_exempt;
-		
-		private string _ex_xh_qualify_yr;
-		
-		private string _ex_xh_prorate_begin;
-		
-		private string _ex_xh_prorate_end;
-		
-		private string _ex_xi_exempt;
-		
-		private string _ex_xi_qualify_yr;
-		
-		private string _ex_xi_prorate_begin;
-		
-		private string _ex_xi_prorate_end;
-		
-		private string _ex_xj_exempt;
-		
-		private string _ex_xj_qualify_yr;
-		
-		private string _ex_xj_prorate_begin;
-		
-		private string _ex_xj_prorate_end;
-		
-		private string _ex_xl_exempt;
-		
-		private string _ex_xl_qualify_yr;
-		
-		private string _ex_xl_prorate_begin;
-		
-		private string _ex_xl_prorate_end;
-		
-		private string _ex_xm_exempt;
-		
-		private string _ex_xm_qualify_yr;
-		
-		private string _ex_xm_prorate_begin;
-		
-		private string _ex_xm_prorate_end;
-		
-		private string _ex_xn_exempt;
-		
-		private string _ex_xn_qualify_yr;
-		
-		private string _ex_xn_prorate_begin;
-		
-		private string _ex_xn_prorate_end;
-		
-		private string _ex_xo_exempt;
-		
-		private string _ex_xo_qualify_yr;
-		
-		private string _ex_xo_prorate_begin;
-		
-		private string _ex_xo_prorate_end;
-		
-		private string _ex_xp_exempt;
-		
-		private string _ex_xp_qualify_yr;
-		
-		private string _ex_xp_prorate_begin;
-		
-		private string _ex_xp_prorate_end;
-		
-		private string _ex_xq_exempt;
-		
-		private string _ex_xq_qualify_yr;
-		
-		private string _ex_xq_prorate_begin;
-		
-		private string _ex_xq_prorate_end;
-		
-		private string _ex_xr_exempt;
-		
-		private string _ex_xr_qualify_yr;
-		
-		private string _ex_xr_prorate_begin;
-		
-		private string _ex_xr_prorate_end;
-		
-		private string _ex_xs_exempt;
-		
-		private string _ex_xs_qualify_yr;
-		
-		private string _ex_xs_prorate_begin;
-		
-		private string _ex_xs_prorate_end;
-		
-		private string _ex_xt_exempt;
-		
-		private string _ex_xt_qualify_yr;
-		
-		private string _ex_xt_prorate_begin;
-		
-		private string _ex_xt_prorate_end;
-		
-		private string _ex_xu_exempt;
-		
-		private string _ex_xu_qualify_yr;
-		
-		private string _ex_xu_prorate_begin;
-		
-		private string _ex_xu_prorate_end;
-		
-		private string _ex_xv_exempt;
-		
-		private string _ex_xv_qualify_yr;
-		
-		private string _ex_xv_prorate_begin;
-		
-		private string _ex_xv_prorate_end;
-		
-		private string _ex_xa_exempt;
-		
-		private System.Nullable<int> _ex_xa_qualify_yr;
-		
-		private System.Nullable<int> _ex_xa_prorate_begin;
-		
-		private System.Nullable<int> _ex_xa_prorate_end;
-		
-		private System.Nullable<int> _lve_qualify_yr;
-		
-		private string _ppv_exempt;
-		
-		private System.Nullable<int> _ppv_qualify_yr;
-		
-		private System.Nullable<int> _ppv_prorate_begin;
-		
-		private System.Nullable<int> _ppv_prorate_end;
-		
-		private string _dvch_exempt;
-		
-		private System.Nullable<int> _dvch_qualify_yr;
-		
-		private System.Nullable<int> _dvch_prorate_begin;
-		
-		private System.Nullable<int> _dvch_prorate_end;
-		
-		private string _dvchs_exempt;
-		
-		private System.Nullable<int> _dvchs_qualify_yr;
-		
-		private System.Nullable<int> _dvchs_prorate_begin;
-		
-		private System.Nullable<int> _dvchs_prorate_end;
-		
-		private string _masss_exempt;
-		
-		private System.Nullable<int> _masss_qualify_yr;
-		
-		private System.Nullable<int> _masss_prorate_begin;
-		
-		private System.Nullable<int> _masss_prorate_end;
-		
-		private System.Nullable<decimal> _pp_late_interstate_allocation_val;
+		private string _exemptions;
 		
 		public SearchAppraisalDistrictData()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataLoadId", DbType="Int")]
-		public System.Nullable<int> DataLoadId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_initial_dataloadid", DbType="Int")]
+		public System.Nullable<int> initial_dataloadid
 		{
 			get
 			{
-				return this._DataLoadId;
+				return this._initial_dataloadid;
 			}
 			set
 			{
-				if ((this._DataLoadId != value))
+				if ((this._initial_dataloadid != value))
 				{
-					this._DataLoadId = value;
+					this._initial_dataloadid = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_County", DbType="VarChar(30)")]
-		public string County
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_dataloadid", DbType="Int")]
+		public System.Nullable<int> current_dataloadid
 		{
 			get
 			{
-				return this._County;
+				return this._current_dataloadid;
 			}
 			set
 			{
-				if ((this._County != value))
+				if ((this._current_dataloadid != value))
 				{
-					this._County = value;
+					this._current_dataloadid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prop_county", DbType="VarChar(25)")]
+		public string prop_county
+		{
+			get
+			{
+				return this._prop_county;
+			}
+			set
+			{
+				if ((this._prop_county != value))
+				{
+					this._prop_county = value;
 				}
 			}
 		}
@@ -4328,8 +3634,8 @@ namespace PTC_Systems
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prop_val_yr", DbType="Int")]
-		public System.Nullable<int> prop_val_yr
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prop_val_yr", DbType="Decimal(5,0)")]
+		public System.Nullable<decimal> prop_val_yr
 		{
 			get
 			{
@@ -4340,70 +3646,6 @@ namespace PTC_Systems
 				if ((this._prop_val_yr != value))
 				{
 					this._prop_val_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sup_num", DbType="VarChar(12)")]
-		public string sup_num
-		{
-			get
-			{
-				return this._sup_num;
-			}
-			set
-			{
-				if ((this._sup_num != value))
-				{
-					this._sup_num = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sup_action", DbType="VarChar(2)")]
-		public string sup_action
-		{
-			get
-			{
-				return this._sup_action;
-			}
-			set
-			{
-				if ((this._sup_action != value))
-				{
-					this._sup_action = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sup_cd", DbType="VarChar(50)")]
-		public string sup_cd
-		{
-			get
-			{
-				return this._sup_cd;
-			}
-			set
-			{
-				if ((this._sup_cd != value))
-				{
-					this._sup_cd = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sup_desc", DbType="VarChar(500)")]
-		public string sup_desc
-		{
-			get
-			{
-				return this._sup_desc;
-			}
-			set
-			{
-				if ((this._sup_desc != value))
-				{
-					this._sup_desc = value;
 				}
 			}
 		}
@@ -4424,22 +3666,6 @@ namespace PTC_Systems
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_py_owner_id", DbType="VarChar(12)")]
-		public string py_owner_id
-		{
-			get
-			{
-				return this._py_owner_id;
-			}
-			set
-			{
-				if ((this._py_owner_id != value))
-				{
-					this._py_owner_id = value;
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_py_owner_name", DbType="VarChar(70)")]
 		public string py_owner_name
 		{
@@ -4452,54 +3678,6 @@ namespace PTC_Systems
 				if ((this._py_owner_name != value))
 				{
 					this._py_owner_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_partial_owner", DbType="Char(1)")]
-		public System.Nullable<char> partial_owner
-		{
-			get
-			{
-				return this._partial_owner;
-			}
-			set
-			{
-				if ((this._partial_owner != value))
-				{
-					this._partial_owner = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_udi_group", DbType="VarChar(12)")]
-		public string udi_group
-		{
-			get
-			{
-				return this._udi_group;
-			}
-			set
-			{
-				if ((this._udi_group != value))
-				{
-					this._udi_group = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_udi_group_filler", DbType="VarChar(2)")]
-		public string udi_group_filler
-		{
-			get
-			{
-				return this._udi_group_filler;
-			}
-			set
-			{
-				if ((this._udi_group_filler != value))
-				{
-					this._udi_group_filler = value;
 				}
 			}
 		}
@@ -4632,118 +3810,6 @@ namespace PTC_Systems
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_py_addr_zip_rt", DbType="VarChar(2)")]
-		public string py_addr_zip_rt
-		{
-			get
-			{
-				return this._py_addr_zip_rt;
-			}
-			set
-			{
-				if ((this._py_addr_zip_rt != value))
-				{
-					this._py_addr_zip_rt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_py_confidential_flag", DbType="Char(1)")]
-		public System.Nullable<char> py_confidential_flag
-		{
-			get
-			{
-				return this._py_confidential_flag;
-			}
-			set
-			{
-				if ((this._py_confidential_flag != value))
-				{
-					this._py_confidential_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_py_address_suppress_flag", DbType="Char(1)")]
-		public System.Nullable<char> py_address_suppress_flag
-		{
-			get
-			{
-				return this._py_address_suppress_flag;
-			}
-			set
-			{
-				if ((this._py_address_suppress_flag != value))
-				{
-					this._py_address_suppress_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_addr_filler", DbType="VarChar(20)")]
-		public string addr_filler
-		{
-			get
-			{
-				return this._addr_filler;
-			}
-			set
-			{
-				if ((this._addr_filler != value))
-				{
-					this._addr_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_py_addr_ml_deliverable", DbType="Char(1)")]
-		public System.Nullable<char> py_addr_ml_deliverable
-		{
-			get
-			{
-				return this._py_addr_ml_deliverable;
-			}
-			set
-			{
-				if ((this._py_addr_ml_deliverable != value))
-				{
-					this._py_addr_ml_deliverable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_filler", DbType="VarChar(27)")]
-		public string situs_filler
-		{
-			get
-			{
-				return this._situs_filler;
-			}
-			set
-			{
-				if ((this._situs_filler != value))
-				{
-					this._situs_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_street_prefx", DbType="VarChar(50)")]
-		public string situs_street_prefx
-		{
-			get
-			{
-				return this._situs_street_prefx;
-			}
-			set
-			{
-				if ((this._situs_street_prefx != value))
-				{
-					this._situs_street_prefx = value;
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_street", DbType="VarChar(50)")]
 		public string situs_street
 		{
@@ -4756,54 +3822,6 @@ namespace PTC_Systems
 				if ((this._situs_street != value))
 				{
 					this._situs_street = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_street_suffix", DbType="VarChar(10)")]
-		public string situs_street_suffix
-		{
-			get
-			{
-				return this._situs_street_suffix;
-			}
-			set
-			{
-				if ((this._situs_street_suffix != value))
-				{
-					this._situs_street_suffix = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_city", DbType="VarChar(30)")]
-		public string situs_city
-		{
-			get
-			{
-				return this._situs_city;
-			}
-			set
-			{
-				if ((this._situs_city != value))
-				{
-					this._situs_city = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_zip", DbType="VarChar(10)")]
-		public string situs_zip
-		{
-			get
-			{
-				return this._situs_zip;
-			}
-			set
-			{
-				if ((this._situs_zip != value))
-				{
-					this._situs_zip = value;
 				}
 			}
 		}
@@ -4824,39 +3842,7 @@ namespace PTC_Systems
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_legal_desc2", DbType="VarChar(255)")]
-		public string legal_desc2
-		{
-			get
-			{
-				return this._legal_desc2;
-			}
-			set
-			{
-				if ((this._legal_desc2 != value))
-				{
-					this._legal_desc2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_legal_acreage", DbType="VarChar(16)")]
-		public string legal_acreage
-		{
-			get
-			{
-				return this._legal_acreage;
-			}
-			set
-			{
-				if ((this._legal_acreage != value))
-				{
-					this._legal_acreage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_abs_subdv_cd", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_abs_subdv_cd", DbType="VarChar(10)")]
 		public string abs_subdv_cd
 		{
 			get
@@ -4868,6 +3854,22 @@ namespace PTC_Systems
 				if ((this._abs_subdv_cd != value))
 				{
 					this._abs_subdv_cd = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_abs_subdv_desc", DbType="VarChar(50)")]
+		public string abs_subdv_desc
+		{
+			get
+			{
+				return this._abs_subdv_desc;
+			}
+			set
+			{
+				if ((this._abs_subdv_desc != value))
+				{
+					this._abs_subdv_desc = value;
 				}
 			}
 		}
@@ -4888,1095 +3890,7 @@ namespace PTC_Systems
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_block", DbType="VarChar(50)")]
-		public string block
-		{
-			get
-			{
-				return this._block;
-			}
-			set
-			{
-				if ((this._block != value))
-				{
-					this._block = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tract_or_lot", DbType="VarChar(50)")]
-		public string tract_or_lot
-		{
-			get
-			{
-				return this._tract_or_lot;
-			}
-			set
-			{
-				if ((this._tract_or_lot != value))
-				{
-					this._tract_or_lot = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_land_hstd_val", DbType="VarChar(15)")]
-		public string land_hstd_val
-		{
-			get
-			{
-				return this._land_hstd_val;
-			}
-			set
-			{
-				if ((this._land_hstd_val != value))
-				{
-					this._land_hstd_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_land_non_hstd_val", DbType="VarChar(15)")]
-		public string land_non_hstd_val
-		{
-			get
-			{
-				return this._land_non_hstd_val;
-			}
-			set
-			{
-				if ((this._land_non_hstd_val != value))
-				{
-					this._land_non_hstd_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imprv_hstd_val", DbType="VarChar(15)")]
-		public string imprv_hstd_val
-		{
-			get
-			{
-				return this._imprv_hstd_val;
-			}
-			set
-			{
-				if ((this._imprv_hstd_val != value))
-				{
-					this._imprv_hstd_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imprv_non_hstd_val", DbType="VarChar(15)")]
-		public string imprv_non_hstd_val
-		{
-			get
-			{
-				return this._imprv_non_hstd_val;
-			}
-			set
-			{
-				if ((this._imprv_non_hstd_val != value))
-				{
-					this._imprv_non_hstd_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ag_use_val", DbType="VarChar(15)")]
-		public string ag_use_val
-		{
-			get
-			{
-				return this._ag_use_val;
-			}
-			set
-			{
-				if ((this._ag_use_val != value))
-				{
-					this._ag_use_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ag_market", DbType="VarChar(15)")]
-		public string ag_market
-		{
-			get
-			{
-				return this._ag_market;
-			}
-			set
-			{
-				if ((this._ag_market != value))
-				{
-					this._ag_market = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_timber_use", DbType="VarChar(15)")]
-		public string timber_use
-		{
-			get
-			{
-				return this._timber_use;
-			}
-			set
-			{
-				if ((this._timber_use != value))
-				{
-					this._timber_use = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_timber_market", DbType="VarChar(15)")]
-		public string timber_market
-		{
-			get
-			{
-				return this._timber_market;
-			}
-			set
-			{
-				if ((this._timber_market != value))
-				{
-					this._timber_market = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appraised_val", DbType="VarChar(15)")]
-		public string appraised_val
-		{
-			get
-			{
-				return this._appraised_val;
-			}
-			set
-			{
-				if ((this._appraised_val != value))
-				{
-					this._appraised_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ten_percent_cap", DbType="VarChar(15)")]
-		public string ten_percent_cap
-		{
-			get
-			{
-				return this._ten_percent_cap;
-			}
-			set
-			{
-				if ((this._ten_percent_cap != value))
-				{
-					this._ten_percent_cap = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_assessed_val", DbType="VarChar(15)")]
-		public string assessed_val
-		{
-			get
-			{
-				return this._assessed_val;
-			}
-			set
-			{
-				if ((this._assessed_val != value))
-				{
-					this._assessed_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_value_filler", DbType="VarChar(20)")]
-		public string value_filler
-		{
-			get
-			{
-				return this._value_filler;
-			}
-			set
-			{
-				if ((this._value_filler != value))
-				{
-					this._value_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_protest_flag", DbType="Char(1)")]
-		public System.Nullable<char> arb_protest_flag
-		{
-			get
-			{
-				return this._arb_protest_flag;
-			}
-			set
-			{
-				if ((this._arb_protest_flag != value))
-				{
-					this._arb_protest_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_value_filler2", DbType="VarChar(12)")]
-		public string value_filler2
-		{
-			get
-			{
-				return this._value_filler2;
-			}
-			set
-			{
-				if ((this._value_filler2 != value))
-				{
-					this._value_filler2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_deed_book_id", DbType="VarChar(20)")]
-		public string deed_book_id
-		{
-			get
-			{
-				return this._deed_book_id;
-			}
-			set
-			{
-				if ((this._deed_book_id != value))
-				{
-					this._deed_book_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_deed_book_page", DbType="VarChar(20)")]
-		public string deed_book_page
-		{
-			get
-			{
-				return this._deed_book_page;
-			}
-			set
-			{
-				if ((this._deed_book_page != value))
-				{
-					this._deed_book_page = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_deed_dt", DbType="VarChar(25)")]
-		public string deed_dt
-		{
-			get
-			{
-				return this._deed_dt;
-			}
-			set
-			{
-				if ((this._deed_dt != value))
-				{
-					this._deed_dt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_co_id", DbType="VarChar(12)")]
-		public string mortgage_co_id
-		{
-			get
-			{
-				return this._mortgage_co_id;
-			}
-			set
-			{
-				if ((this._mortgage_co_id != value))
-				{
-					this._mortgage_co_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortage_co_name", DbType="VarChar(70)")]
-		public string mortage_co_name
-		{
-			get
-			{
-				return this._mortage_co_name;
-			}
-			set
-			{
-				if ((this._mortage_co_name != value))
-				{
-					this._mortage_co_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_acct_id", DbType="VarChar(50)")]
-		public string mortgage_acct_id
-		{
-			get
-			{
-				return this._mortgage_acct_id;
-			}
-			set
-			{
-				if ((this._mortgage_acct_id != value))
-				{
-					this._mortgage_acct_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_owner_id", DbType="VarChar(12)")]
-		public string jan1_owner_id
-		{
-			get
-			{
-				return this._jan1_owner_id;
-			}
-			set
-			{
-				if ((this._jan1_owner_id != value))
-				{
-					this._jan1_owner_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_owner_name", DbType="VarChar(70)")]
-		public string jan1_owner_name
-		{
-			get
-			{
-				return this._jan1_owner_name;
-			}
-			set
-			{
-				if ((this._jan1_owner_name != value))
-				{
-					this._jan1_owner_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_line1", DbType="VarChar(60)")]
-		public string jan1_addr_line1
-		{
-			get
-			{
-				return this._jan1_addr_line1;
-			}
-			set
-			{
-				if ((this._jan1_addr_line1 != value))
-				{
-					this._jan1_addr_line1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_line2", DbType="VarChar(60)")]
-		public string jan1_addr_line2
-		{
-			get
-			{
-				return this._jan1_addr_line2;
-			}
-			set
-			{
-				if ((this._jan1_addr_line2 != value))
-				{
-					this._jan1_addr_line2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_line3", DbType="VarChar(60)")]
-		public string jan1_addr_line3
-		{
-			get
-			{
-				return this._jan1_addr_line3;
-			}
-			set
-			{
-				if ((this._jan1_addr_line3 != value))
-				{
-					this._jan1_addr_line3 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_city", DbType="VarChar(50)")]
-		public string jan1_addr_city
-		{
-			get
-			{
-				return this._jan1_addr_city;
-			}
-			set
-			{
-				if ((this._jan1_addr_city != value))
-				{
-					this._jan1_addr_city = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_state", DbType="VarChar(50)")]
-		public string jan1_addr_state
-		{
-			get
-			{
-				return this._jan1_addr_state;
-			}
-			set
-			{
-				if ((this._jan1_addr_state != value))
-				{
-					this._jan1_addr_state = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_country", DbType="VarChar(5)")]
-		public string jan1_addr_country
-		{
-			get
-			{
-				return this._jan1_addr_country;
-			}
-			set
-			{
-				if ((this._jan1_addr_country != value))
-				{
-					this._jan1_addr_country = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_zip", DbType="VarChar(5)")]
-		public string jan1_addr_zip
-		{
-			get
-			{
-				return this._jan1_addr_zip;
-			}
-			set
-			{
-				if ((this._jan1_addr_zip != value))
-				{
-					this._jan1_addr_zip = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_zip_cass", DbType="VarChar(4)")]
-		public string jan1_addr_zip_cass
-		{
-			get
-			{
-				return this._jan1_addr_zip_cass;
-			}
-			set
-			{
-				if ((this._jan1_addr_zip_cass != value))
-				{
-					this._jan1_addr_zip_cass = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_zip_rt", DbType="VarChar(2)")]
-		public string jan1_addr_zip_rt
-		{
-			get
-			{
-				return this._jan1_addr_zip_rt;
-			}
-			set
-			{
-				if ((this._jan1_addr_zip_rt != value))
-				{
-					this._jan1_addr_zip_rt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_confidential_flag", DbType="Char(1)")]
-		public System.Nullable<char> jan1_confidential_flag
-		{
-			get
-			{
-				return this._jan1_confidential_flag;
-			}
-			set
-			{
-				if ((this._jan1_confidential_flag != value))
-				{
-					this._jan1_confidential_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_address_suppress_flag", DbType="Char(1)")]
-		public System.Nullable<char> jan1_address_suppress_flag
-		{
-			get
-			{
-				return this._jan1_address_suppress_flag;
-			}
-			set
-			{
-				if ((this._jan1_address_suppress_flag != value))
-				{
-					this._jan1_address_suppress_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_addr_filler", DbType="VarChar(37)")]
-		public string jan1_addr_filler
-		{
-			get
-			{
-				return this._jan1_addr_filler;
-			}
-			set
-			{
-				if ((this._jan1_addr_filler != value))
-				{
-					this._jan1_addr_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_ml_deliverable", DbType="Char(1)")]
-		public System.Nullable<char> jan1_ml_deliverable
-		{
-			get
-			{
-				return this._jan1_ml_deliverable;
-			}
-			set
-			{
-				if ((this._jan1_ml_deliverable != value))
-				{
-					this._jan1_ml_deliverable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hs_exempt", DbType="Char(1)")]
-		public System.Nullable<char> hs_exempt
-		{
-			get
-			{
-				return this._hs_exempt;
-			}
-			set
-			{
-				if ((this._hs_exempt != value))
-				{
-					this._hs_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65_exempt", DbType="Char(1)")]
-		public System.Nullable<char> ov65_exempt
-		{
-			get
-			{
-				return this._ov65_exempt;
-			}
-			set
-			{
-				if ((this._ov65_exempt != value))
-				{
-					this._ov65_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65_prorate_begin", DbType="VarChar(25)")]
-		public string ov65_prorate_begin
-		{
-			get
-			{
-				return this._ov65_prorate_begin;
-			}
-			set
-			{
-				if ((this._ov65_prorate_begin != value))
-				{
-					this._ov65_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65_prorate_end", DbType="VarChar(25)")]
-		public string ov65_prorate_end
-		{
-			get
-			{
-				return this._ov65_prorate_end;
-			}
-			set
-			{
-				if ((this._ov65_prorate_end != value))
-				{
-					this._ov65_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65s_exempt", DbType="Char(1)")]
-		public System.Nullable<char> ov65s_exempt
-		{
-			get
-			{
-				return this._ov65s_exempt;
-			}
-			set
-			{
-				if ((this._ov65s_exempt != value))
-				{
-					this._ov65s_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dp_exempt
-		{
-			get
-			{
-				return this._dp_exempt;
-			}
-			set
-			{
-				if ((this._dp_exempt != value))
-				{
-					this._dp_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv1_exempt
-		{
-			get
-			{
-				return this._dv1_exempt;
-			}
-			set
-			{
-				if ((this._dv1_exempt != value))
-				{
-					this._dv1_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1s_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv1s_exempt
-		{
-			get
-			{
-				return this._dv1s_exempt;
-			}
-			set
-			{
-				if ((this._dv1s_exempt != value))
-				{
-					this._dv1s_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv2_exempt
-		{
-			get
-			{
-				return this._dv2_exempt;
-			}
-			set
-			{
-				if ((this._dv2_exempt != value))
-				{
-					this._dv2_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2s_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv2s_exempt
-		{
-			get
-			{
-				return this._dv2s_exempt;
-			}
-			set
-			{
-				if ((this._dv2s_exempt != value))
-				{
-					this._dv2s_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv3_exempt
-		{
-			get
-			{
-				return this._dv3_exempt;
-			}
-			set
-			{
-				if ((this._dv3_exempt != value))
-				{
-					this._dv3_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3s_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv3s_exempt
-		{
-			get
-			{
-				return this._dv3s_exempt;
-			}
-			set
-			{
-				if ((this._dv3s_exempt != value))
-				{
-					this._dv3s_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv4_exempt
-		{
-			get
-			{
-				return this._dv4_exempt;
-			}
-			set
-			{
-				if ((this._dv4_exempt != value))
-				{
-					this._dv4_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4s_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dv4s_exempt
-		{
-			get
-			{
-				return this._dv4s_exempt;
-			}
-			set
-			{
-				if ((this._dv4s_exempt != value))
-				{
-					this._dv4s_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_exempt", DbType="Char(1)")]
-		public System.Nullable<char> ex_exempt
-		{
-			get
-			{
-				return this._ex_exempt;
-			}
-			set
-			{
-				if ((this._ex_exempt != value))
-				{
-					this._ex_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_prorate_begin", DbType="VarChar(25)")]
-		public string ex_prorate_begin
-		{
-			get
-			{
-				return this._ex_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_prorate_begin != value))
-				{
-					this._ex_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_prorate_end", DbType="VarChar(25)")]
-		public string ex_prorate_end
-		{
-			get
-			{
-				return this._ex_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_prorate_end != value))
-				{
-					this._ex_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lve_exempt", DbType="Char(1)")]
-		public System.Nullable<char> lve_exempt
-		{
-			get
-			{
-				return this._lve_exempt;
-			}
-			set
-			{
-				if ((this._lve_exempt != value))
-				{
-					this._lve_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ab_exempt", DbType="Char(1)")]
-		public System.Nullable<char> ab_exempt
-		{
-			get
-			{
-				return this._ab_exempt;
-			}
-			set
-			{
-				if ((this._ab_exempt != value))
-				{
-					this._ab_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_en_exempt", DbType="Char(1)")]
-		public System.Nullable<char> en_exempt
-		{
-			get
-			{
-				return this._en_exempt;
-			}
-			set
-			{
-				if ((this._en_exempt != value))
-				{
-					this._en_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fr_exempt", DbType="Char(1)")]
-		public System.Nullable<char> fr_exempt
-		{
-			get
-			{
-				return this._fr_exempt;
-			}
-			set
-			{
-				if ((this._fr_exempt != value))
-				{
-					this._fr_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ht_exempt", DbType="Char(1)")]
-		public System.Nullable<char> ht_exempt
-		{
-			get
-			{
-				return this._ht_exempt;
-			}
-			set
-			{
-				if ((this._ht_exempt != value))
-				{
-					this._ht_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_exempt", DbType="Char(1)")]
-		public System.Nullable<char> pro_exempt
-		{
-			get
-			{
-				return this._pro_exempt;
-			}
-			set
-			{
-				if ((this._pro_exempt != value))
-				{
-					this._pro_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pc_exempt", DbType="Char(1)")]
-		public System.Nullable<char> pc_exempt
-		{
-			get
-			{
-				return this._pc_exempt;
-			}
-			set
-			{
-				if ((this._pc_exempt != value))
-				{
-					this._pc_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_so_exempt", DbType="Char(1)")]
-		public System.Nullable<char> so_exempt
-		{
-			get
-			{
-				return this._so_exempt;
-			}
-			set
-			{
-				if ((this._so_exempt != value))
-				{
-					this._so_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex366_exempt", DbType="Char(1)")]
-		public System.Nullable<char> ex366_exempt
-		{
-			get
-			{
-				return this._ex366_exempt;
-			}
-			set
-			{
-				if ((this._ex366_exempt != value))
-				{
-					this._ex366_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ch_exempt", DbType="Char(1)")]
-		public System.Nullable<char> ch_exempt
-		{
-			get
-			{
-				return this._ch_exempt;
-			}
-			set
-			{
-				if ((this._ch_exempt != value))
-				{
-					this._ch_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imprv_state_cd", DbType="VarChar(50)")]
-		public string imprv_state_cd
-		{
-			get
-			{
-				return this._imprv_state_cd;
-			}
-			set
-			{
-				if ((this._imprv_state_cd != value))
-				{
-					this._imprv_state_cd = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_land_state_cd", DbType="VarChar(50)")]
-		public string land_state_cd
-		{
-			get
-			{
-				return this._land_state_cd;
-			}
-			set
-			{
-				if ((this._land_state_cd != value))
-				{
-					this._land_state_cd = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_personal_state_cd", DbType="VarChar(50)")]
-		public string personal_state_cd
-		{
-			get
-			{
-				return this._personal_state_cd;
-			}
-			set
-			{
-				if ((this._personal_state_cd != value))
-				{
-					this._personal_state_cd = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mineral_state_cd", DbType="VarChar(10)")]
-		public string mineral_state_cd
-		{
-			get
-			{
-				return this._mineral_state_cd;
-			}
-			set
-			{
-				if ((this._mineral_state_cd != value))
-				{
-					this._mineral_state_cd = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_land_acres", DbType="VarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_land_acres", DbType="VarChar(18)")]
 		public string land_acres
 		{
 			get
@@ -5992,4834 +3906,530 @@ namespace PTC_Systems
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_id", DbType="VarChar(12)")]
-		public string entity_agent_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_built", DbType="Int")]
+		public System.Nullable<int> year_built
 		{
 			get
 			{
-				return this._entity_agent_id;
+				return this._year_built;
 			}
 			set
 			{
-				if ((this._entity_agent_id != value))
+				if ((this._year_built != value))
 				{
-					this._entity_agent_id = value;
+					this._year_built = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_name", DbType="VarChar(70)")]
-		public string entity_agent_name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_effective_year_built", DbType="Int")]
+		public System.Nullable<int> effective_year_built
 		{
 			get
 			{
-				return this._entity_agent_name;
+				return this._effective_year_built;
 			}
 			set
 			{
-				if ((this._entity_agent_name != value))
+				if ((this._effective_year_built != value))
 				{
-					this._entity_agent_name = value;
+					this._effective_year_built = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_addr_line1", DbType="VarChar(60)")]
-		public string entity_agent_addr_line1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prop_use_cd", DbType="VarChar(10)")]
+		public string prop_use_cd
 		{
 			get
 			{
-				return this._entity_agent_addr_line1;
+				return this._prop_use_cd;
 			}
 			set
 			{
-				if ((this._entity_agent_addr_line1 != value))
+				if ((this._prop_use_cd != value))
 				{
-					this._entity_agent_addr_line1 = value;
+					this._prop_use_cd = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_addr_line2", DbType="VarChar(60)")]
-		public string entity_agent_addr_line2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prop_use_desc", DbType="VarChar(50)")]
+		public string prop_use_desc
 		{
 			get
 			{
-				return this._entity_agent_addr_line2;
+				return this._prop_use_desc;
 			}
 			set
 			{
-				if ((this._entity_agent_addr_line2 != value))
+				if ((this._prop_use_desc != value))
 				{
-					this._entity_agent_addr_line2 = value;
+					this._prop_use_desc = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_addr_line3", DbType="VarChar(60)")]
-		public string entity_agent_addr_line3
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="class", Storage="_class", DbType="VarChar(10)")]
+		public string @class
 		{
 			get
 			{
-				return this._entity_agent_addr_line3;
+				return this._class;
 			}
 			set
 			{
-				if ((this._entity_agent_addr_line3 != value))
+				if ((this._class != value))
 				{
-					this._entity_agent_addr_line3 = value;
+					this._class = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_city", DbType="VarChar(50)")]
-		public string entity_agent_city
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gross_building_area", DbType="VarChar(14)")]
+		public string gross_building_area
 		{
 			get
 			{
-				return this._entity_agent_city;
+				return this._gross_building_area;
 			}
 			set
 			{
-				if ((this._entity_agent_city != value))
+				if ((this._gross_building_area != value))
 				{
-					this._entity_agent_city = value;
+					this._gross_building_area = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_state", DbType="VarChar(50)")]
-		public string entity_agent_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_net_rentable_area", DbType="VarChar(14)")]
+		public string net_rentable_area
 		{
 			get
 			{
-				return this._entity_agent_state;
+				return this._net_rentable_area;
 			}
 			set
 			{
-				if ((this._entity_agent_state != value))
+				if ((this._net_rentable_area != value))
 				{
-					this._entity_agent_state = value;
+					this._net_rentable_area = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_country", DbType="VarChar(5)")]
-		public string entity_agent_country
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_property_name", DbType="VarChar(50)")]
+		public string property_name
 		{
 			get
 			{
-				return this._entity_agent_country;
+				return this._property_name;
 			}
 			set
 			{
-				if ((this._entity_agent_country != value))
+				if ((this._property_name != value))
 				{
-					this._entity_agent_country = value;
+					this._property_name = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_zip", DbType="VarChar(5)")]
-		public string entity_agent_zip
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_land_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_land_hstd_val
 		{
 			get
 			{
-				return this._entity_agent_zip;
+				return this._proposed_land_hstd_val;
 			}
 			set
 			{
-				if ((this._entity_agent_zip != value))
+				if ((this._proposed_land_hstd_val != value))
 				{
-					this._entity_agent_zip = value;
+					this._proposed_land_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_cass", DbType="VarChar(4)")]
-		public string entity_agent_cass
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_land_non_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_land_non_hstd_val
 		{
 			get
 			{
-				return this._entity_agent_cass;
+				return this._proposed_land_non_hstd_val;
 			}
 			set
 			{
-				if ((this._entity_agent_cass != value))
+				if ((this._proposed_land_non_hstd_val != value))
 				{
-					this._entity_agent_cass = value;
+					this._proposed_land_non_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_agent_rt", DbType="VarChar(2)")]
-		public string entity_agent_rt
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_imprv_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_imprv_hstd_val
 		{
 			get
 			{
-				return this._entity_agent_rt;
+				return this._proposed_imprv_hstd_val;
 			}
 			set
 			{
-				if ((this._entity_agent_rt != value))
+				if ((this._proposed_imprv_hstd_val != value))
 				{
-					this._entity_agent_rt = value;
+					this._proposed_imprv_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ent_agent_filler", DbType="VarChar(34)")]
-		public string ent_agent_filler
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_imprv_non_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_imprv_non_hstd_val
 		{
 			get
 			{
-				return this._ent_agent_filler;
+				return this._proposed_imprv_non_hstd_val;
 			}
 			set
 			{
-				if ((this._ent_agent_filler != value))
+				if ((this._proposed_imprv_non_hstd_val != value))
 				{
-					this._ent_agent_filler = value;
+					this._proposed_imprv_non_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_id", DbType="VarChar(12)")]
-		public string ca_agent_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_ag_use_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_ag_use_val
 		{
 			get
 			{
-				return this._ca_agent_id;
+				return this._proposed_ag_use_val;
 			}
 			set
 			{
-				if ((this._ca_agent_id != value))
+				if ((this._proposed_ag_use_val != value))
 				{
-					this._ca_agent_id = value;
+					this._proposed_ag_use_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_name", DbType="VarChar(70)")]
-		public string ca_agent_name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_ag_market", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_ag_market
 		{
 			get
 			{
-				return this._ca_agent_name;
+				return this._proposed_ag_market;
 			}
 			set
 			{
-				if ((this._ca_agent_name != value))
+				if ((this._proposed_ag_market != value))
 				{
-					this._ca_agent_name = value;
+					this._proposed_ag_market = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_addr_line1", DbType="VarChar(60)")]
-		public string ca_agent_addr_line1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_timber_use", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_timber_use
 		{
 			get
 			{
-				return this._ca_agent_addr_line1;
+				return this._proposed_timber_use;
 			}
 			set
 			{
-				if ((this._ca_agent_addr_line1 != value))
+				if ((this._proposed_timber_use != value))
 				{
-					this._ca_agent_addr_line1 = value;
+					this._proposed_timber_use = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_addr_line2", DbType="VarChar(60)")]
-		public string ca_agent_addr_line2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_timber_market", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_timber_market
 		{
 			get
 			{
-				return this._ca_agent_addr_line2;
+				return this._proposed_timber_market;
 			}
 			set
 			{
-				if ((this._ca_agent_addr_line2 != value))
+				if ((this._proposed_timber_market != value))
 				{
-					this._ca_agent_addr_line2 = value;
+					this._proposed_timber_market = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_addr_line3", DbType="VarChar(60)")]
-		public string ca_agent_addr_line3
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_appraised_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_appraised_val
 		{
 			get
 			{
-				return this._ca_agent_addr_line3;
+				return this._proposed_appraised_val;
 			}
 			set
 			{
-				if ((this._ca_agent_addr_line3 != value))
+				if ((this._proposed_appraised_val != value))
 				{
-					this._ca_agent_addr_line3 = value;
+					this._proposed_appraised_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_city", DbType="VarChar(50)")]
-		public string ca_agent_city
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_ten_percent_cap", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_ten_percent_cap
 		{
 			get
 			{
-				return this._ca_agent_city;
+				return this._proposed_ten_percent_cap;
 			}
 			set
 			{
-				if ((this._ca_agent_city != value))
+				if ((this._proposed_ten_percent_cap != value))
 				{
-					this._ca_agent_city = value;
+					this._proposed_ten_percent_cap = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_state", DbType="VarChar(50)")]
-		public string ca_agent_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_assessed_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> proposed_assessed_val
 		{
 			get
 			{
-				return this._ca_agent_state;
+				return this._proposed_assessed_val;
 			}
 			set
 			{
-				if ((this._ca_agent_state != value))
+				if ((this._proposed_assessed_val != value))
 				{
-					this._ca_agent_state = value;
+					this._proposed_assessed_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_country", DbType="VarChar(5)")]
-		public string ca_agent_country
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proposed_market_value", DbType="Decimal(14,0)")]
+		public System.Nullable<decimal> proposed_market_value
 		{
 			get
 			{
-				return this._ca_agent_country;
+				return this._proposed_market_value;
 			}
 			set
 			{
-				if ((this._ca_agent_country != value))
+				if ((this._proposed_market_value != value))
 				{
-					this._ca_agent_country = value;
+					this._proposed_market_value = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_zip", DbType="VarChar(5)")]
-		public string ca_agent_zip
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_land_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_land_hstd_val
 		{
 			get
 			{
-				return this._ca_agent_zip;
+				return this._current_land_hstd_val;
 			}
 			set
 			{
-				if ((this._ca_agent_zip != value))
+				if ((this._current_land_hstd_val != value))
 				{
-					this._ca_agent_zip = value;
+					this._current_land_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_zip_cass", DbType="VarChar(4)")]
-		public string ca_agent_zip_cass
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_land_non_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_land_non_hstd_val
 		{
 			get
 			{
-				return this._ca_agent_zip_cass;
+				return this._current_land_non_hstd_val;
 			}
 			set
 			{
-				if ((this._ca_agent_zip_cass != value))
+				if ((this._current_land_non_hstd_val != value))
 				{
-					this._ca_agent_zip_cass = value;
+					this._current_land_non_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_zip_rt", DbType="VarChar(2)")]
-		public string ca_agent_zip_rt
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_imprv_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_imprv_hstd_val
 		{
 			get
 			{
-				return this._ca_agent_zip_rt;
+				return this._current_imprv_hstd_val;
 			}
 			set
 			{
-				if ((this._ca_agent_zip_rt != value))
+				if ((this._current_imprv_hstd_val != value))
 				{
-					this._ca_agent_zip_rt = value;
+					this._current_imprv_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ca_agent_filler", DbType="VarChar(34)")]
-		public string ca_agent_filler
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_imprv_non_hstd_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_imprv_non_hstd_val
 		{
 			get
 			{
-				return this._ca_agent_filler;
+				return this._current_imprv_non_hstd_val;
 			}
 			set
 			{
-				if ((this._ca_agent_filler != value))
+				if ((this._current_imprv_non_hstd_val != value))
 				{
-					this._ca_agent_filler = value;
+					this._current_imprv_non_hstd_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_id", DbType="VarChar(12)")]
-		public string arb_agent_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_ag_use_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_ag_use_val
 		{
 			get
 			{
-				return this._arb_agent_id;
+				return this._current_ag_use_val;
 			}
 			set
 			{
-				if ((this._arb_agent_id != value))
+				if ((this._current_ag_use_val != value))
 				{
-					this._arb_agent_id = value;
+					this._current_ag_use_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_name", DbType="VarChar(70)")]
-		public string arb_agent_name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_ag_market", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_ag_market
 		{
 			get
 			{
-				return this._arb_agent_name;
+				return this._current_ag_market;
 			}
 			set
 			{
-				if ((this._arb_agent_name != value))
+				if ((this._current_ag_market != value))
 				{
-					this._arb_agent_name = value;
+					this._current_ag_market = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_addr_line1", DbType="VarChar(60)")]
-		public string arb_agent_addr_line1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_timber_use", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_timber_use
 		{
 			get
 			{
-				return this._arb_agent_addr_line1;
+				return this._current_timber_use;
 			}
 			set
 			{
-				if ((this._arb_agent_addr_line1 != value))
+				if ((this._current_timber_use != value))
 				{
-					this._arb_agent_addr_line1 = value;
+					this._current_timber_use = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_addr_line2", DbType="VarChar(60)")]
-		public string arb_agent_addr_line2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_timber_market", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_timber_market
 		{
 			get
 			{
-				return this._arb_agent_addr_line2;
+				return this._current_timber_market;
 			}
 			set
 			{
-				if ((this._arb_agent_addr_line2 != value))
+				if ((this._current_timber_market != value))
 				{
-					this._arb_agent_addr_line2 = value;
+					this._current_timber_market = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_addr_line3", DbType="VarChar(60)")]
-		public string arb_agent_addr_line3
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_appraised_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_appraised_val
 		{
 			get
 			{
-				return this._arb_agent_addr_line3;
+				return this._current_appraised_val;
 			}
 			set
 			{
-				if ((this._arb_agent_addr_line3 != value))
+				if ((this._current_appraised_val != value))
 				{
-					this._arb_agent_addr_line3 = value;
+					this._current_appraised_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_city", DbType="VarChar(50)")]
-		public string arb_agent_city
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_ten_percent_cap", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_ten_percent_cap
 		{
 			get
 			{
-				return this._arb_agent_city;
+				return this._current_ten_percent_cap;
 			}
 			set
 			{
-				if ((this._arb_agent_city != value))
+				if ((this._current_ten_percent_cap != value))
 				{
-					this._arb_agent_city = value;
+					this._current_ten_percent_cap = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_state", DbType="VarChar(50)")]
-		public string arb_agent_state
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_assessed_val", DbType="Decimal(15,0)")]
+		public System.Nullable<decimal> current_assessed_val
 		{
 			get
 			{
-				return this._arb_agent_state;
+				return this._current_assessed_val;
 			}
 			set
 			{
-				if ((this._arb_agent_state != value))
+				if ((this._current_assessed_val != value))
 				{
-					this._arb_agent_state = value;
+					this._current_assessed_val = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_country", DbType="VarChar(5)")]
-		public string arb_agent_country
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_current_market_value", DbType="Decimal(14,0)")]
+		public System.Nullable<decimal> current_market_value
 		{
 			get
 			{
-				return this._arb_agent_country;
+				return this._current_market_value;
 			}
 			set
 			{
-				if ((this._arb_agent_country != value))
+				if ((this._current_market_value != value))
 				{
-					this._arb_agent_country = value;
+					this._current_market_value = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_zip", DbType="VarChar(5)")]
-		public string arb_agent_zip
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_exemptions", DbType="VarChar(50)")]
+		public string exemptions
 		{
 			get
 			{
-				return this._arb_agent_zip;
+				return this._exemptions;
 			}
 			set
 			{
-				if ((this._arb_agent_zip != value))
+				if ((this._exemptions != value))
 				{
-					this._arb_agent_zip = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_zip_cass", DbType="VarChar(4)")]
-		public string arb_agent_zip_cass
-		{
-			get
-			{
-				return this._arb_agent_zip_cass;
-			}
-			set
-			{
-				if ((this._arb_agent_zip_cass != value))
-				{
-					this._arb_agent_zip_cass = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_zip_rt", DbType="VarChar(2)")]
-		public string arb_agent_zip_rt
-		{
-			get
-			{
-				return this._arb_agent_zip_rt;
-			}
-			set
-			{
-				if ((this._arb_agent_zip_rt != value))
-				{
-					this._arb_agent_zip_rt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_arb_agent_filler", DbType="VarChar(34)")]
-		public string arb_agent_filler
-		{
-			get
-			{
-				return this._arb_agent_filler;
-			}
-			set
-			{
-				if ((this._arb_agent_filler != value))
-				{
-					this._arb_agent_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mineral_type_of_int", DbType="VarChar(5)")]
-		public string mineral_type_of_int
-		{
-			get
-			{
-				return this._mineral_type_of_int;
-			}
-			set
-			{
-				if ((this._mineral_type_of_int != value))
-				{
-					this._mineral_type_of_int = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mineral_int_pct", DbType="VarChar(15)")]
-		public string mineral_int_pct
-		{
-			get
-			{
-				return this._mineral_int_pct;
-			}
-			set
-			{
-				if ((this._mineral_int_pct != value))
-				{
-					this._mineral_int_pct = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_productivity_use_code", DbType="VarChar(3)")]
-		public string productivity_use_code
-		{
-			get
-			{
-				return this._productivity_use_code;
-			}
-			set
-			{
-				if ((this._productivity_use_code != value))
-				{
-					this._productivity_use_code = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entity_filler", DbType="VarChar(40)")]
-		public string entity_filler
-		{
-			get
-			{
-				return this._entity_filler;
-			}
-			set
-			{
-				if ((this._entity_filler != value))
-				{
-					this._entity_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_timber_78_market", DbType="VarChar(12)")]
-		public string timber_78_market
-		{
-			get
-			{
-				return this._timber_78_market;
-			}
-			set
-			{
-				if ((this._timber_78_market != value))
-				{
-					this._timber_78_market = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ag_late_loss", DbType="VarChar(12)")]
-		public string ag_late_loss
-		{
-			get
-			{
-				return this._ag_late_loss;
-			}
-			set
-			{
-				if ((this._ag_late_loss != value))
-				{
-					this._ag_late_loss = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_late_freeport_penalty", DbType="VarChar(12)")]
-		public string late_freeport_penalty
-		{
-			get
-			{
-				return this._late_freeport_penalty;
-			}
-			set
-			{
-				if ((this._late_freeport_penalty != value))
-				{
-					this._late_freeport_penalty = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delivery_point", DbType="VarChar(2)")]
-		public string delivery_point
-		{
-			get
-			{
-				return this._delivery_point;
-			}
-			set
-			{
-				if ((this._delivery_point != value))
-				{
-					this._delivery_point = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_carrier_route", DbType="VarChar(5)")]
-		public string carrier_route
-		{
-			get
-			{
-				return this._carrier_route;
-			}
-			set
-			{
-				if ((this._carrier_route != value))
-				{
-					this._carrier_route = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_check_digit", DbType="VarChar(2)")]
-		public string check_digit
-		{
-			get
-			{
-				return this._check_digit;
-			}
-			set
-			{
-				if ((this._check_digit != value))
-				{
-					this._check_digit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dba", DbType="VarChar(40)")]
-		public string dba
-		{
-			get
-			{
-				return this._dba;
-			}
-			set
-			{
-				if ((this._dba != value))
-				{
-					this._dba = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dba_filler", DbType="VarChar(38)")]
-		public string dba_filler
-		{
-			get
-			{
-				return this._dba_filler;
-			}
-			set
-			{
-				if ((this._dba_filler != value))
-				{
-					this._dba_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_market_value", DbType="VarChar(14)")]
-		public string market_value
-		{
-			get
-			{
-				return this._market_value;
-			}
-			set
-			{
-				if ((this._market_value != value))
-				{
-					this._market_value = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mh_label", DbType="VarChar(20)")]
-		public string mh_label
-		{
-			get
-			{
-				return this._mh_label;
-			}
-			set
-			{
-				if ((this._mh_label != value))
-				{
-					this._mh_label = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mh_serial", DbType="VarChar(20)")]
-		public string mh_serial
-		{
-			get
-			{
-				return this._mh_serial;
-			}
-			set
-			{
-				if ((this._mh_serial != value))
-				{
-					this._mh_serial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mh_model", DbType="VarChar(20)")]
-		public string mh_model
-		{
-			get
-			{
-				return this._mh_model;
-			}
-			set
-			{
-				if ((this._mh_model != value))
-				{
-					this._mh_model = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_flag_filler1", DbType="VarChar(1)")]
-		public string flag_filler1
-		{
-			get
-			{
-				return this._flag_filler1;
-			}
-			set
-			{
-				if ((this._flag_filler1 != value))
-				{
-					this._flag_filler1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_flag_filler2", DbType="VarChar(1)")]
-		public string flag_filler2
-		{
-			get
-			{
-				return this._flag_filler2;
-			}
-			set
-			{
-				if ((this._flag_filler2 != value))
-				{
-					this._flag_filler2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_flag_filler", DbType="VarChar(70)")]
-		public string flag_filler
-		{
-			get
-			{
-				return this._flag_filler;
-			}
-			set
-			{
-				if ((this._flag_filler != value))
-				{
-					this._flag_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65_deferral_date", DbType="VarChar(25)")]
-		public string ov65_deferral_date
-		{
-			get
-			{
-				return this._ov65_deferral_date;
-			}
-			set
-			{
-				if ((this._ov65_deferral_date != value))
-				{
-					this._ov65_deferral_date = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp_deferral_date", DbType="VarChar(25)")]
-		public string dp_deferral_date
-		{
-			get
-			{
-				return this._dp_deferral_date;
-			}
-			set
-			{
-				if ((this._dp_deferral_date != value))
-				{
-					this._dp_deferral_date = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ref_id1", DbType="VarChar(25)")]
-		public string ref_id1
-		{
-			get
-			{
-				return this._ref_id1;
-			}
-			set
-			{
-				if ((this._ref_id1 != value))
-				{
-					this._ref_id1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ref_id2", DbType="VarChar(25)")]
-		public string ref_id2
-		{
-			get
-			{
-				return this._ref_id2;
-			}
-			set
-			{
-				if ((this._ref_id2 != value))
-				{
-					this._ref_id2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_num", DbType="VarChar(15)")]
-		public string situs_num
-		{
-			get
-			{
-				return this._situs_num;
-			}
-			set
-			{
-				if ((this._situs_num != value))
-				{
-					this._situs_num = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situs_unit", DbType="VarChar(5)")]
-		public string situs_unit
-		{
-			get
-			{
-				return this._situs_unit;
-			}
-			set
-			{
-				if ((this._situs_unit != value))
-				{
-					this._situs_unit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_owner_id", DbType="VarChar(12)")]
-		public string appr_owner_id
-		{
-			get
-			{
-				return this._appr_owner_id;
-			}
-			set
-			{
-				if ((this._appr_owner_id != value))
-				{
-					this._appr_owner_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_owner_name", DbType="VarChar(70)")]
-		public string appr_owner_name
-		{
-			get
-			{
-				return this._appr_owner_name;
-			}
-			set
-			{
-				if ((this._appr_owner_name != value))
-				{
-					this._appr_owner_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_line1", DbType="VarChar(60)")]
-		public string appr_addr_line1
-		{
-			get
-			{
-				return this._appr_addr_line1;
-			}
-			set
-			{
-				if ((this._appr_addr_line1 != value))
-				{
-					this._appr_addr_line1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_line2", DbType="VarChar(60)")]
-		public string appr_addr_line2
-		{
-			get
-			{
-				return this._appr_addr_line2;
-			}
-			set
-			{
-				if ((this._appr_addr_line2 != value))
-				{
-					this._appr_addr_line2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_line3", DbType="VarChar(60)")]
-		public string appr_addr_line3
-		{
-			get
-			{
-				return this._appr_addr_line3;
-			}
-			set
-			{
-				if ((this._appr_addr_line3 != value))
-				{
-					this._appr_addr_line3 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_city", DbType="VarChar(50)")]
-		public string appr_addr_city
-		{
-			get
-			{
-				return this._appr_addr_city;
-			}
-			set
-			{
-				if ((this._appr_addr_city != value))
-				{
-					this._appr_addr_city = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_state", DbType="VarChar(50)")]
-		public string appr_addr_state
-		{
-			get
-			{
-				return this._appr_addr_state;
-			}
-			set
-			{
-				if ((this._appr_addr_state != value))
-				{
-					this._appr_addr_state = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_country", DbType="VarChar(5)")]
-		public string appr_addr_country
-		{
-			get
-			{
-				return this._appr_addr_country;
-			}
-			set
-			{
-				if ((this._appr_addr_country != value))
-				{
-					this._appr_addr_country = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_zip", DbType="VarChar(5)")]
-		public string appr_addr_zip
-		{
-			get
-			{
-				return this._appr_addr_zip;
-			}
-			set
-			{
-				if ((this._appr_addr_zip != value))
-				{
-					this._appr_addr_zip = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_zip_cass", DbType="VarChar(4)")]
-		public string appr_addr_zip_cass
-		{
-			get
-			{
-				return this._appr_addr_zip_cass;
-			}
-			set
-			{
-				if ((this._appr_addr_zip_cass != value))
-				{
-					this._appr_addr_zip_cass = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_addr_zip_cass_route", DbType="VarChar(2)")]
-		public string appr_addr_zip_cass_route
-		{
-			get
-			{
-				return this._appr_addr_zip_cass_route;
-			}
-			set
-			{
-				if ((this._appr_addr_zip_cass_route != value))
-				{
-					this._appr_addr_zip_cass_route = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_ml_deliverable", DbType="Char(1)")]
-		public System.Nullable<char> appr_ml_deliverable
-		{
-			get
-			{
-				return this._appr_ml_deliverable;
-			}
-			set
-			{
-				if ((this._appr_ml_deliverable != value))
-				{
-					this._appr_ml_deliverable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_confidential_flag", DbType="Char(1)")]
-		public System.Nullable<char> appr_confidential_flag
-		{
-			get
-			{
-				return this._appr_confidential_flag;
-			}
-			set
-			{
-				if ((this._appr_confidential_flag != value))
-				{
-					this._appr_confidential_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_address_suppress_flag", DbType="Char(1)")]
-		public System.Nullable<char> appr_address_suppress_flag
-		{
-			get
-			{
-				return this._appr_address_suppress_flag;
-			}
-			set
-			{
-				if ((this._appr_address_suppress_flag != value))
-				{
-					this._appr_address_suppress_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appr_confidential_name", DbType="VarChar(70)")]
-		public string appr_confidential_name
-		{
-			get
-			{
-				return this._appr_confidential_name;
-			}
-			set
-			{
-				if ((this._appr_confidential_name != value))
-				{
-					this._appr_confidential_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_py_confidential_name", DbType="VarChar(70)")]
-		public string py_confidential_name
-		{
-			get
-			{
-				return this._py_confidential_name;
-			}
-			set
-			{
-				if ((this._py_confidential_name != value))
-				{
-					this._py_confidential_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jan1_confidential_name", DbType="VarChar(70)")]
-		public string jan1_confidential_name
-		{
-			get
-			{
-				return this._jan1_confidential_name;
-			}
-			set
-			{
-				if ((this._jan1_confidential_name != value))
-				{
-					this._jan1_confidential_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_filler_sic_code", DbType="VarChar(5)")]
-		public string filler_sic_code
-		{
-			get
-			{
-				return this._filler_sic_code;
-			}
-			set
-			{
-				if ((this._filler_sic_code != value))
-				{
-					this._filler_sic_code = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rendition_filed", DbType="Char(1)")]
-		public System.Nullable<char> rendition_filed
-		{
-			get
-			{
-				return this._rendition_filed;
-			}
-			set
-			{
-				if ((this._rendition_filed != value))
-				{
-					this._rendition_filed = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rendition_date", DbType="VarChar(25)")]
-		public string rendition_date
-		{
-			get
-			{
-				return this._rendition_date;
-			}
-			set
-			{
-				if ((this._rendition_date != value))
-				{
-					this._rendition_date = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rendition_penalty", DbType="VarChar(15)")]
-		public string rendition_penalty
-		{
-			get
-			{
-				return this._rendition_penalty;
-			}
-			set
-			{
-				if ((this._rendition_penalty != value))
-				{
-					this._rendition_penalty = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rendition_penalty_date_paid", DbType="VarChar(25)")]
-		public string rendition_penalty_date_paid
-		{
-			get
-			{
-				return this._rendition_penalty_date_paid;
-			}
-			set
-			{
-				if ((this._rendition_penalty_date_paid != value))
-				{
-					this._rendition_penalty_date_paid = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rendition_fraud_penalty", DbType="VarChar(15)")]
-		public string rendition_fraud_penalty
-		{
-			get
-			{
-				return this._rendition_fraud_penalty;
-			}
-			set
-			{
-				if ((this._rendition_fraud_penalty != value))
-				{
-					this._rendition_fraud_penalty = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rendition_fraud_penalty_date_paid", DbType="VarChar(25)")]
-		public string rendition_fraud_penalty_date_paid
-		{
-			get
-			{
-				return this._rendition_fraud_penalty_date_paid;
-			}
-			set
-			{
-				if ((this._rendition_fraud_penalty_date_paid != value))
-				{
-					this._rendition_fraud_penalty_date_paid = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_deed_num_filler", DbType="VarChar(20)")]
-		public string deed_num_filler
-		{
-			get
-			{
-				return this._deed_num_filler;
-			}
-			set
-			{
-				if ((this._deed_num_filler != value))
-				{
-					this._deed_num_filler = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_entities", DbType="VarChar(140)")]
-		public string entities
-		{
-			get
-			{
-				return this._entities;
-			}
-			set
-			{
-				if ((this._entities != value))
-				{
-					this._entities = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_eco_exempt", DbType="Char(1)")]
-		public System.Nullable<char> eco_exempt
-		{
-			get
-			{
-				return this._eco_exempt;
-			}
-			set
-			{
-				if ((this._eco_exempt != value))
-				{
-					this._eco_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataset_id", DbType="VarChar(15)")]
-		public string dataset_id
-		{
-			get
-			{
-				return this._dataset_id;
-			}
-			set
-			{
-				if ((this._dataset_id != value))
-				{
-					this._dataset_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_deed_num", DbType="VarChar(50)")]
-		public string deed_num
-		{
-			get
-			{
-				return this._deed_num;
-			}
-			set
-			{
-				if ((this._deed_num != value))
-				{
-					this._deed_num = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chodo_exempt", DbType="Char(1)")]
-		public System.Nullable<char> chodo_exempt
-		{
-			get
-			{
-				return this._chodo_exempt;
-			}
-			set
-			{
-				if ((this._chodo_exempt != value))
-				{
-					this._chodo_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_local_option_pct_only_flag_hs", DbType="Char(1)")]
-		public System.Nullable<char> local_option_pct_only_flag_hs
-		{
-			get
-			{
-				return this._local_option_pct_only_flag_hs;
-			}
-			set
-			{
-				if ((this._local_option_pct_only_flag_hs != value))
-				{
-					this._local_option_pct_only_flag_hs = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_local_option_pct_only_flag_ov65", DbType="Char(1)")]
-		public System.Nullable<char> local_option_pct_only_flag_ov65
-		{
-			get
-			{
-				return this._local_option_pct_only_flag_ov65;
-			}
-			set
-			{
-				if ((this._local_option_pct_only_flag_ov65 != value))
-				{
-					this._local_option_pct_only_flag_ov65 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_local_option_pct_only_flag_ov65s", DbType="Char(1)")]
-		public System.Nullable<char> local_option_pct_only_flag_ov65s
-		{
-			get
-			{
-				return this._local_option_pct_only_flag_ov65s;
-			}
-			set
-			{
-				if ((this._local_option_pct_only_flag_ov65s != value))
-				{
-					this._local_option_pct_only_flag_ov65s = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_local_option_pct_only_flag_dp", DbType="Char(1)")]
-		public System.Nullable<char> local_option_pct_only_flag_dp
-		{
-			get
-			{
-				return this._local_option_pct_only_flag_dp;
-			}
-			set
-			{
-				if ((this._local_option_pct_only_flag_dp != value))
-				{
-					this._local_option_pct_only_flag_dp = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_freeze_only_flag_ov65", DbType="Char(1)")]
-		public System.Nullable<char> freeze_only_flag_ov65
-		{
-			get
-			{
-				return this._freeze_only_flag_ov65;
-			}
-			set
-			{
-				if ((this._freeze_only_flag_ov65 != value))
-				{
-					this._freeze_only_flag_ov65 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_freeze_only_flag_ov65s", DbType="Char(1)")]
-		public System.Nullable<char> freeze_only_flag_ov65s
-		{
-			get
-			{
-				return this._freeze_only_flag_ov65s;
-			}
-			set
-			{
-				if ((this._freeze_only_flag_ov65s != value))
-				{
-					this._freeze_only_flag_ov65s = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_freeze_only_flag_dp", DbType="Char(1)")]
-		public System.Nullable<char> freeze_only_flag_dp
-		{
-			get
-			{
-				return this._freeze_only_flag_dp;
-			}
-			set
-			{
-				if ((this._freeze_only_flag_dp != value))
-				{
-					this._freeze_only_flag_dp = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_apply_percent_exemption_flag", DbType="Char(1)")]
-		public System.Nullable<char> apply_percent_exemption_flag
-		{
-			get
-			{
-				return this._apply_percent_exemption_flag;
-			}
-			set
-			{
-				if ((this._apply_percent_exemption_flag != value))
-				{
-					this._apply_percent_exemption_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_exemption_percentage", DbType="VarChar(15)")]
-		public string exemption_percentage
-		{
-			get
-			{
-				return this._exemption_percentage;
-			}
-			set
-			{
-				if ((this._exemption_percentage != value))
-				{
-					this._exemption_percentage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vit_flag", DbType="Char(1)")]
-		public System.Nullable<char> vit_flag
-		{
-			get
-			{
-				return this._vit_flag;
-			}
-			set
-			{
-				if ((this._vit_flag != value))
-				{
-					this._vit_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lih_exempt", DbType="Char(1)")]
-		public System.Nullable<char> lih_exempt
-		{
-			get
-			{
-				return this._lih_exempt;
-			}
-			set
-			{
-				if ((this._lih_exempt != value))
-				{
-					this._lih_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_git_exempt", DbType="Char(1)")]
-		public System.Nullable<char> git_exempt
-		{
-			get
-			{
-				return this._git_exempt;
-			}
-			set
-			{
-				if ((this._git_exempt != value))
-				{
-					this._git_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dps_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dps_exempt
-		{
-			get
-			{
-				return this._dps_exempt;
-			}
-			set
-			{
-				if ((this._dps_exempt != value))
-				{
-					this._dps_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dps_deferral_date", DbType="VarChar(25)")]
-		public string dps_deferral_date
-		{
-			get
-			{
-				return this._dps_deferral_date;
-			}
-			set
-			{
-				if ((this._dps_deferral_date != value))
-				{
-					this._dps_deferral_date = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_local_option_pct_only_flag_dps", DbType="Char(1)")]
-		public System.Nullable<char> local_option_pct_only_flag_dps
-		{
-			get
-			{
-				return this._local_option_pct_only_flag_dps;
-			}
-			set
-			{
-				if ((this._local_option_pct_only_flag_dps != value))
-				{
-					this._local_option_pct_only_flag_dps = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_freeze_only_flag_dps", DbType="Char(1)")]
-		public System.Nullable<char> freeze_only_flag_dps
-		{
-			get
-			{
-				return this._freeze_only_flag_dps;
-			}
-			set
-			{
-				if ((this._freeze_only_flag_dps != value))
-				{
-					this._freeze_only_flag_dps = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhs_exempt", DbType="Char(1)")]
-		public System.Nullable<char> dvhs_exempt
-		{
-			get
-			{
-				return this._dvhs_exempt;
-			}
-			set
-			{
-				if ((this._dvhs_exempt != value))
-				{
-					this._dvhs_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hs_qualify_yr", DbType="VarChar(4)")]
-		public string hs_qualify_yr
-		{
-			get
-			{
-				return this._hs_qualify_yr;
-			}
-			set
-			{
-				if ((this._hs_qualify_yr != value))
-				{
-					this._hs_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65_qualify_yr", DbType="VarChar(4)")]
-		public string ov65_qualify_yr
-		{
-			get
-			{
-				return this._ov65_qualify_yr;
-			}
-			set
-			{
-				if ((this._ov65_qualify_yr != value))
-				{
-					this._ov65_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65s_qualify_yr", DbType="VarChar(4)")]
-		public string ov65s_qualify_yr
-		{
-			get
-			{
-				return this._ov65s_qualify_yr;
-			}
-			set
-			{
-				if ((this._ov65s_qualify_yr != value))
-				{
-					this._ov65s_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp_qualify_yr", DbType="VarChar(4)")]
-		public string dp_qualify_yr
-		{
-			get
-			{
-				return this._dp_qualify_yr;
-			}
-			set
-			{
-				if ((this._dp_qualify_yr != value))
-				{
-					this._dp_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dps_qualify_yr", DbType="VarChar(4)")]
-		public string dps_qualify_yr
-		{
-			get
-			{
-				return this._dps_qualify_yr;
-			}
-			set
-			{
-				if ((this._dps_qualify_yr != value))
-				{
-					this._dps_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1_qualify_yr", DbType="VarChar(4)")]
-		public string dv1_qualify_yr
-		{
-			get
-			{
-				return this._dv1_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv1_qualify_yr != value))
-				{
-					this._dv1_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1s_qualify_yr", DbType="VarChar(4)")]
-		public string dv1s_qualify_yr
-		{
-			get
-			{
-				return this._dv1s_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv1s_qualify_yr != value))
-				{
-					this._dv1s_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2_qualify_yr", DbType="VarChar(4)")]
-		public string dv2_qualify_yr
-		{
-			get
-			{
-				return this._dv2_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv2_qualify_yr != value))
-				{
-					this._dv2_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2s_qualify_yr", DbType="VarChar(4)")]
-		public string dv2s_qualify_yr
-		{
-			get
-			{
-				return this._dv2s_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv2s_qualify_yr != value))
-				{
-					this._dv2s_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3_qualify_yr", DbType="VarChar(4)")]
-		public string dv3_qualify_yr
-		{
-			get
-			{
-				return this._dv3_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv3_qualify_yr != value))
-				{
-					this._dv3_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3s_qualify_yr", DbType="VarChar(4)")]
-		public string dv3s_qualify_yr
-		{
-			get
-			{
-				return this._dv3s_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv3s_qualify_yr != value))
-				{
-					this._dv3s_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4_qualify_yr", DbType="VarChar(4)")]
-		public string dv4_qualify_yr
-		{
-			get
-			{
-				return this._dv4_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv4_qualify_yr != value))
-				{
-					this._dv4_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4s_qualify_yr", DbType="VarChar(4)")]
-		public string dv4s_qualify_yr
-		{
-			get
-			{
-				return this._dv4s_qualify_yr;
-			}
-			set
-			{
-				if ((this._dv4s_qualify_yr != value))
-				{
-					this._dv4s_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhs_qualify_yr", DbType="VarChar(4)")]
-		public string dvhs_qualify_yr
-		{
-			get
-			{
-				return this._dvhs_qualify_yr;
-			}
-			set
-			{
-				if ((this._dvhs_qualify_yr != value))
-				{
-					this._dvhs_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_qualify_yr", DbType="VarChar(4)")]
-		public string ex_qualify_yr
-		{
-			get
-			{
-				return this._ex_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_qualify_yr != value))
-				{
-					this._ex_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ab_qualify_yr", DbType="VarChar(4)")]
-		public string ab_qualify_yr
-		{
-			get
-			{
-				return this._ab_qualify_yr;
-			}
-			set
-			{
-				if ((this._ab_qualify_yr != value))
-				{
-					this._ab_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_en_qualify_yr", DbType="VarChar(4)")]
-		public string en_qualify_yr
-		{
-			get
-			{
-				return this._en_qualify_yr;
-			}
-			set
-			{
-				if ((this._en_qualify_yr != value))
-				{
-					this._en_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fr_qualify_yr", DbType="VarChar(4)")]
-		public string fr_qualify_yr
-		{
-			get
-			{
-				return this._fr_qualify_yr;
-			}
-			set
-			{
-				if ((this._fr_qualify_yr != value))
-				{
-					this._fr_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ht_qualify_yr", DbType="VarChar(4)")]
-		public string ht_qualify_yr
-		{
-			get
-			{
-				return this._ht_qualify_yr;
-			}
-			set
-			{
-				if ((this._ht_qualify_yr != value))
-				{
-					this._ht_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_qualify_yr", DbType="VarChar(4)")]
-		public string pro_qualify_yr
-		{
-			get
-			{
-				return this._pro_qualify_yr;
-			}
-			set
-			{
-				if ((this._pro_qualify_yr != value))
-				{
-					this._pro_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pc_qualify_yr", DbType="VarChar(4)")]
-		public string pc_qualify_yr
-		{
-			get
-			{
-				return this._pc_qualify_yr;
-			}
-			set
-			{
-				if ((this._pc_qualify_yr != value))
-				{
-					this._pc_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_so_qualify_yr", DbType="VarChar(4)")]
-		public string so_qualify_yr
-		{
-			get
-			{
-				return this._so_qualify_yr;
-			}
-			set
-			{
-				if ((this._so_qualify_yr != value))
-				{
-					this._so_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex366_qualify_yr", DbType="VarChar(4)")]
-		public string ex366_qualify_yr
-		{
-			get
-			{
-				return this._ex366_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex366_qualify_yr != value))
-				{
-					this._ex366_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ch_qualify_yr", DbType="VarChar(4)")]
-		public string ch_qualify_yr
-		{
-			get
-			{
-				return this._ch_qualify_yr;
-			}
-			set
-			{
-				if ((this._ch_qualify_yr != value))
-				{
-					this._ch_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_eco_qualify_yr", DbType="VarChar(4)")]
-		public string eco_qualify_yr
-		{
-			get
-			{
-				return this._eco_qualify_yr;
-			}
-			set
-			{
-				if ((this._eco_qualify_yr != value))
-				{
-					this._eco_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chodo_qualify_yr", DbType="VarChar(4)")]
-		public string chodo_qualify_yr
-		{
-			get
-			{
-				return this._chodo_qualify_yr;
-			}
-			set
-			{
-				if ((this._chodo_qualify_yr != value))
-				{
-					this._chodo_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lih_qualify_yr", DbType="VarChar(4)")]
-		public string lih_qualify_yr
-		{
-			get
-			{
-				return this._lih_qualify_yr;
-			}
-			set
-			{
-				if ((this._lih_qualify_yr != value))
-				{
-					this._lih_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_git_qualify_yr", DbType="VarChar(4)")]
-		public string git_qualify_yr
-		{
-			get
-			{
-				return this._git_qualify_yr;
-			}
-			set
-			{
-				if ((this._git_qualify_yr != value))
-				{
-					this._git_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_line1", DbType="VarChar(60)")]
-		public string mortgage_addr_line1
-		{
-			get
-			{
-				return this._mortgage_addr_line1;
-			}
-			set
-			{
-				if ((this._mortgage_addr_line1 != value))
-				{
-					this._mortgage_addr_line1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_line2", DbType="VarChar(60)")]
-		public string mortgage_addr_line2
-		{
-			get
-			{
-				return this._mortgage_addr_line2;
-			}
-			set
-			{
-				if ((this._mortgage_addr_line2 != value))
-				{
-					this._mortgage_addr_line2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_line3", DbType="VarChar(60)")]
-		public string mortgage_addr_line3
-		{
-			get
-			{
-				return this._mortgage_addr_line3;
-			}
-			set
-			{
-				if ((this._mortgage_addr_line3 != value))
-				{
-					this._mortgage_addr_line3 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_city", DbType="VarChar(50)")]
-		public string mortgage_addr_city
-		{
-			get
-			{
-				return this._mortgage_addr_city;
-			}
-			set
-			{
-				if ((this._mortgage_addr_city != value))
-				{
-					this._mortgage_addr_city = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_state", DbType="VarChar(50)")]
-		public string mortgage_addr_state
-		{
-			get
-			{
-				return this._mortgage_addr_state;
-			}
-			set
-			{
-				if ((this._mortgage_addr_state != value))
-				{
-					this._mortgage_addr_state = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_country", DbType="VarChar(10)")]
-		public string mortgage_addr_country
-		{
-			get
-			{
-				return this._mortgage_addr_country;
-			}
-			set
-			{
-				if ((this._mortgage_addr_country != value))
-				{
-					this._mortgage_addr_country = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_zip", DbType="VarChar(10)")]
-		public string mortgage_addr_zip
-		{
-			get
-			{
-				return this._mortgage_addr_zip;
-			}
-			set
-			{
-				if ((this._mortgage_addr_zip != value))
-				{
-					this._mortgage_addr_zip = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_zip_cass", DbType="VarChar(10)")]
-		public string mortgage_addr_zip_cass
-		{
-			get
-			{
-				return this._mortgage_addr_zip_cass;
-			}
-			set
-			{
-				if ((this._mortgage_addr_zip_cass != value))
-				{
-					this._mortgage_addr_zip_cass = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_zip_rt", DbType="VarChar(10)")]
-		public string mortgage_addr_zip_rt
-		{
-			get
-			{
-				return this._mortgage_addr_zip_rt;
-			}
-			set
-			{
-				if ((this._mortgage_addr_zip_rt != value))
-				{
-					this._mortgage_addr_zip_rt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mortgage_addr_ml_deliverable", DbType="VarChar(10)")]
-		public string mortgage_addr_ml_deliverable
-		{
-			get
-			{
-				return this._mortgage_addr_ml_deliverable;
-			}
-			set
-			{
-				if ((this._mortgage_addr_ml_deliverable != value))
-				{
-					this._mortgage_addr_ml_deliverable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sic_code", DbType="VarChar(10)")]
-		public string sic_code
-		{
-			get
-			{
-				return this._sic_code;
-			}
-			set
-			{
-				if ((this._sic_code != value))
-				{
-					this._sic_code = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_omitted_property_flag", DbType="Char(1)")]
-		public System.Nullable<char> omitted_property_flag
-		{
-			get
-			{
-				return this._omitted_property_flag;
-			}
-			set
-			{
-				if ((this._omitted_property_flag != value))
-				{
-					this._omitted_property_flag = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hs_prorate_begin", DbType="VarChar(25)")]
-		public string hs_prorate_begin
-		{
-			get
-			{
-				return this._hs_prorate_begin;
-			}
-			set
-			{
-				if ((this._hs_prorate_begin != value))
-				{
-					this._hs_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hs_prorate_end", DbType="VarChar(25)")]
-		public string hs_prorate_end
-		{
-			get
-			{
-				return this._hs_prorate_end;
-			}
-			set
-			{
-				if ((this._hs_prorate_end != value))
-				{
-					this._hs_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65s_prorate_begin", DbType="VarChar(25)")]
-		public string ov65s_prorate_begin
-		{
-			get
-			{
-				return this._ov65s_prorate_begin;
-			}
-			set
-			{
-				if ((this._ov65s_prorate_begin != value))
-				{
-					this._ov65s_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ov65s_prorate_end", DbType="VarChar(25)")]
-		public string ov65s_prorate_end
-		{
-			get
-			{
-				return this._ov65s_prorate_end;
-			}
-			set
-			{
-				if ((this._ov65s_prorate_end != value))
-				{
-					this._ov65s_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp_prorate_begin", DbType="VarChar(25)")]
-		public string dp_prorate_begin
-		{
-			get
-			{
-				return this._dp_prorate_begin;
-			}
-			set
-			{
-				if ((this._dp_prorate_begin != value))
-				{
-					this._dp_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp_prorate_end", DbType="VarChar(25)")]
-		public string dp_prorate_end
-		{
-			get
-			{
-				return this._dp_prorate_end;
-			}
-			set
-			{
-				if ((this._dp_prorate_end != value))
-				{
-					this._dp_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1_prorate_begin", DbType="VarChar(25)")]
-		public string dv1_prorate_begin
-		{
-			get
-			{
-				return this._dv1_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv1_prorate_begin != value))
-				{
-					this._dv1_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1_prorate_end", DbType="VarChar(25)")]
-		public string dv1_prorate_end
-		{
-			get
-			{
-				return this._dv1_prorate_end;
-			}
-			set
-			{
-				if ((this._dv1_prorate_end != value))
-				{
-					this._dv1_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1s_prorate_begin", DbType="VarChar(25)")]
-		public string dv1s_prorate_begin
-		{
-			get
-			{
-				return this._dv1s_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv1s_prorate_begin != value))
-				{
-					this._dv1s_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv1s_prorate_end", DbType="VarChar(25)")]
-		public string dv1s_prorate_end
-		{
-			get
-			{
-				return this._dv1s_prorate_end;
-			}
-			set
-			{
-				if ((this._dv1s_prorate_end != value))
-				{
-					this._dv1s_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2_prorate_begin", DbType="VarChar(25)")]
-		public string dv2_prorate_begin
-		{
-			get
-			{
-				return this._dv2_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv2_prorate_begin != value))
-				{
-					this._dv2_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2_prorate_end", DbType="VarChar(25)")]
-		public string dv2_prorate_end
-		{
-			get
-			{
-				return this._dv2_prorate_end;
-			}
-			set
-			{
-				if ((this._dv2_prorate_end != value))
-				{
-					this._dv2_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2s_prorate_begin", DbType="VarChar(25)")]
-		public string dv2s_prorate_begin
-		{
-			get
-			{
-				return this._dv2s_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv2s_prorate_begin != value))
-				{
-					this._dv2s_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv2s_prorate_end", DbType="VarChar(25)")]
-		public string dv2s_prorate_end
-		{
-			get
-			{
-				return this._dv2s_prorate_end;
-			}
-			set
-			{
-				if ((this._dv2s_prorate_end != value))
-				{
-					this._dv2s_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3_prorate_begin", DbType="VarChar(25)")]
-		public string dv3_prorate_begin
-		{
-			get
-			{
-				return this._dv3_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv3_prorate_begin != value))
-				{
-					this._dv3_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3_prorate_end", DbType="VarChar(25)")]
-		public string dv3_prorate_end
-		{
-			get
-			{
-				return this._dv3_prorate_end;
-			}
-			set
-			{
-				if ((this._dv3_prorate_end != value))
-				{
-					this._dv3_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3s_prorate_begin", DbType="VarChar(25)")]
-		public string dv3s_prorate_begin
-		{
-			get
-			{
-				return this._dv3s_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv3s_prorate_begin != value))
-				{
-					this._dv3s_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv3s_prorate_end", DbType="VarChar(25)")]
-		public string dv3s_prorate_end
-		{
-			get
-			{
-				return this._dv3s_prorate_end;
-			}
-			set
-			{
-				if ((this._dv3s_prorate_end != value))
-				{
-					this._dv3s_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4_prorate_begin", DbType="VarChar(25)")]
-		public string dv4_prorate_begin
-		{
-			get
-			{
-				return this._dv4_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv4_prorate_begin != value))
-				{
-					this._dv4_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4_prorate_end", DbType="VarChar(25)")]
-		public string dv4_prorate_end
-		{
-			get
-			{
-				return this._dv4_prorate_end;
-			}
-			set
-			{
-				if ((this._dv4_prorate_end != value))
-				{
-					this._dv4_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4s_prorate_begin", DbType="VarChar(25)")]
-		public string dv4s_prorate_begin
-		{
-			get
-			{
-				return this._dv4s_prorate_begin;
-			}
-			set
-			{
-				if ((this._dv4s_prorate_begin != value))
-				{
-					this._dv4s_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dv4s_prorate_end", DbType="VarChar(25)")]
-		public string dv4s_prorate_end
-		{
-			get
-			{
-				return this._dv4s_prorate_end;
-			}
-			set
-			{
-				if ((this._dv4s_prorate_end != value))
-				{
-					this._dv4s_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lve_prorate_begin", DbType="VarChar(25)")]
-		public string lve_prorate_begin
-		{
-			get
-			{
-				return this._lve_prorate_begin;
-			}
-			set
-			{
-				if ((this._lve_prorate_begin != value))
-				{
-					this._lve_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lve_prorate_end", DbType="VarChar(25)")]
-		public string lve_prorate_end
-		{
-			get
-			{
-				return this._lve_prorate_end;
-			}
-			set
-			{
-				if ((this._lve_prorate_end != value))
-				{
-					this._lve_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ab_prorate_begin", DbType="VarChar(25)")]
-		public string ab_prorate_begin
-		{
-			get
-			{
-				return this._ab_prorate_begin;
-			}
-			set
-			{
-				if ((this._ab_prorate_begin != value))
-				{
-					this._ab_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ab_prorate_end", DbType="VarChar(25)")]
-		public string ab_prorate_end
-		{
-			get
-			{
-				return this._ab_prorate_end;
-			}
-			set
-			{
-				if ((this._ab_prorate_end != value))
-				{
-					this._ab_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_en_prorate_begin", DbType="VarChar(25)")]
-		public string en_prorate_begin
-		{
-			get
-			{
-				return this._en_prorate_begin;
-			}
-			set
-			{
-				if ((this._en_prorate_begin != value))
-				{
-					this._en_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_en_prorate_end", DbType="VarChar(25)")]
-		public string en_prorate_end
-		{
-			get
-			{
-				return this._en_prorate_end;
-			}
-			set
-			{
-				if ((this._en_prorate_end != value))
-				{
-					this._en_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fr_prorate_begin", DbType="VarChar(25)")]
-		public string fr_prorate_begin
-		{
-			get
-			{
-				return this._fr_prorate_begin;
-			}
-			set
-			{
-				if ((this._fr_prorate_begin != value))
-				{
-					this._fr_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fr_prorate_end", DbType="VarChar(25)")]
-		public string fr_prorate_end
-		{
-			get
-			{
-				return this._fr_prorate_end;
-			}
-			set
-			{
-				if ((this._fr_prorate_end != value))
-				{
-					this._fr_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ht_prorate_begin", DbType="VarChar(25)")]
-		public string ht_prorate_begin
-		{
-			get
-			{
-				return this._ht_prorate_begin;
-			}
-			set
-			{
-				if ((this._ht_prorate_begin != value))
-				{
-					this._ht_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ht_prorate_end", DbType="VarChar(25)")]
-		public string ht_prorate_end
-		{
-			get
-			{
-				return this._ht_prorate_end;
-			}
-			set
-			{
-				if ((this._ht_prorate_end != value))
-				{
-					this._ht_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_prorate_begin", DbType="VarChar(25)")]
-		public string pro_prorate_begin
-		{
-			get
-			{
-				return this._pro_prorate_begin;
-			}
-			set
-			{
-				if ((this._pro_prorate_begin != value))
-				{
-					this._pro_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_prorate_end", DbType="VarChar(25)")]
-		public string pro_prorate_end
-		{
-			get
-			{
-				return this._pro_prorate_end;
-			}
-			set
-			{
-				if ((this._pro_prorate_end != value))
-				{
-					this._pro_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pc_prorate_begin", DbType="VarChar(25)")]
-		public string pc_prorate_begin
-		{
-			get
-			{
-				return this._pc_prorate_begin;
-			}
-			set
-			{
-				if ((this._pc_prorate_begin != value))
-				{
-					this._pc_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pc_prorate_end", DbType="VarChar(25)")]
-		public string pc_prorate_end
-		{
-			get
-			{
-				return this._pc_prorate_end;
-			}
-			set
-			{
-				if ((this._pc_prorate_end != value))
-				{
-					this._pc_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_so_prorate_begin", DbType="VarChar(25)")]
-		public string so_prorate_begin
-		{
-			get
-			{
-				return this._so_prorate_begin;
-			}
-			set
-			{
-				if ((this._so_prorate_begin != value))
-				{
-					this._so_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_so_prorate_end", DbType="VarChar(25)")]
-		public string so_prorate_end
-		{
-			get
-			{
-				return this._so_prorate_end;
-			}
-			set
-			{
-				if ((this._so_prorate_end != value))
-				{
-					this._so_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex366_prorate_begin", DbType="VarChar(25)")]
-		public string ex366_prorate_begin
-		{
-			get
-			{
-				return this._ex366_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex366_prorate_begin != value))
-				{
-					this._ex366_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex366_prorate_end", DbType="VarChar(25)")]
-		public string ex366_prorate_end
-		{
-			get
-			{
-				return this._ex366_prorate_end;
-			}
-			set
-			{
-				if ((this._ex366_prorate_end != value))
-				{
-					this._ex366_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ch_prorate_begin", DbType="VarChar(25)")]
-		public string ch_prorate_begin
-		{
-			get
-			{
-				return this._ch_prorate_begin;
-			}
-			set
-			{
-				if ((this._ch_prorate_begin != value))
-				{
-					this._ch_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ch_prorate_end", DbType="VarChar(25)")]
-		public string ch_prorate_end
-		{
-			get
-			{
-				return this._ch_prorate_end;
-			}
-			set
-			{
-				if ((this._ch_prorate_end != value))
-				{
-					this._ch_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dps_prorate_begin", DbType="VarChar(25)")]
-		public string dps_prorate_begin
-		{
-			get
-			{
-				return this._dps_prorate_begin;
-			}
-			set
-			{
-				if ((this._dps_prorate_begin != value))
-				{
-					this._dps_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dps_prorate_end", DbType="VarChar(25)")]
-		public string dps_prorate_end
-		{
-			get
-			{
-				return this._dps_prorate_end;
-			}
-			set
-			{
-				if ((this._dps_prorate_end != value))
-				{
-					this._dps_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_eco_prorate_begin", DbType="VarChar(25)")]
-		public string eco_prorate_begin
-		{
-			get
-			{
-				return this._eco_prorate_begin;
-			}
-			set
-			{
-				if ((this._eco_prorate_begin != value))
-				{
-					this._eco_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_eco_prorate_end", DbType="VarChar(25)")]
-		public string eco_prorate_end
-		{
-			get
-			{
-				return this._eco_prorate_end;
-			}
-			set
-			{
-				if ((this._eco_prorate_end != value))
-				{
-					this._eco_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chodo_prorate_begin", DbType="VarChar(25)")]
-		public string chodo_prorate_begin
-		{
-			get
-			{
-				return this._chodo_prorate_begin;
-			}
-			set
-			{
-				if ((this._chodo_prorate_begin != value))
-				{
-					this._chodo_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chodo_prorate_end", DbType="VarChar(25)")]
-		public string chodo_prorate_end
-		{
-			get
-			{
-				return this._chodo_prorate_end;
-			}
-			set
-			{
-				if ((this._chodo_prorate_end != value))
-				{
-					this._chodo_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lih_prorate_begin", DbType="VarChar(25)")]
-		public string lih_prorate_begin
-		{
-			get
-			{
-				return this._lih_prorate_begin;
-			}
-			set
-			{
-				if ((this._lih_prorate_begin != value))
-				{
-					this._lih_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lih_prorate_end", DbType="VarChar(25)")]
-		public string lih_prorate_end
-		{
-			get
-			{
-				return this._lih_prorate_end;
-			}
-			set
-			{
-				if ((this._lih_prorate_end != value))
-				{
-					this._lih_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_git_prorate_begin", DbType="VarChar(25)")]
-		public string git_prorate_begin
-		{
-			get
-			{
-				return this._git_prorate_begin;
-			}
-			set
-			{
-				if ((this._git_prorate_begin != value))
-				{
-					this._git_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_git_prorate_end", DbType="VarChar(25)")]
-		public string git_prorate_end
-		{
-			get
-			{
-				return this._git_prorate_end;
-			}
-			set
-			{
-				if ((this._git_prorate_end != value))
-				{
-					this._git_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clt_exempt", DbType="VarChar(1)")]
-		public string clt_exempt
-		{
-			get
-			{
-				return this._clt_exempt;
-			}
-			set
-			{
-				if ((this._clt_exempt != value))
-				{
-					this._clt_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clt_prorate_begin", DbType="VarChar(25)")]
-		public string clt_prorate_begin
-		{
-			get
-			{
-				return this._clt_prorate_begin;
-			}
-			set
-			{
-				if ((this._clt_prorate_begin != value))
-				{
-					this._clt_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clt_prorate_end", DbType="VarChar(25)")]
-		public string clt_prorate_end
-		{
-			get
-			{
-				return this._clt_prorate_end;
-			}
-			set
-			{
-				if ((this._clt_prorate_end != value))
-				{
-					this._clt_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clt_qualify_yr", DbType="VarChar(4)")]
-		public string clt_qualify_yr
-		{
-			get
-			{
-				return this._clt_qualify_yr;
-			}
-			set
-			{
-				if ((this._clt_qualify_yr != value))
-				{
-					this._clt_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhss_exempt", DbType="VarChar(1)")]
-		public string dvhss_exempt
-		{
-			get
-			{
-				return this._dvhss_exempt;
-			}
-			set
-			{
-				if ((this._dvhss_exempt != value))
-				{
-					this._dvhss_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhss_prorate_begin", DbType="VarChar(25)")]
-		public string dvhss_prorate_begin
-		{
-			get
-			{
-				return this._dvhss_prorate_begin;
-			}
-			set
-			{
-				if ((this._dvhss_prorate_begin != value))
-				{
-					this._dvhss_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhss_prorate_end", DbType="VarChar(25)")]
-		public string dvhss_prorate_end
-		{
-			get
-			{
-				return this._dvhss_prorate_end;
-			}
-			set
-			{
-				if ((this._dvhss_prorate_end != value))
-				{
-					this._dvhss_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhss_qualify_yr", DbType="VarChar(4)")]
-		public string dvhss_qualify_yr
-		{
-			get
-			{
-				return this._dvhss_qualify_yr;
-			}
-			set
-			{
-				if ((this._dvhss_qualify_yr != value))
-				{
-					this._dvhss_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_omitted_imprv_hstd_val", DbType="VarChar(15)")]
-		public string omitted_imprv_hstd_val
-		{
-			get
-			{
-				return this._omitted_imprv_hstd_val;
-			}
-			set
-			{
-				if ((this._omitted_imprv_hstd_val != value))
-				{
-					this._omitted_imprv_hstd_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_omitted_imprv_non_hstd_val", DbType="VarChar(15)")]
-		public string omitted_imprv_non_hstd_val
-		{
-			get
-			{
-				return this._omitted_imprv_non_hstd_val;
-			}
-			set
-			{
-				if ((this._omitted_imprv_non_hstd_val != value))
-				{
-					this._omitted_imprv_non_hstd_val = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhs_prorate_begin", DbType="VarChar(25)")]
-		public string dvhs_prorate_begin
-		{
-			get
-			{
-				return this._dvhs_prorate_begin;
-			}
-			set
-			{
-				if ((this._dvhs_prorate_begin != value))
-				{
-					this._dvhs_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvhs_prorate_end", DbType="VarChar(25)")]
-		public string dvhs_prorate_end
-		{
-			get
-			{
-				return this._dvhs_prorate_end;
-			}
-			set
-			{
-				if ((this._dvhs_prorate_end != value))
-				{
-					this._dvhs_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xd_exempt", DbType="VarChar(1)")]
-		public string ex_xd_exempt
-		{
-			get
-			{
-				return this._ex_xd_exempt;
-			}
-			set
-			{
-				if ((this._ex_xd_exempt != value))
-				{
-					this._ex_xd_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xd_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xd_qualify_yr
-		{
-			get
-			{
-				return this._ex_xd_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xd_qualify_yr != value))
-				{
-					this._ex_xd_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xd_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xd_prorate_begin
-		{
-			get
-			{
-				return this._ex_xd_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xd_prorate_begin != value))
-				{
-					this._ex_xd_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xd_prorate_end", DbType="VarChar(25)")]
-		public string ex_xd_prorate_end
-		{
-			get
-			{
-				return this._ex_xd_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xd_prorate_end != value))
-				{
-					this._ex_xd_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xf_exempt", DbType="VarChar(1)")]
-		public string ex_xf_exempt
-		{
-			get
-			{
-				return this._ex_xf_exempt;
-			}
-			set
-			{
-				if ((this._ex_xf_exempt != value))
-				{
-					this._ex_xf_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xf_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xf_qualify_yr
-		{
-			get
-			{
-				return this._ex_xf_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xf_qualify_yr != value))
-				{
-					this._ex_xf_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xf_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xf_prorate_begin
-		{
-			get
-			{
-				return this._ex_xf_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xf_prorate_begin != value))
-				{
-					this._ex_xf_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xf_prorate_end", DbType="VarChar(25)")]
-		public string ex_xf_prorate_end
-		{
-			get
-			{
-				return this._ex_xf_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xf_prorate_end != value))
-				{
-					this._ex_xf_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xg_exempt", DbType="VarChar(1)")]
-		public string ex_xg_exempt
-		{
-			get
-			{
-				return this._ex_xg_exempt;
-			}
-			set
-			{
-				if ((this._ex_xg_exempt != value))
-				{
-					this._ex_xg_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xg_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xg_qualify_yr
-		{
-			get
-			{
-				return this._ex_xg_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xg_qualify_yr != value))
-				{
-					this._ex_xg_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xg_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xg_prorate_begin
-		{
-			get
-			{
-				return this._ex_xg_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xg_prorate_begin != value))
-				{
-					this._ex_xg_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xg_prorate_end", DbType="VarChar(25)")]
-		public string ex_xg_prorate_end
-		{
-			get
-			{
-				return this._ex_xg_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xg_prorate_end != value))
-				{
-					this._ex_xg_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xh_exempt", DbType="VarChar(1)")]
-		public string ex_xh_exempt
-		{
-			get
-			{
-				return this._ex_xh_exempt;
-			}
-			set
-			{
-				if ((this._ex_xh_exempt != value))
-				{
-					this._ex_xh_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xh_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xh_qualify_yr
-		{
-			get
-			{
-				return this._ex_xh_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xh_qualify_yr != value))
-				{
-					this._ex_xh_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xh_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xh_prorate_begin
-		{
-			get
-			{
-				return this._ex_xh_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xh_prorate_begin != value))
-				{
-					this._ex_xh_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xh_prorate_end", DbType="VarChar(25)")]
-		public string ex_xh_prorate_end
-		{
-			get
-			{
-				return this._ex_xh_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xh_prorate_end != value))
-				{
-					this._ex_xh_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xi_exempt", DbType="VarChar(1)")]
-		public string ex_xi_exempt
-		{
-			get
-			{
-				return this._ex_xi_exempt;
-			}
-			set
-			{
-				if ((this._ex_xi_exempt != value))
-				{
-					this._ex_xi_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xi_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xi_qualify_yr
-		{
-			get
-			{
-				return this._ex_xi_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xi_qualify_yr != value))
-				{
-					this._ex_xi_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xi_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xi_prorate_begin
-		{
-			get
-			{
-				return this._ex_xi_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xi_prorate_begin != value))
-				{
-					this._ex_xi_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xi_prorate_end", DbType="VarChar(25)")]
-		public string ex_xi_prorate_end
-		{
-			get
-			{
-				return this._ex_xi_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xi_prorate_end != value))
-				{
-					this._ex_xi_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xj_exempt", DbType="VarChar(1)")]
-		public string ex_xj_exempt
-		{
-			get
-			{
-				return this._ex_xj_exempt;
-			}
-			set
-			{
-				if ((this._ex_xj_exempt != value))
-				{
-					this._ex_xj_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xj_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xj_qualify_yr
-		{
-			get
-			{
-				return this._ex_xj_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xj_qualify_yr != value))
-				{
-					this._ex_xj_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xj_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xj_prorate_begin
-		{
-			get
-			{
-				return this._ex_xj_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xj_prorate_begin != value))
-				{
-					this._ex_xj_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xj_prorate_end", DbType="VarChar(25)")]
-		public string ex_xj_prorate_end
-		{
-			get
-			{
-				return this._ex_xj_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xj_prorate_end != value))
-				{
-					this._ex_xj_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xl_exempt", DbType="VarChar(1)")]
-		public string ex_xl_exempt
-		{
-			get
-			{
-				return this._ex_xl_exempt;
-			}
-			set
-			{
-				if ((this._ex_xl_exempt != value))
-				{
-					this._ex_xl_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xl_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xl_qualify_yr
-		{
-			get
-			{
-				return this._ex_xl_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xl_qualify_yr != value))
-				{
-					this._ex_xl_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xl_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xl_prorate_begin
-		{
-			get
-			{
-				return this._ex_xl_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xl_prorate_begin != value))
-				{
-					this._ex_xl_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xl_prorate_end", DbType="VarChar(25)")]
-		public string ex_xl_prorate_end
-		{
-			get
-			{
-				return this._ex_xl_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xl_prorate_end != value))
-				{
-					this._ex_xl_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xm_exempt", DbType="VarChar(1)")]
-		public string ex_xm_exempt
-		{
-			get
-			{
-				return this._ex_xm_exempt;
-			}
-			set
-			{
-				if ((this._ex_xm_exempt != value))
-				{
-					this._ex_xm_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xm_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xm_qualify_yr
-		{
-			get
-			{
-				return this._ex_xm_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xm_qualify_yr != value))
-				{
-					this._ex_xm_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xm_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xm_prorate_begin
-		{
-			get
-			{
-				return this._ex_xm_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xm_prorate_begin != value))
-				{
-					this._ex_xm_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xm_prorate_end", DbType="VarChar(25)")]
-		public string ex_xm_prorate_end
-		{
-			get
-			{
-				return this._ex_xm_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xm_prorate_end != value))
-				{
-					this._ex_xm_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xn_exempt", DbType="VarChar(1)")]
-		public string ex_xn_exempt
-		{
-			get
-			{
-				return this._ex_xn_exempt;
-			}
-			set
-			{
-				if ((this._ex_xn_exempt != value))
-				{
-					this._ex_xn_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xn_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xn_qualify_yr
-		{
-			get
-			{
-				return this._ex_xn_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xn_qualify_yr != value))
-				{
-					this._ex_xn_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xn_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xn_prorate_begin
-		{
-			get
-			{
-				return this._ex_xn_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xn_prorate_begin != value))
-				{
-					this._ex_xn_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xn_prorate_end", DbType="VarChar(25)")]
-		public string ex_xn_prorate_end
-		{
-			get
-			{
-				return this._ex_xn_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xn_prorate_end != value))
-				{
-					this._ex_xn_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xo_exempt", DbType="VarChar(1)")]
-		public string ex_xo_exempt
-		{
-			get
-			{
-				return this._ex_xo_exempt;
-			}
-			set
-			{
-				if ((this._ex_xo_exempt != value))
-				{
-					this._ex_xo_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xo_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xo_qualify_yr
-		{
-			get
-			{
-				return this._ex_xo_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xo_qualify_yr != value))
-				{
-					this._ex_xo_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xo_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xo_prorate_begin
-		{
-			get
-			{
-				return this._ex_xo_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xo_prorate_begin != value))
-				{
-					this._ex_xo_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xo_prorate_end", DbType="VarChar(25)")]
-		public string ex_xo_prorate_end
-		{
-			get
-			{
-				return this._ex_xo_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xo_prorate_end != value))
-				{
-					this._ex_xo_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xp_exempt", DbType="VarChar(1)")]
-		public string ex_xp_exempt
-		{
-			get
-			{
-				return this._ex_xp_exempt;
-			}
-			set
-			{
-				if ((this._ex_xp_exempt != value))
-				{
-					this._ex_xp_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xp_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xp_qualify_yr
-		{
-			get
-			{
-				return this._ex_xp_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xp_qualify_yr != value))
-				{
-					this._ex_xp_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xp_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xp_prorate_begin
-		{
-			get
-			{
-				return this._ex_xp_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xp_prorate_begin != value))
-				{
-					this._ex_xp_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xp_prorate_end", DbType="VarChar(25)")]
-		public string ex_xp_prorate_end
-		{
-			get
-			{
-				return this._ex_xp_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xp_prorate_end != value))
-				{
-					this._ex_xp_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xq_exempt", DbType="VarChar(1)")]
-		public string ex_xq_exempt
-		{
-			get
-			{
-				return this._ex_xq_exempt;
-			}
-			set
-			{
-				if ((this._ex_xq_exempt != value))
-				{
-					this._ex_xq_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xq_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xq_qualify_yr
-		{
-			get
-			{
-				return this._ex_xq_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xq_qualify_yr != value))
-				{
-					this._ex_xq_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xq_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xq_prorate_begin
-		{
-			get
-			{
-				return this._ex_xq_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xq_prorate_begin != value))
-				{
-					this._ex_xq_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xq_prorate_end", DbType="VarChar(25)")]
-		public string ex_xq_prorate_end
-		{
-			get
-			{
-				return this._ex_xq_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xq_prorate_end != value))
-				{
-					this._ex_xq_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xr_exempt", DbType="VarChar(1)")]
-		public string ex_xr_exempt
-		{
-			get
-			{
-				return this._ex_xr_exempt;
-			}
-			set
-			{
-				if ((this._ex_xr_exempt != value))
-				{
-					this._ex_xr_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xr_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xr_qualify_yr
-		{
-			get
-			{
-				return this._ex_xr_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xr_qualify_yr != value))
-				{
-					this._ex_xr_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xr_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xr_prorate_begin
-		{
-			get
-			{
-				return this._ex_xr_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xr_prorate_begin != value))
-				{
-					this._ex_xr_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xr_prorate_end", DbType="VarChar(25)")]
-		public string ex_xr_prorate_end
-		{
-			get
-			{
-				return this._ex_xr_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xr_prorate_end != value))
-				{
-					this._ex_xr_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xs_exempt", DbType="VarChar(1)")]
-		public string ex_xs_exempt
-		{
-			get
-			{
-				return this._ex_xs_exempt;
-			}
-			set
-			{
-				if ((this._ex_xs_exempt != value))
-				{
-					this._ex_xs_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xs_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xs_qualify_yr
-		{
-			get
-			{
-				return this._ex_xs_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xs_qualify_yr != value))
-				{
-					this._ex_xs_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xs_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xs_prorate_begin
-		{
-			get
-			{
-				return this._ex_xs_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xs_prorate_begin != value))
-				{
-					this._ex_xs_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xs_prorate_end", DbType="VarChar(25)")]
-		public string ex_xs_prorate_end
-		{
-			get
-			{
-				return this._ex_xs_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xs_prorate_end != value))
-				{
-					this._ex_xs_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xt_exempt", DbType="VarChar(1)")]
-		public string ex_xt_exempt
-		{
-			get
-			{
-				return this._ex_xt_exempt;
-			}
-			set
-			{
-				if ((this._ex_xt_exempt != value))
-				{
-					this._ex_xt_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xt_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xt_qualify_yr
-		{
-			get
-			{
-				return this._ex_xt_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xt_qualify_yr != value))
-				{
-					this._ex_xt_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xt_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xt_prorate_begin
-		{
-			get
-			{
-				return this._ex_xt_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xt_prorate_begin != value))
-				{
-					this._ex_xt_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xt_prorate_end", DbType="VarChar(25)")]
-		public string ex_xt_prorate_end
-		{
-			get
-			{
-				return this._ex_xt_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xt_prorate_end != value))
-				{
-					this._ex_xt_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xu_exempt", DbType="VarChar(1)")]
-		public string ex_xu_exempt
-		{
-			get
-			{
-				return this._ex_xu_exempt;
-			}
-			set
-			{
-				if ((this._ex_xu_exempt != value))
-				{
-					this._ex_xu_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xu_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xu_qualify_yr
-		{
-			get
-			{
-				return this._ex_xu_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xu_qualify_yr != value))
-				{
-					this._ex_xu_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xu_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xu_prorate_begin
-		{
-			get
-			{
-				return this._ex_xu_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xu_prorate_begin != value))
-				{
-					this._ex_xu_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xu_prorate_end", DbType="VarChar(25)")]
-		public string ex_xu_prorate_end
-		{
-			get
-			{
-				return this._ex_xu_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xu_prorate_end != value))
-				{
-					this._ex_xu_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xv_exempt", DbType="VarChar(1)")]
-		public string ex_xv_exempt
-		{
-			get
-			{
-				return this._ex_xv_exempt;
-			}
-			set
-			{
-				if ((this._ex_xv_exempt != value))
-				{
-					this._ex_xv_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xv_qualify_yr", DbType="VarChar(4)")]
-		public string ex_xv_qualify_yr
-		{
-			get
-			{
-				return this._ex_xv_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xv_qualify_yr != value))
-				{
-					this._ex_xv_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xv_prorate_begin", DbType="VarChar(25)")]
-		public string ex_xv_prorate_begin
-		{
-			get
-			{
-				return this._ex_xv_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xv_prorate_begin != value))
-				{
-					this._ex_xv_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xv_prorate_end", DbType="VarChar(25)")]
-		public string ex_xv_prorate_end
-		{
-			get
-			{
-				return this._ex_xv_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xv_prorate_end != value))
-				{
-					this._ex_xv_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xa_exempt", DbType="VarChar(1)")]
-		public string ex_xa_exempt
-		{
-			get
-			{
-				return this._ex_xa_exempt;
-			}
-			set
-			{
-				if ((this._ex_xa_exempt != value))
-				{
-					this._ex_xa_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xa_qualify_yr", DbType="Int")]
-		public System.Nullable<int> ex_xa_qualify_yr
-		{
-			get
-			{
-				return this._ex_xa_qualify_yr;
-			}
-			set
-			{
-				if ((this._ex_xa_qualify_yr != value))
-				{
-					this._ex_xa_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xa_prorate_begin", DbType="Int")]
-		public System.Nullable<int> ex_xa_prorate_begin
-		{
-			get
-			{
-				return this._ex_xa_prorate_begin;
-			}
-			set
-			{
-				if ((this._ex_xa_prorate_begin != value))
-				{
-					this._ex_xa_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ex_xa_prorate_end", DbType="Int")]
-		public System.Nullable<int> ex_xa_prorate_end
-		{
-			get
-			{
-				return this._ex_xa_prorate_end;
-			}
-			set
-			{
-				if ((this._ex_xa_prorate_end != value))
-				{
-					this._ex_xa_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lve_qualify_yr", DbType="Int")]
-		public System.Nullable<int> lve_qualify_yr
-		{
-			get
-			{
-				return this._lve_qualify_yr;
-			}
-			set
-			{
-				if ((this._lve_qualify_yr != value))
-				{
-					this._lve_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ppv_exempt", DbType="VarChar(1)")]
-		public string ppv_exempt
-		{
-			get
-			{
-				return this._ppv_exempt;
-			}
-			set
-			{
-				if ((this._ppv_exempt != value))
-				{
-					this._ppv_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ppv_qualify_yr", DbType="Int")]
-		public System.Nullable<int> ppv_qualify_yr
-		{
-			get
-			{
-				return this._ppv_qualify_yr;
-			}
-			set
-			{
-				if ((this._ppv_qualify_yr != value))
-				{
-					this._ppv_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ppv_prorate_begin", DbType="Int")]
-		public System.Nullable<int> ppv_prorate_begin
-		{
-			get
-			{
-				return this._ppv_prorate_begin;
-			}
-			set
-			{
-				if ((this._ppv_prorate_begin != value))
-				{
-					this._ppv_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ppv_prorate_end", DbType="Int")]
-		public System.Nullable<int> ppv_prorate_end
-		{
-			get
-			{
-				return this._ppv_prorate_end;
-			}
-			set
-			{
-				if ((this._ppv_prorate_end != value))
-				{
-					this._ppv_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvch_exempt", DbType="VarChar(1)")]
-		public string dvch_exempt
-		{
-			get
-			{
-				return this._dvch_exempt;
-			}
-			set
-			{
-				if ((this._dvch_exempt != value))
-				{
-					this._dvch_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvch_qualify_yr", DbType="Int")]
-		public System.Nullable<int> dvch_qualify_yr
-		{
-			get
-			{
-				return this._dvch_qualify_yr;
-			}
-			set
-			{
-				if ((this._dvch_qualify_yr != value))
-				{
-					this._dvch_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvch_prorate_begin", DbType="Int")]
-		public System.Nullable<int> dvch_prorate_begin
-		{
-			get
-			{
-				return this._dvch_prorate_begin;
-			}
-			set
-			{
-				if ((this._dvch_prorate_begin != value))
-				{
-					this._dvch_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvch_prorate_end", DbType="Int")]
-		public System.Nullable<int> dvch_prorate_end
-		{
-			get
-			{
-				return this._dvch_prorate_end;
-			}
-			set
-			{
-				if ((this._dvch_prorate_end != value))
-				{
-					this._dvch_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvchs_exempt", DbType="VarChar(1)")]
-		public string dvchs_exempt
-		{
-			get
-			{
-				return this._dvchs_exempt;
-			}
-			set
-			{
-				if ((this._dvchs_exempt != value))
-				{
-					this._dvchs_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvchs_qualify_yr", DbType="Int")]
-		public System.Nullable<int> dvchs_qualify_yr
-		{
-			get
-			{
-				return this._dvchs_qualify_yr;
-			}
-			set
-			{
-				if ((this._dvchs_qualify_yr != value))
-				{
-					this._dvchs_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvchs_prorate_begin", DbType="Int")]
-		public System.Nullable<int> dvchs_prorate_begin
-		{
-			get
-			{
-				return this._dvchs_prorate_begin;
-			}
-			set
-			{
-				if ((this._dvchs_prorate_begin != value))
-				{
-					this._dvchs_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dvchs_prorate_end", DbType="Int")]
-		public System.Nullable<int> dvchs_prorate_end
-		{
-			get
-			{
-				return this._dvchs_prorate_end;
-			}
-			set
-			{
-				if ((this._dvchs_prorate_end != value))
-				{
-					this._dvchs_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masss_exempt", DbType="VarChar(1)")]
-		public string masss_exempt
-		{
-			get
-			{
-				return this._masss_exempt;
-			}
-			set
-			{
-				if ((this._masss_exempt != value))
-				{
-					this._masss_exempt = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masss_qualify_yr", DbType="Int")]
-		public System.Nullable<int> masss_qualify_yr
-		{
-			get
-			{
-				return this._masss_qualify_yr;
-			}
-			set
-			{
-				if ((this._masss_qualify_yr != value))
-				{
-					this._masss_qualify_yr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masss_prorate_begin", DbType="Int")]
-		public System.Nullable<int> masss_prorate_begin
-		{
-			get
-			{
-				return this._masss_prorate_begin;
-			}
-			set
-			{
-				if ((this._masss_prorate_begin != value))
-				{
-					this._masss_prorate_begin = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masss_prorate_end", DbType="Int")]
-		public System.Nullable<int> masss_prorate_end
-		{
-			get
-			{
-				return this._masss_prorate_end;
-			}
-			set
-			{
-				if ((this._masss_prorate_end != value))
-				{
-					this._masss_prorate_end = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pp_late_interstate_allocation_val", DbType="Money")]
-		public System.Nullable<decimal> pp_late_interstate_allocation_val
-		{
-			get
-			{
-				return this._pp_late_interstate_allocation_val;
-			}
-			set
-			{
-				if ((this._pp_late_interstate_allocation_val != value))
-				{
-					this._pp_late_interstate_allocation_val = value;
+					this._exemptions = value;
 				}
 			}
 		}

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 84.25" name="db_ptc">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 16.125" name="db_ptc">
   <DataContextMoniker Name="/db_ptcDataContext" />
   <nestedChildShapes>
     <classShape Id="d531064a-1405-4173-87f3-a758c551ec46" absoluteBounds="2.625, 0.5, 2, 3.3093082682291666">
@@ -27,7 +27,7 @@
         <elementListCompartment Id="d4a3e50b-7cdb-433c-8bc6-c8706c609e0b" absoluteBounds="7.515, 1.46, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.75 : 5.72512044270833); (7.5 : 5.72512044270833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(6.75 : 5.72512044270833); (7.5 : 5.72512044270833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/db_ptcDataContext/Property/Property_Parcel" />
       <nodes>
         <classShapeMoniker Id="0d09625e-0432-44d3-a53b-43583298cfb6" />
@@ -47,7 +47,7 @@
         <classShapeMoniker Id="d531064a-1405-4173-87f3-a758c551ec46" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.75 : 4.69875); (4.75 : 4.69875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.75 : 4.76125); (4.75 : 4.76125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/db_ptcDataContext/Contact/Contact_Property" />
       <nodes>
         <classShapeMoniker Id="ffd0bdcc-5bfd-4486-9caa-a40e096291bb" />
@@ -80,10 +80,10 @@
         <classShapeMoniker Id="ec4b4393-189e-4aa9-9181-42bd6e1e3d6d" />
       </nodes>
     </associationConnector>
-    <classShape Id="52b8e52a-c428-48a7-b492-0611a6d4a20e" absoluteBounds="3.875, 4.375, 2, 79.652976888020817">
+    <classShape Id="a6f2eacd-be43-4e54-bff1-623051320823" absoluteBounds="4.25, 4.5, 2, 11.385968424479165">
       <DataClassMoniker Name="/db_ptcDataContext/SearchAppraisalDistrictData" />
       <nestedChildShapes>
-        <elementListCompartment Id="844ece48-05e3-4a19-9b54-6f424cea80fe" absoluteBounds="3.89, 4.835, 1.9700000000000002, 79.092976888020829" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0a6891d6-463f-4c61-b7a5-b8d49dfac1f7" absoluteBounds="4.265, 4.96, 1.9700000000000002, 10.825968424479166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -51,7 +51,7 @@ namespace PTC_Systems
             }
         }
 
-        protected void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
+        public void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
         {
 
             SqlCommand com;
@@ -94,12 +94,12 @@ namespace PTC_Systems
 
             com = new SqlCommand(str, conn);
             
-            com.Parameters.AddWithValue("@ClientName", wzClientName.Text);
+            com.Parameters.AddWithValue("@ClientName", wzClientName.Value);
             com.Parameters.AddWithValue("@ClientLogo", wzClientLogo.ImageUrl);
             com.Parameters.AddWithValue("@ClientContactId", ClientContactdd.SelectedValue);
             com.Parameters.AddWithValue("@ClientActive", wzClientActive.Checked);
             com.Parameters.AddWithValue("@ClientActiveDate", wzClientActiveDate.Text);
-            com.Parameters.AddWithValue("@ClientAddressLine1", wzClientAddressLine1.Text);
+            com.Parameters.AddWithValue("@ClientAddressLine1", wzClientAddressLine1.Value);
             com.Parameters.AddWithValue("@ClientAddressLine2", wzClientAddresLine2.Text);
             com.Parameters.AddWithValue("@ClientAddressState", wzClientAddressState.Text);
             com.Parameters.AddWithValue("@ClientAddressCity", wzClientAddressCity.Text);
@@ -162,7 +162,11 @@ namespace PTC_Systems
                         tb.py_addr_zip,
                         tb.py_addr_zip_cass,
                         acres = Convert.ToDecimal(tb.land_acres)/10000,
-                        tb.dba
+                        tb.property_name,
+                        tb.gross_building_area,
+                        tb.net_rentable_area,
+                        tb.prop_use_cd,
+                        tb.prop_use_desc,
                         
                     }).FirstOrDefault();
 
@@ -175,9 +179,12 @@ namespace PTC_Systems
                 txtownercity.Text = lookup.py_addr_city;
                 txtownerstate.Text = lookup.py_addr_state;
                 txtownerzip.Text = lookup.py_addr_zip + '-' + lookup.py_addr_zip_cass;
-                txtdba.Text = lookup.dba;
+                txtdba.Text = lookup.property_name;
                 txtlandsize.Text = lookup.acres.ToString("#.####");
-                
+                txtgba.Text = lookup.gross_building_area;
+                txtnla.Text = lookup.net_rentable_area;
+                txtpropusecode.Text = lookup.prop_use_cd;
+                txtpropusedesc.Text = lookup.prop_use_desc;
 
 
             }
