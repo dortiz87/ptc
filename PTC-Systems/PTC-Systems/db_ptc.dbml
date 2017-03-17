@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ptc" Class="db_ptcDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=daenerys-one.database.windows.net;Initial Catalog=ptc;Persist Security Info=True;User ID=ptcadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ptcConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Clients" Member="Clients">
+    <Type Name="Client">
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientContactid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientActiveDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ClientInactiveDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ClientLogo" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ClientActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAddressLine1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAddressLine2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ClientAddressCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAddressState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAddressZip" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientNotes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Client_Property" Member="Properties" ThisKey="ClientId" OtherKey="PropertyClientId" Type="Property" />
+      <Association Name="Contact_Client" Member="Contact" ThisKey="ClientContactid" OtherKey="Contactid" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Properties" Member="Properties">
+    <Type Name="Property">
+      <Column Name="PropertyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PropertyClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyContactid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PropertyName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InternalCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyCounty" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyIsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyActiviatedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyInactivatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PropertyAddressLine1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyAddressLine2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PropertyAddressCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyAddressState" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyAddressZip" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyPrimaryUse" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyCharYearBuilt" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="PropertyCharUnits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PropertyCharGBA" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PropertyCharNLA" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PropertyInfoSalesPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PropertyInfoSalesDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PropertyFlagIncomeProducing" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyFlagIEReceived" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyFlagRRReceived" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyFlagAOAReceived" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyAOAExpDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Property_Parcel" Member="Parcels" ThisKey="PropertyId" OtherKey="ParcelPropertyId" Type="Parcel" />
+      <Association Name="Client_Property" Member="Client" ThisKey="PropertyClientId" OtherKey="ClientId" Type="Client" IsForeignKey="true" />
+      <Association Name="Contact_Property" Member="Contact" ThisKey="PropertyContactid" OtherKey="Contactid" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parcel" Member="Parcels">
+    <Type Name="Parcel">
+      <Column Name="ParcelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParcelPropertyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParcelFlagActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ParcelActiveDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ParcelInactiveDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ParcelPropId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParcelGeoId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParcelDBA" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ParcelSitusStreetprefx" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParcelSitusStreet" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParcelSitusStreetSuffix" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParcelSitusCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParcelSitusZip" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="ParcelLegalDesc" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ParcelOwnerName" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="ParcelOwnerAddressLine1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ParcelOwnerAddressLine2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ParcelOwnerAddressCity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParcelOwnerAddressState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParcelOwnerAddressZip" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="ParcelCharGBA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParcelCharNLA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParcelCharYearBuilt" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="ParcelNotes" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ParcelAppraisalAuthoritiesId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Parcel_ProcessYear" Member="ProcessYears" ThisKey="ParcelId" OtherKey="ProcessYearsParcelsId" Type="ProcessYear" />
+      <Association Name="Property_Parcel" Member="Property" ThisKey="ParcelPropertyId" OtherKey="PropertyId" Type="Property" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contacts" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="Contactid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContactSalutation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ContactFirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactLastname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactAddressLine1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactAddressLine2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactAddressCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactAddressState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactAddressZip" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmailAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactAltEmailAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactBusinessNumber" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ContactBusinessNumberExtension" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContactCellularNumber" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ContactFaxNumber" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Contact_Client" Member="Clients" ThisKey="Contactid" OtherKey="ClientContactid" Type="Client" />
+      <Association Name="Contact_Property" Member="Properties" ThisKey="Contactid" OtherKey="PropertyContactid" Type="Property" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HearingSchedule" Member="HearingSchedules">
+    <Type Name="HearingSchedule">
+      <Column Name="HearingScheduleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HearingScheduleInformalHearingDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="HearingScheduleInformalHearingTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="HearingScheduleFormalHearingDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="HearingScheduleFormalHearingTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="HearingScheduleLitigationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HearingScheduleLitigationTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="HearingSchedulePrevFormalHearingDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HearingSchedulePostmarkDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HearingScheduleRescheduleStatus" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="HearingScheduleRescheduledRequestDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HearingScheduleBoardOrderRecdDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="HearingSchedule_ProcessYear" Member="ProcessYears" ThisKey="HearingScheduleId" OtherKey="HearingSchedule_HearingScheduleId" Type="ProcessYear" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProcessYears" Member="ProcessYears">
+    <Type Name="ProcessYear">
+      <Column Name="ProcessYearId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProcessYearsParcelsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessYear" Member="ProcessYear1" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessYearProposedLandValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearProposedImpValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearProposedTotalValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearCurrentStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearStatusChangeDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearARBLandValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearARBImpValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearARBTotalValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearLitLandValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearLitImpValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearLitTotalValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProcessYearAppealDeadline" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ProcessYearNotes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessYearChangedBy" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="HearingSchedule_HearingScheduleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HearingSchedule_ProcessYear" Member="HearingSchedule" ThisKey="HearingSchedule_HearingScheduleId" OtherKey="HearingScheduleId" Type="HearingSchedule" IsForeignKey="true" />
+      <Association Name="Parcel_ProcessYear" Member="Parcel" ThisKey="ProcessYearsParcelsId" OtherKey="ParcelId" Type="Parcel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SearchAppraisalDistrictData" Member="SearchAppraisalDistrictDatas">
+    <Type Name="SearchAppraisalDistrictData">
+      <Column Name="DataLoadId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="County" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="prop_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prop_type_cd" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="prop_val_yr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sup_num" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="sup_action" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="sup_cd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sup_desc" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="geo_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="py_owner_id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="py_owner_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="partial_owner" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="udi_group" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="udi_group_filler" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="py_addr_line1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="py_addr_line2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="py_addr_line3" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="py_addr_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="py_addr_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="py_addr_country" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="py_addr_zip" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="py_addr_zip_cass" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="py_addr_zip_rt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="py_confidential_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="py_address_suppress_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="addr_filler" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="py_addr_ml_deliverable" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="situs_filler" Type="System.String" DbType="VarChar(27)" CanBeNull="true" />
+      <Column Name="situs_street_prefx" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="situs_street" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="situs_street_suffix" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="situs_city" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="situs_zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="legal_desc" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="legal_desc2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="legal_acreage" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="abs_subdv_cd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hood_cd" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="block" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tract_or_lot" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="land_hstd_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="land_non_hstd_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="imprv_hstd_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="imprv_non_hstd_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ag_use_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ag_market" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="timber_use" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="timber_market" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="appraised_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ten_percent_cap" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="assessed_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="value_filler" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="arb_protest_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="value_filler2" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="deed_book_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="deed_book_page" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="deed_dt" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="mortgage_co_id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="mortage_co_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="mortgage_acct_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jan1_owner_id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="jan1_owner_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="jan1_addr_line1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="jan1_addr_line2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="jan1_addr_line3" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="jan1_addr_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jan1_addr_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jan1_addr_country" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="jan1_addr_zip" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="jan1_addr_zip_cass" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="jan1_addr_zip_rt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="jan1_confidential_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="jan1_address_suppress_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="jan1_addr_filler" Type="System.String" DbType="VarChar(37)" CanBeNull="true" />
+      <Column Name="jan1_ml_deliverable" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="hs_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ov65_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ov65_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ov65_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ov65s_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dp_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv1_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv1s_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv2_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv2s_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv3_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv3s_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv4_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dv4s_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ex_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ex_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="lve_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ab_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="en_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fr_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ht_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="pro_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="pc_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="so_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ex366_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ch_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="imprv_state_cd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="land_state_cd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="personal_state_cd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mineral_state_cd" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="land_acres" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="entity_agent_id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="entity_agent_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="entity_agent_addr_line1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="entity_agent_addr_line2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="entity_agent_addr_line3" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="entity_agent_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="entity_agent_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="entity_agent_country" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="entity_agent_zip" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="entity_agent_cass" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="entity_agent_rt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ent_agent_filler" Type="System.String" DbType="VarChar(34)" CanBeNull="true" />
+      <Column Name="ca_agent_id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ca_agent_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="ca_agent_addr_line1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ca_agent_addr_line2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ca_agent_addr_line3" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ca_agent_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ca_agent_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ca_agent_country" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ca_agent_zip" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ca_agent_zip_cass" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ca_agent_zip_rt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ca_agent_filler" Type="System.String" DbType="VarChar(34)" CanBeNull="true" />
+      <Column Name="arb_agent_id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="arb_agent_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="arb_agent_addr_line1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="arb_agent_addr_line2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="arb_agent_addr_line3" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="arb_agent_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="arb_agent_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="arb_agent_country" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="arb_agent_zip" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="arb_agent_zip_cass" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="arb_agent_zip_rt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="arb_agent_filler" Type="System.String" DbType="VarChar(34)" CanBeNull="true" />
+      <Column Name="mineral_type_of_int" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="mineral_int_pct" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="productivity_use_code" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="entity_filler" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="timber_78_market" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ag_late_loss" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="late_freeport_penalty" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="delivery_point" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="carrier_route" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="check_digit" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="dba" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="dba_filler" Type="System.String" DbType="VarChar(38)" CanBeNull="true" />
+      <Column Name="market_value" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="mh_label" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="mh_serial" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="mh_model" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="flag_filler1" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="flag_filler2" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="flag_filler" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="ov65_deferral_date" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dp_deferral_date" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ref_id1" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ref_id2" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="situs_num" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="situs_unit" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="appr_owner_id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="appr_owner_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="appr_addr_line1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="appr_addr_line2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="appr_addr_line3" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="appr_addr_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="appr_addr_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="appr_addr_country" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="appr_addr_zip" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="appr_addr_zip_cass" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="appr_addr_zip_cass_route" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="appr_ml_deliverable" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="appr_confidential_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="appr_address_suppress_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="appr_confidential_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="py_confidential_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="jan1_confidential_name" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="filler_sic_code" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="rendition_filed" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="rendition_date" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="rendition_penalty" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="rendition_penalty_date_paid" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="rendition_fraud_penalty" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="rendition_fraud_penalty_date_paid" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="deed_num_filler" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="entities" Type="System.String" DbType="VarChar(140)" CanBeNull="true" />
+      <Column Name="eco_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dataset_id" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="deed_num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="chodo_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="local_option_pct_only_flag_hs" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="local_option_pct_only_flag_ov65" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="local_option_pct_only_flag_ov65s" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="local_option_pct_only_flag_dp" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="freeze_only_flag_ov65" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="freeze_only_flag_ov65s" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="freeze_only_flag_dp" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="apply_percent_exemption_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="exemption_percentage" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="vit_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="lih_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="git_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dps_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dps_deferral_date" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="local_option_pct_only_flag_dps" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="freeze_only_flag_dps" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dvhs_exempt" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="hs_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ov65_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ov65s_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dp_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dps_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv1_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv1s_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv2_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv2s_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv3_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv3s_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv4_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dv4s_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dvhs_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ab_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="en_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="fr_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ht_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="pro_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="pc_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="so_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex366_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ch_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="eco_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="chodo_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="lih_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="git_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="mortgage_addr_line1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="mortgage_addr_line2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="mortgage_addr_line3" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="mortgage_addr_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mortgage_addr_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mortgage_addr_country" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mortgage_addr_zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mortgage_addr_zip_cass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mortgage_addr_zip_rt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mortgage_addr_ml_deliverable" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="sic_code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="omitted_property_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="hs_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="hs_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ov65s_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ov65s_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dp_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dp_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv1_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv1_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv1s_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv1s_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv2_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv2_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv2s_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv2s_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv3_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv3_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv3s_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv3s_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv4_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv4_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv4s_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dv4s_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="lve_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="lve_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ab_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ab_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="en_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="en_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="fr_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="fr_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ht_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ht_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="pro_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="pro_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="pc_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="pc_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="so_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="so_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex366_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex366_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ch_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ch_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dps_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dps_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="eco_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="eco_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="chodo_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="chodo_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="lih_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="lih_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="git_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="git_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="clt_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="clt_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="clt_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="clt_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="dvhss_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="dvhss_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dvhss_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dvhss_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="omitted_imprv_hstd_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="omitted_imprv_non_hstd_val" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="dvhs_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="dvhs_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xd_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xd_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xd_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xd_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xf_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xf_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xf_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xf_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xg_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xg_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xg_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xg_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xh_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xh_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xh_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xh_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xi_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xi_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xi_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xi_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xj_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xj_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xj_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xj_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xl_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xl_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xl_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xl_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xm_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xm_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xm_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xm_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xn_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xn_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xn_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xn_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xo_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xo_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xo_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xo_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xp_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xp_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xp_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xp_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xq_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xq_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xq_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xq_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xr_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xr_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xr_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xr_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xs_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xs_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xs_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xs_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xt_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xt_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xt_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xt_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xu_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xu_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xu_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xu_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xv_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xv_qualify_yr" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ex_xv_prorate_begin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xv_prorate_end" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ex_xa_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ex_xa_qualify_yr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ex_xa_prorate_begin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ex_xa_prorate_end" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lve_qualify_yr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ppv_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ppv_qualify_yr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ppv_prorate_begin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ppv_prorate_end" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dvch_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="dvch_qualify_yr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dvch_prorate_begin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dvch_prorate_end" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dvchs_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="dvchs_qualify_yr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dvchs_prorate_begin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dvchs_prorate_end" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="masss_exempt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="masss_qualify_yr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="masss_prorate_begin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="masss_prorate_end" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pp_late_interstate_allocation_val" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.NewClientSetup" Method="NewClientSetup">
+    <Parameter Name="ClientContactId" Parameter="clientContactId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientActiveDate" Parameter="clientActiveDate" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ClientLogo" Parameter="clientLogo" Type="System.Data.Linq.Binary" DbType="VarBinary(1)" />
+    <Parameter Name="ClientActive" Parameter="clientActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Clientname" Parameter="clientname" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ClientAddressLine1" Parameter="clientAddressLine1" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ClientAddressLine2" Parameter="clientAddressLine2" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ClientAddressCity" Parameter="clientAddressCity" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientAddressState" Parameter="clientAddressState" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientAddressZip" Parameter="clientAddressZip" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="ClientNotes" Parameter="clientNotes" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="PropertyContactid" Parameter="propertyContactid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PropertyName" Parameter="propertyName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="InternalCode" Parameter="internalCode" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="PropertyCounty" Parameter="propertyCounty" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PropertyIsActive" Parameter="propertyIsActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PropertyActiviatedDate" Parameter="propertyActiviatedDate" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="PropertyAddressLine1" Parameter="propertyAddressLine1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PropertyAddressLine2" Parameter="propertyAddressLine2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PropertyAddressCity" Parameter="propertyAddressCity" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PropertyAddressState" Parameter="propertyAddressState" Type="System.String" DbType="Char(2)" />
+    <Parameter Name="PropertyAddressZip" Parameter="propertyAddressZip" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="PropertyPrimaryUse" Parameter="propertyPrimaryUse" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="PropertyCharYearBuilt" Parameter="propertyCharYearBuilt" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="PropertyCharUnits" Parameter="propertyCharUnits" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PropertyCharGBA" Parameter="propertyCharGBA" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PropertyCharNLA" Parameter="propertyCharNLA" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PropertyInfoSalesPrice" Parameter="propertyInfoSalesPrice" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="PropertyInfoSalesDate" Parameter="propertyInfoSalesDate" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="PropertyFlagIncomeProducing" Parameter="propertyFlagIncomeProducing" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PropertyFlagIEReceived" Parameter="propertyFlagIEReceived" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PropertyFlagRRReceived" Parameter="propertyFlagRRReceived" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PropertyFlagAOAReceived" Parameter="propertyFlagAOAReceived" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PropertyAOAExpDate" Parameter="propertyAOAExpDate" Type="System.DateTime" DbType="SmallDateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

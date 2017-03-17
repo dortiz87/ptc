@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PageNav.master.cs" Inherits="PTC_Systems.PageNav" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Menu ID="Menu1" runat="server">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/Clients.aspx" Text="Clients" Value="Clients"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Props.aspx" Text="Properties" Value="Properties"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Parcels.aspx" Text="Parcels" Value="Parcels"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/ProcessYears.aspx" Text="Process Years" Value="Process Years">
+                <asp:MenuItem NavigateUrl="~/IncomeAnalysis.aspx" Text="Income Analysis" Value="Income Analysis"></asp:MenuItem>
+            </asp:MenuItem>
+        </Items>
+    </asp:Menu>
+
+    <div id="2col">
+  <asp:ContentPlaceHolder ID="leftcolumn" runat="server">
+  </asp:ContentPlaceHolder>
+  <asp:ContentPlaceHolder ID="rightcolumn" runat="server">
+  </asp:ContentPlaceHolder>
+</div>
+
+</asp:Content>
