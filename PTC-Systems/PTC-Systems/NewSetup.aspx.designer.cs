@@ -10,7 +10,7 @@
 namespace PTC_Systems {
     
     
-    public partial class NewClientSetup {
+    public partial class newsetup {
         
         /// <summary>
         /// form1 control.
@@ -22,49 +22,13 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Wizard1 control.
+        /// wzClientName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Wizard Wizard1;
-        
-        /// <summary>
-        /// wzClientLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image wzClientLogo;
-        
-        /// <summary>
-        /// FileUpload1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-        
-        /// <summary>
-        /// ClientContactdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ClientContactdd;
-        
-        /// <summary>
-        /// wzClientActive control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox wzClientActive;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientName;
         
         /// <summary>
         /// wzClientActiveDate control.
@@ -73,16 +37,7 @@ namespace PTC_Systems {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzClientActiveDate;
-        
-        /// <summary>
-        /// wzClientName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzClientActiveDate;
         
         /// <summary>
         /// wzClientAddressLine1 control.
@@ -94,13 +49,13 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressLine1;
         
         /// <summary>
-        /// wzClientAddresLine2 control.
+        /// wzClientAddressLine2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzClientAddresLine2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressLine2;
         
         /// <summary>
         /// wzClientAddressCity control.
@@ -109,7 +64,7 @@ namespace PTC_Systems {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzClientAddressCity;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressCity;
         
         /// <summary>
         /// wzClientAddressState control.
@@ -118,7 +73,7 @@ namespace PTC_Systems {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzClientAddressState;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressState;
         
         /// <summary>
         /// wzClientAddressZip control.
@@ -127,7 +82,7 @@ namespace PTC_Systems {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzClientAddressZip;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzClientAddressZip;
         
         /// <summary>
         /// wzClientNotes control.
@@ -136,474 +91,123 @@ namespace PTC_Systems {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzClientNotes;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea wzClientNotes;
         
         /// <summary>
-        /// PropertyContactdd control.
+        /// wzPropertyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PropertyContactdd;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyName;
         
         /// <summary>
-        /// wzpPropertyName control.
+        /// wzInternalCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzInternalCode;
         
         /// <summary>
-        /// wzpInternalCode control.
+        /// wzPropertyActiveDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpInternalCode;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzPropertyActiveDate;
         
         /// <summary>
-        /// wzpPropertyCounty control.
+        /// wzPropertyAddressLine1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyCounty;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyAddressLine1;
         
         /// <summary>
-        /// wzpPropertyIsActive control.
+        /// wzPropertyAddressLine2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox wzpPropertyIsActive;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyAddressLine2;
         
         /// <summary>
-        /// wzpPropertyActivatedDate control.
+        /// wzPropertyAddressCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyActivatedDate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyAddressCity;
         
         /// <summary>
-        /// wzpPropertyAddressLine1 control.
+        /// wzPropertyAddressState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyAddressLine1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyAddressState;
         
         /// <summary>
-        /// wzpPropertyAddressLine2 control.
+        /// wzPropertyAddressZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyAddressLine2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyAddressZip;
         
         /// <summary>
-        /// wzpPropertyAddressCity control.
+        /// wzPropertyCharYearBuilt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyAddressCity;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyCharYearBuilt;
         
         /// <summary>
-        /// wzpPropertyAddressState control.
+        /// wzPropertyCharGBA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyAddressState;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyCharGBA;
         
         /// <summary>
-        /// wzpPropertyAddressZip control.
+        /// wzPropertyCharNLA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyAddressZip;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyCharNLA;
         
         /// <summary>
-        /// wzpPropertyPrimaryUse control.
+        /// wzPropertyInfoSalesDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyPrimaryUse;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzPropertyInfoSalesDate;
         
         /// <summary>
-        /// wzpPropertyCharYearBuilt control.
+        /// wzPropertyInfoSalesPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyCharYearBuilt;
-        
-        /// <summary>
-        /// wzpPropertyCharUnits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyCharUnits;
-        
-        /// <summary>
-        /// wzpPropertyCharGBA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyCharGBA;
-        
-        /// <summary>
-        /// wzpPropertyCharNLA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyCharNLA;
-        
-        /// <summary>
-        /// wzpPropertyInfoSalesPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyInfoSalesPrice;
-        
-        /// <summary>
-        /// wzpPropertyInfoSalesDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyInfoSalesDate;
-        
-        /// <summary>
-        /// wzpPropertyFlagAOAReceived control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox wzpPropertyFlagAOAReceived;
-        
-        /// <summary>
-        /// wzpPropertyAOAExpDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzpPropertyAOAExpDate;
-        
-        /// <summary>
-        /// wzpPropertyFlagIncomeProducing control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox wzpPropertyFlagIncomeProducing;
-        
-        /// <summary>
-        /// wzpPropertyFlagIEReceived control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox wzpPropertyFlagIEReceived;
-        
-        /// <summary>
-        /// wzpPropertyFlagRRReceived control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox wzpPropertyFlagRRReceived;
-        
-        /// <summary>
-        /// txtSearchPID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearchPID;
-        
-        /// <summary>
-        /// txtSearchCounty control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearchCounty;
-        
-        /// <summary>
-        /// ParcelInfoLookup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ParcelInfoLookup;
-        
-        /// <summary>
-        /// txtdba control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdba;
-        
-        /// <summary>
-        /// txtgeoid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtgeoid;
-        
-        /// <summary>
-        /// txtparceltype control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtparceltype;
-        
-        /// <summary>
-        /// txtpropusecode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpropusecode;
-        
-        /// <summary>
-        /// txtpropusedesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpropusedesc;
-        
-        /// <summary>
-        /// txtlegaldesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlegaldesc;
-        
-        /// <summary>
-        /// txtaddressline2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtaddressline2;
-        
-        /// <summary>
-        /// txtlegalowner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlegalowner;
-        
-        /// <summary>
-        /// txtowneraddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtowneraddress;
-        
-        /// <summary>
-        /// txtownercity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtownercity;
-        
-        /// <summary>
-        /// txtownerstate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtownerstate;
-        
-        /// <summary>
-        /// txtownerzip control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtownerzip;
-        
-        /// <summary>
-        /// txtgba control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtgba;
-        
-        /// <summary>
-        /// txtnla control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtnla;
-        
-        /// <summary>
-        /// txtlandsize control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlandsize;
-        
-        /// <summary>
-        /// txtIHV3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIHV3;
-        
-        /// <summary>
-        /// txtINHV3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtINHV3;
-        
-        /// <summary>
-        /// txtLHV3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLHV3;
-        
-        /// <summary>
-        /// txtLNHV3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLNHV3;
-        
-        /// <summary>
-        /// txtAMV3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAMV3;
-        
-        /// <summary>
-        /// txtTMV3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTMV3;
-        
-        /// <summary>
-        /// txtMV3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMV3;
-        
-        /// <summary>
-        /// txtAGTIMRED3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAGTIMRED3;
-        
-        /// <summary>
-        /// txtAPPVAL3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAPPVAL3;
-        
-        /// <summary>
-        /// txtHSCAP3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHSCAP3;
-        
-        /// <summary>
-        /// txtASSVAL3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtASSVAL3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyInfoSalesPrice;
     }
 }
