@@ -54,8 +54,8 @@
         <br />
         <asp:Label ID="ptactivestatus" runat="server"></asp:Label>
         <asp:Label ID="ptactivedate" runat="server"></asp:Label>
-    </div>
     <asp:HiddenField ID="hfpropid" runat="server" />
-</asp:Content>
+    </div>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="rightcolumn" runat="server">
 </asp:Content>

@@ -10,7 +10,7 @@
         if ($target.parent().hasClass('disabled')) {
             return false;
         }
-    });
+   });
 
     $(".next-step").click(function (e) {
 
