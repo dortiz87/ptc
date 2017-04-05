@@ -89,7 +89,32 @@ namespace PTC_Systems
 		@PropertyFlagIEReceived = @PropertyFlagIEReceived,
 		@PropertyFlagRRReceived = @PropertyFlagRRReceived,
 		@PropertyFlagAOAReceived = @PropertyFlagAOAReceived,
-		@PropertyAOAExpDate = @PropertyAOAExpDate";
+		@PropertyAOAExpDate = @PropertyAOAExpDate,
+        @ParcelFlagActive = @ParcelFlagActive,
+        @ParcelActiveDate = @ParcelActiveDate,
+        @ParcelPropId = @ParcelPropId,
+        @ParcelGeoId = @ParcelGeoId,
+        @ParcelDBA = @ParcelDBA,
+        @ParcelSitusStreetprefx = @ParcelSitusStreetprefx,
+        @ParcelSitusStreet = @ParcelSitusStreet,
+        @ParcelSitusStreetSuffix = @ParcelSitusStreetSuffix,
+        @ParcelSitusCity = @ParcelSitusCity,
+        @ParcelSitusZip = @ParcelSitusZip,
+        @ParcelLegalDesc = @ParcelLegalDesc,
+        @ParcelOwnerName = @ParcelOwnerName,
+        @ParcelOwnerAddressLine1 = @ParcelOwnerAddressLine1,
+        @ParcelOwnerAddressLine2 = @ParcelOwnerAddressLine2,
+        @ParcelOwnerAddressCity = @ParcelOwnerAddressCity,
+        @ParcelOwnerAddressState = @ParcelOwnerAddressState,
+        @ParcelOwnerAddressZip = @ParcelOwnerAddressZip,
+        @ParcelCharGBA = @ParcelCharGBA,
+        @ParcelCharNLA = @ParcelCharNLA,
+        @ParcelCharYearBuilt = @ParcelCharYearBuilt,
+        @ParcelNotes = @ParcelNotes,
+        @ParcelAppraisalAuthoritiesId = @ParcelAppraisalAuthoritiesId
+        @ParcelCharAcres = @ParcelCharAcres,
+        @ParcelPropUseCd = @ParcelPropUseCd,
+        @ParcelPropUseDesc = @ParcelPropUseDesc";
 
             com = new SqlCommand(str, conn);
 
@@ -137,11 +162,16 @@ namespace PTC_Systems
         {
             db_ptcDataContext ADsearch = new db_ptcDataContext();
 
-            //int AD;
-            {
+            
+
+           
+
+                //int AD;
+                {
                 var lookup = (
                     from tb in ADsearch.SearchAppraisalDistrictDatas
                     where tb.prop_id.ToString() == wzParcelId.Value
+                   
                     select new
                     {
                         tb.geo_id,
@@ -159,10 +189,13 @@ namespace PTC_Systems
                         tb.property_name,
                         tb.gross_building_area,
                         tb.net_rentable_area,
+                        tb.year_built,
                         tb.prop_use_cd,
                         tb.prop_use_desc,
 
                     }).FirstOrDefault();
+
+               
 
                 wzParcelGeoId.Value = lookup.geo_id;
                 wzParcelType.Value = lookup.prop_type_cd;
@@ -178,12 +211,15 @@ namespace PTC_Systems
                 wzParcelGBA.Value = lookup.gross_building_area;
                 wzParcelNLA.Value = lookup.net_rentable_area;
                 wzParcelPropertyUseCode.Value = lookup.prop_use_cd;
+                /*wzParcelCharYearBuilt = lookup.year_built;*/
                 wzParcelPropertyUseDesc.Value = lookup.prop_use_desc;
 
+               
 
             }
+
+           }
 
 
         }
     }
-}

@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="newsetup.aspx.cs" Inherits="PTC_Systems.newsetup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
     <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"><body></body>
+
+<html><body></body>
 <head>
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -369,8 +371,10 @@
                                     <label for="lbparceladdress">Location Address</label>
                                     <input runat="server" type="text" class="form-control" id="wzParcelAdressLine2" placeholder="Address" />
                                 </div>
-
-
+                                 <div class="col-xs-2 col-md-2">
+                                    <label for="lbparcelacres">Year Built</label>
+                                    <input runat="server" type="text" class="form-control" id="wzParcelCharYearBuilt" placeholder="Year Built" />
+                                </div>
                             </div>                  
                             <div class="row">
                                 <div class="col-xs-2 col-md-2">
@@ -398,8 +402,11 @@
 
                             <div class="tab-pane" role="tabpanel" id="step4">
                                 <div class="step2">
+                                    <div>
+                                    
+                                    </div>
 
-
+                                    
                             </div>
                                 <ul class="list-inline pull-right">
                                     <li>
@@ -423,8 +430,5 @@
         </div>
     </section>
    </div>
-</div>
-    
-       
-
+</div>   
 </asp:Content>

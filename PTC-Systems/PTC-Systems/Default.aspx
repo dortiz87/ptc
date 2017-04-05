@@ -3,8 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>get username </h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+        <h1>Prop Tax Systems </h1>
+        <p class="lead">Property Tax Software Solutions</p>
         <p>&nbsp;</p>
     </div>
 

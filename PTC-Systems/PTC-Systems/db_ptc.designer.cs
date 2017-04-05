@@ -136,6 +136,14 @@ namespace PTC_Systems
 			}
 		}
 		
+		public System.Data.Linq.Table<SearchTaxOfficeData> SearchTaxOfficeDatas
+		{
+			get
+			{
+				return this.GetTable<SearchTaxOfficeData>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NewClientSetup")]
 		public int NewClientSetup(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientContactId", DbType="Int")] System.Nullable<int> clientContactId, 
@@ -4430,6 +4438,789 @@ namespace PTC_Systems
 				if ((this._exemptions != value))
 				{
 					this._exemptions = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SearchTaxOfficeData")]
+	public partial class SearchTaxOfficeData
+	{
+		
+		private System.Nullable<int> _DATALOADID;
+		
+		private string _COUNTY;
+		
+		private string _ACCOUNT;
+		
+		private string _sYEAR;
+		
+		private string _JURISDICTION;
+		
+		private string _TAXUNITACCT;
+		
+		private string _LEVY;
+		
+		private string _EXPHOMESTEAD;
+		
+		private string _EXPOVER65;
+		
+		private string _EXPVETERAN;
+		
+		private string _EXPDISABLED;
+		
+		private string _EXPAG;
+		
+		private string _DATEPAID;
+		
+		private string _DUEDATE;
+		
+		private string _OMITFLAG;
+		
+		private string _LEVYBALANCE;
+		
+		private string _SUIT;
+		
+		private string _CAUSENO;
+		
+		private string _BANKCODE;
+		
+		private string _BANKRUPTNO;
+		
+		private string _ATTORNEY;
+		
+		private string _COURTCOST;
+		
+		private string _ABSTRACTFEE;
+		
+		private string _DEFERRAL;
+		
+		private string _BILLSUPP;
+		
+		private string _SPLITPMTFLAG;
+		
+		private string _CATAGORYCODE;
+		
+		private string _ACCTOWNER;
+		
+		private string _ACCTADDRESS2;
+		
+		private string _ACCTADDRESS3;
+		
+		private string _ACCTADDRESS4;
+		
+		private string _ACCTCITY;
+		
+		private string _ACCTSTATE;
+		
+		private string _ZIP;
+		
+		private string _ROLLCODE;
+		
+		private string _PARCELNO;
+		
+		private string _PARCELNAME;
+		
+		private string _PAYMENTAGREEMENT;
+		
+		private string _TOTAMTDUE;
+		
+		private string _TOTAMTDUE30;
+		
+		private string _TOTAMTDUE60;
+		
+		private string _TOTAMTDUE90;
+		
+		private string _AMOUNTINDICATOR;
+		
+		public SearchTaxOfficeData()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATALOADID", DbType="Int")]
+		public System.Nullable<int> DATALOADID
+		{
+			get
+			{
+				return this._DATALOADID;
+			}
+			set
+			{
+				if ((this._DATALOADID != value))
+				{
+					this._DATALOADID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COUNTY", DbType="VarChar(25)")]
+		public string COUNTY
+		{
+			get
+			{
+				return this._COUNTY;
+			}
+			set
+			{
+				if ((this._COUNTY != value))
+				{
+					this._COUNTY = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCOUNT", DbType="VarChar(34)")]
+		public string ACCOUNT
+		{
+			get
+			{
+				return this._ACCOUNT;
+			}
+			set
+			{
+				if ((this._ACCOUNT != value))
+				{
+					this._ACCOUNT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sYEAR", DbType="VarChar(4)")]
+		public string sYEAR
+		{
+			get
+			{
+				return this._sYEAR;
+			}
+			set
+			{
+				if ((this._sYEAR != value))
+				{
+					this._sYEAR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JURISDICTION", DbType="VarChar(4)")]
+		public string JURISDICTION
+		{
+			get
+			{
+				return this._JURISDICTION;
+			}
+			set
+			{
+				if ((this._JURISDICTION != value))
+				{
+					this._JURISDICTION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TAXUNITACCT", DbType="VarChar(34)")]
+		public string TAXUNITACCT
+		{
+			get
+			{
+				return this._TAXUNITACCT;
+			}
+			set
+			{
+				if ((this._TAXUNITACCT != value))
+				{
+					this._TAXUNITACCT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LEVY", DbType="VarChar(11)")]
+		public string LEVY
+		{
+			get
+			{
+				return this._LEVY;
+			}
+			set
+			{
+				if ((this._LEVY != value))
+				{
+					this._LEVY = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EXPHOMESTEAD", DbType="VarChar(1)")]
+		public string EXPHOMESTEAD
+		{
+			get
+			{
+				return this._EXPHOMESTEAD;
+			}
+			set
+			{
+				if ((this._EXPHOMESTEAD != value))
+				{
+					this._EXPHOMESTEAD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EXPOVER65", DbType="VarChar(1)")]
+		public string EXPOVER65
+		{
+			get
+			{
+				return this._EXPOVER65;
+			}
+			set
+			{
+				if ((this._EXPOVER65 != value))
+				{
+					this._EXPOVER65 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EXPVETERAN", DbType="VarChar(1)")]
+		public string EXPVETERAN
+		{
+			get
+			{
+				return this._EXPVETERAN;
+			}
+			set
+			{
+				if ((this._EXPVETERAN != value))
+				{
+					this._EXPVETERAN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EXPDISABLED", DbType="VarChar(1)")]
+		public string EXPDISABLED
+		{
+			get
+			{
+				return this._EXPDISABLED;
+			}
+			set
+			{
+				if ((this._EXPDISABLED != value))
+				{
+					this._EXPDISABLED = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EXPAG", DbType="VarChar(1)")]
+		public string EXPAG
+		{
+			get
+			{
+				return this._EXPAG;
+			}
+			set
+			{
+				if ((this._EXPAG != value))
+				{
+					this._EXPAG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATEPAID", DbType="VarChar(8)")]
+		public string DATEPAID
+		{
+			get
+			{
+				return this._DATEPAID;
+			}
+			set
+			{
+				if ((this._DATEPAID != value))
+				{
+					this._DATEPAID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DUEDATE", DbType="VarChar(8)")]
+		public string DUEDATE
+		{
+			get
+			{
+				return this._DUEDATE;
+			}
+			set
+			{
+				if ((this._DUEDATE != value))
+				{
+					this._DUEDATE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OMITFLAG", DbType="VarChar(2)")]
+		public string OMITFLAG
+		{
+			get
+			{
+				return this._OMITFLAG;
+			}
+			set
+			{
+				if ((this._OMITFLAG != value))
+				{
+					this._OMITFLAG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LEVYBALANCE", DbType="VarChar(11)")]
+		public string LEVYBALANCE
+		{
+			get
+			{
+				return this._LEVYBALANCE;
+			}
+			set
+			{
+				if ((this._LEVYBALANCE != value))
+				{
+					this._LEVYBALANCE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUIT", DbType="VarChar(1)")]
+		public string SUIT
+		{
+			get
+			{
+				return this._SUIT;
+			}
+			set
+			{
+				if ((this._SUIT != value))
+				{
+					this._SUIT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CAUSENO", DbType="VarChar(40)")]
+		public string CAUSENO
+		{
+			get
+			{
+				return this._CAUSENO;
+			}
+			set
+			{
+				if ((this._CAUSENO != value))
+				{
+					this._CAUSENO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BANKCODE", DbType="VarChar(1)")]
+		public string BANKCODE
+		{
+			get
+			{
+				return this._BANKCODE;
+			}
+			set
+			{
+				if ((this._BANKCODE != value))
+				{
+					this._BANKCODE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BANKRUPTNO", DbType="VarChar(40)")]
+		public string BANKRUPTNO
+		{
+			get
+			{
+				return this._BANKRUPTNO;
+			}
+			set
+			{
+				if ((this._BANKRUPTNO != value))
+				{
+					this._BANKRUPTNO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ATTORNEY", DbType="VarChar(1)")]
+		public string ATTORNEY
+		{
+			get
+			{
+				return this._ATTORNEY;
+			}
+			set
+			{
+				if ((this._ATTORNEY != value))
+				{
+					this._ATTORNEY = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COURTCOST", DbType="VarChar(7)")]
+		public string COURTCOST
+		{
+			get
+			{
+				return this._COURTCOST;
+			}
+			set
+			{
+				if ((this._COURTCOST != value))
+				{
+					this._COURTCOST = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ABSTRACTFEE", DbType="VarChar(7)")]
+		public string ABSTRACTFEE
+		{
+			get
+			{
+				return this._ABSTRACTFEE;
+			}
+			set
+			{
+				if ((this._ABSTRACTFEE != value))
+				{
+					this._ABSTRACTFEE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEFERRAL", DbType="VarChar(1)")]
+		public string DEFERRAL
+		{
+			get
+			{
+				return this._DEFERRAL;
+			}
+			set
+			{
+				if ((this._DEFERRAL != value))
+				{
+					this._DEFERRAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BILLSUPP", DbType="VarChar(1)")]
+		public string BILLSUPP
+		{
+			get
+			{
+				return this._BILLSUPP;
+			}
+			set
+			{
+				if ((this._BILLSUPP != value))
+				{
+					this._BILLSUPP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SPLITPMTFLAG", DbType="VarChar(1)")]
+		public string SPLITPMTFLAG
+		{
+			get
+			{
+				return this._SPLITPMTFLAG;
+			}
+			set
+			{
+				if ((this._SPLITPMTFLAG != value))
+				{
+					this._SPLITPMTFLAG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CATAGORYCODE", DbType="VarChar(4)")]
+		public string CATAGORYCODE
+		{
+			get
+			{
+				return this._CATAGORYCODE;
+			}
+			set
+			{
+				if ((this._CATAGORYCODE != value))
+				{
+					this._CATAGORYCODE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCTOWNER", DbType="VarChar(40)")]
+		public string ACCTOWNER
+		{
+			get
+			{
+				return this._ACCTOWNER;
+			}
+			set
+			{
+				if ((this._ACCTOWNER != value))
+				{
+					this._ACCTOWNER = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCTADDRESS2", DbType="VarChar(40)")]
+		public string ACCTADDRESS2
+		{
+			get
+			{
+				return this._ACCTADDRESS2;
+			}
+			set
+			{
+				if ((this._ACCTADDRESS2 != value))
+				{
+					this._ACCTADDRESS2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCTADDRESS3", DbType="VarChar(40)")]
+		public string ACCTADDRESS3
+		{
+			get
+			{
+				return this._ACCTADDRESS3;
+			}
+			set
+			{
+				if ((this._ACCTADDRESS3 != value))
+				{
+					this._ACCTADDRESS3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCTADDRESS4", DbType="VarChar(40)")]
+		public string ACCTADDRESS4
+		{
+			get
+			{
+				return this._ACCTADDRESS4;
+			}
+			set
+			{
+				if ((this._ACCTADDRESS4 != value))
+				{
+					this._ACCTADDRESS4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCTCITY", DbType="VarChar(40)")]
+		public string ACCTCITY
+		{
+			get
+			{
+				return this._ACCTCITY;
+			}
+			set
+			{
+				if ((this._ACCTCITY != value))
+				{
+					this._ACCTCITY = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACCTSTATE", DbType="VarChar(2)")]
+		public string ACCTSTATE
+		{
+			get
+			{
+				return this._ACCTSTATE;
+			}
+			set
+			{
+				if ((this._ACCTSTATE != value))
+				{
+					this._ACCTSTATE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZIP", DbType="VarChar(12)")]
+		public string ZIP
+		{
+			get
+			{
+				return this._ZIP;
+			}
+			set
+			{
+				if ((this._ZIP != value))
+				{
+					this._ZIP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLLCODE", DbType="VarChar(1)")]
+		public string ROLLCODE
+		{
+			get
+			{
+				return this._ROLLCODE;
+			}
+			set
+			{
+				if ((this._ROLLCODE != value))
+				{
+					this._ROLLCODE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PARCELNO", DbType="VarChar(8)")]
+		public string PARCELNO
+		{
+			get
+			{
+				return this._PARCELNO;
+			}
+			set
+			{
+				if ((this._PARCELNO != value))
+				{
+					this._PARCELNO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PARCELNAME", DbType="VarChar(40)")]
+		public string PARCELNAME
+		{
+			get
+			{
+				return this._PARCELNAME;
+			}
+			set
+			{
+				if ((this._PARCELNAME != value))
+				{
+					this._PARCELNAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAYMENTAGREEMENT", DbType="VarChar(1)")]
+		public string PAYMENTAGREEMENT
+		{
+			get
+			{
+				return this._PAYMENTAGREEMENT;
+			}
+			set
+			{
+				if ((this._PAYMENTAGREEMENT != value))
+				{
+					this._PAYMENTAGREEMENT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAMTDUE", DbType="VarChar(11)")]
+		public string TOTAMTDUE
+		{
+			get
+			{
+				return this._TOTAMTDUE;
+			}
+			set
+			{
+				if ((this._TOTAMTDUE != value))
+				{
+					this._TOTAMTDUE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAMTDUE30", DbType="VarChar(11)")]
+		public string TOTAMTDUE30
+		{
+			get
+			{
+				return this._TOTAMTDUE30;
+			}
+			set
+			{
+				if ((this._TOTAMTDUE30 != value))
+				{
+					this._TOTAMTDUE30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAMTDUE60", DbType="VarChar(11)")]
+		public string TOTAMTDUE60
+		{
+			get
+			{
+				return this._TOTAMTDUE60;
+			}
+			set
+			{
+				if ((this._TOTAMTDUE60 != value))
+				{
+					this._TOTAMTDUE60 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAMTDUE90", DbType="VarChar(11)")]
+		public string TOTAMTDUE90
+		{
+			get
+			{
+				return this._TOTAMTDUE90;
+			}
+			set
+			{
+				if ((this._TOTAMTDUE90 != value))
+				{
+					this._TOTAMTDUE90 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AMOUNTINDICATOR", DbType="VarChar(1)")]
+		public string AMOUNTINDICATOR
+		{
+			get
+			{
+				return this._AMOUNTINDICATOR;
+			}
+			set
+			{
+				if ((this._AMOUNTINDICATOR != value))
+				{
+					this._AMOUNTINDICATOR = value;
 				}
 			}
 		}

@@ -19,7 +19,7 @@ namespace PTC_Systems
             {     
 
             GetClientInfo();
-            GetPropInfo();
+           /* GetPropInfo();*/
             }
             
 
@@ -76,36 +76,36 @@ namespace PTC_Systems
             }
         }
 
-        public void GetPropInfo()
-        {
-            db_ptcDataContext clientdatacontext = new db_ptcDataContext();
+        /* public void GetPropInfo()
+         {
+             db_ptcDataContext clientdatacontext = new db_ptcDataContext();
 
-            int cid;
+             int cid;
 
-            bool IsIntValue = Int32.TryParse(hfClientid.Value, out cid);
+             bool IsIntValue = Int32.TryParse(hfClientid.Value, out cid);
 
-            if (IsIntValue)
-            {
-                var proplist = (
-                    from p in clientdatacontext.Properties
-                    where p.PropertyClientId == cid
-                    select new
-                    {
-                      Property_Name = p.PropertyName,
-                      Count =  p.PropertyCounty,
-                      Primary_Use = p.PropertyPrimaryUse
+             if (IsIntValue)
+             {
+                 var proplist = (
+                     from p in clientdatacontext.Properties
+                     where p.PropertyClientId == cid
+                     select new
+                     {
+                       Property_Name = p.PropertyName,
+                       Count =  p.PropertyCounty,
+                       Primary_Use = p.PropertyPrimaryUse
 
-                    }).ToList();
+                     }).ToList();
 
-                //propview.DataSource = proplist;
-               // propview.DataBind();
-               
-                
-            }
-        }
+                 //propview.DataSource = proplist;
+                // propview.DataBind();
 
-     
-    }
+
+             }
+    }*/
+
+
+}
 
   
     }

@@ -204,6 +204,53 @@
       <Column Name="exemptions" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SearchTaxOfficeData" Member="SearchTaxOfficeDatas">
+    <Type Name="SearchTaxOfficeData">
+      <Column Name="DATALOADID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COUNTY" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ACCOUNT" Type="System.String" DbType="VarChar(34)" CanBeNull="true" />
+      <Column Name="sYEAR" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="JURISDICTION" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="TAXUNITACCT" Type="System.String" DbType="VarChar(34)" CanBeNull="true" />
+      <Column Name="LEVY" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="EXPHOMESTEAD" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EXPOVER65" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EXPVETERAN" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EXPDISABLED" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EXPAG" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DATEPAID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="DUEDATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="OMITFLAG" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="LEVYBALANCE" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="SUIT" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CAUSENO" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="BANKCODE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="BANKRUPTNO" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ATTORNEY" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="COURTCOST" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="ABSTRACTFEE" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="DEFERRAL" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="BILLSUPP" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="SPLITPMTFLAG" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CATAGORYCODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ACCTOWNER" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ACCTADDRESS2" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ACCTADDRESS3" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ACCTADDRESS4" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ACCTCITY" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ACCTSTATE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ZIP" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ROLLCODE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PARCELNO" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="PARCELNAME" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PAYMENTAGREEMENT" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TOTAMTDUE" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="TOTAMTDUE30" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="TOTAMTDUE60" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="TOTAMTDUE90" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="AMOUNTINDICATOR" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.NewClientSetup" Method="NewClientSetup">
     <Parameter Name="ClientContactId" Parameter="clientContactId" Type="System.Int32" DbType="Int" />
     <Parameter Name="ClientActiveDate" Parameter="clientActiveDate" Type="System.DateTime" DbType="SmallDateTime" />

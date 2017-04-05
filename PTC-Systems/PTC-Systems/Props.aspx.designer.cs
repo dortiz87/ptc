@@ -40,15 +40,6 @@ namespace PTC_Systems {
         protected global::System.Web.UI.WebControls.Label ptlastname;
         
         /// <summary>
-        /// ptclientname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ptclientname;
-        
-        /// <summary>
         /// ptemail control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace PTC_Systems {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label ptfaxnumber;
+        
+        /// <summary>
+        /// ptclientname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ptclientname;
         
         /// <summary>
         /// ptcounty control.
