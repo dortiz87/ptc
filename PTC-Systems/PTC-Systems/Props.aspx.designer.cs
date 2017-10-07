@@ -85,6 +85,33 @@ namespace PTC_Systems {
         protected global::System.Web.UI.WebControls.Label ptclientname;
         
         /// <summary>
+        /// ptpropcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ptpropcode;
+        
+        /// <summary>
+        /// ptactivestatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ptactivestatus;
+        
+        /// <summary>
+        /// ptactivedate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ptactivedate;
+        
+        /// <summary>
         /// ptcounty control.
         /// </summary>
         /// <remarks>
@@ -173,24 +200,6 @@ namespace PTC_Systems {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label ptnla;
-        
-        /// <summary>
-        /// ptactivestatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ptactivestatus;
-        
-        /// <summary>
-        /// ptactivedate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ptactivedate;
         
         /// <summary>
         /// hfpropid control.

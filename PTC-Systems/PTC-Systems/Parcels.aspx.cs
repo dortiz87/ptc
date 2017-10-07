@@ -7,11 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace PTC_Systems
 {
-    public partial class Parcels : System.Web.UI.Page
+    public partial class parcels : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            hfparcelid.Value = Request.QueryString["id"];
         }
+
+      
     }
 }

@@ -70,13 +70,23 @@ namespace PTC_Systems
                 ptfaxnumber.Text = propertydetails.ContactFaxNumber;
                 ptcounty.Text = propertydetails.PropertyCounty;
                 ptaddressline1.Text = propertydetails.PropertyAddressLine1;
+                ptaddresline2.Text = propertydetails.PropertyAddressLine2;
+                ptcity.Text = propertydetails.PropertyAddressCity;
+                ptstate.Text = propertydetails.PropertyAddressState;
+                ptzip.Text = propertydetails.PropertyAddressZip;
+                ptyearbuilt.Text = propertydetails.PropertyCharYearBuilt;
+                ptgba.Text = propertydetails.PropertyCharGBA.ToString();
+                ptnla.Text = propertydetails.PropertyCharNLA.ToString();
+                ptunits.Text = propertydetails.PropertyCharUnits.ToString();
+                ptactivedate.Text = propertydetails.PropertyActiviatedDate.ToShortDateString();
+                ptpropcode.Text = propertydetails.InternalCode;
 
-              
+
 
             }
 
 
           }
 
-        }  
+    }  
     }
