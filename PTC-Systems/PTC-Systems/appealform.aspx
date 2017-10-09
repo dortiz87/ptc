@@ -17,18 +17,18 @@
     <div class="row">
         <div class="col-xs-3 col-md-3">
 
-            <input runat="server" type="text" class="form-control" placeholder="Appraisal District Name" />
+            <input runat="server" type="text" class="form-control" id="adname" placeholder="Appraisal District Name" />
         </div>
         <div class="col-xs-3 col-md-3">
 
-            <input runat="server" type="text" class="form-control" placeholder="AD Phone" />
+            <input runat="server" type="text" class="form-control" id="adphone" placeholder="AD Phone" />
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-3 col-md-3">
 
-            <input runat="server" type="text" class="form-control" placeholder="Appraisal District Address" />
+            <input runat="server" type="text" class="form-control" id="adaddress" placeholder="Appraisal District Address" />
         </div>
     </div>
 
@@ -71,8 +71,10 @@
             <input runat="server" type="text" class="form-control" placeholder="Account Number" />
         </div>
     </div>
-           <button type="button" class="btn btn-primary">Generate Form</button> 
+           
            </div>
           </div>
-
+    <asp:Button ID="BtnGeneratePDF" runat="server" Text="Generate Appeal Form" 
+            onclick="BtnGeneratePDF_Click" ViewStateMode="Disabled" CssClass="btn btn-primary" />
+   
 </asp:Content>

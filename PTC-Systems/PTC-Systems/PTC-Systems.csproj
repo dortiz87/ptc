@@ -293,6 +293,7 @@
     <Content Include="Props.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="PDFforms\appealform.pdf" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -451,6 +452,11 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Content Include="App_Code\PDFCheckBoxFieldType.cs" />
+    <Content Include="App_Code\PDFFieldType.cs" />
+    <Compile Include="App_Code\PDFHelper.cs" />
+    <Content Include="App_Code\PDFOtherFieldType.cs" />
+    <Content Include="App_Code\PDFTextFieldType.cs" />
     <Compile Include="appealform.aspx.cs">
       <DependentUpon>appealform.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -591,7 +597,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
