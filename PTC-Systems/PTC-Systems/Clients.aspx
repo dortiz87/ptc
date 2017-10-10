@@ -88,8 +88,9 @@
                 <div>
                     <!--Trigger the modal with a button -->
                     <br />
-                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#editclientdetails">Edit Client Details</button>
+                    <button runat="server" type="button" onclick="GetClientWizard_Click" class="btn btn-link" data-toggle="modal" data-target="#editclientdetails">Edit Client Details</button>
                 </div>
+                <div><button runat="server" id="addproperty" type="button" class ="btn btn-link">Add Property</button></div>
             </div>
             <span style="font-size: small">
                 <asp:HiddenField ID="hfClientid" runat="server" />
@@ -116,8 +117,8 @@
                         <div class="spacing">
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
-                                    <label for="lbclientname">Client Name</label>
-                                    <input runat="server" type="text" class="form-control" id="wzClientName" placeholder="Client Name" />
+                                    <label for="lbClient">Client Name</label>
+                                    <asp:TextBox id="wzClient" runat="server" CssClass="form-control" />
                                 </div>
                                 <div class="col-xs-3 col-md-3">
                                     <label for="lbclientactivedate">Date Activated</label>
@@ -197,12 +198,13 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-        </div>
+        </div>   
     </div>
-        
+    
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" contentplaceholderid="rightcolumn">
+  
     </asp:Content>
 
 

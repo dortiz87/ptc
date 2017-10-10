@@ -50,7 +50,7 @@ namespace PTC_Systems
                 PropertyContactdd.Items.Insert(0, new ListItem("Select Contact", "NA"));
             }
         }
-        public void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
+        public void Wizard1_FinishButton_Click(object sender, EventArgs e)
         {
 
             SqlCommand com;
@@ -220,6 +220,9 @@ namespace PTC_Systems
 
            }
 
+        protected void Unnamed_ServerClick(object sender, EventArgs e)
+        {
 
         }
+    }
     }

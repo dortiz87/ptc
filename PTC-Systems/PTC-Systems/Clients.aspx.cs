@@ -72,9 +72,17 @@ namespace PTC_Systems
                 lblastname.Text = ClientData.ContactLastname;
                 lbcellphone.Text = Convert.ToInt64(ClientData.ContactCellularNumber).ToString("(###) ###-####");
                 lbbusphone.Text = Convert.ToInt64(ClientData.ContactBusinessNumber).ToString("(###) ###-####");
+                wzClient.Text= ClientData.ClientName;
+                wzClientAddressLine1.Value = ClientData.ClientAddressLine1;
+                wzClientAddressLine2.Value = ClientData.ClientAddressLine2;
+
 
             }
         }
+
+       
+       
+        
 
         /* public void GetPropInfo()
          {
@@ -105,7 +113,7 @@ namespace PTC_Systems
     }*/
 
 
-}
+    }
 
   
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Web;
+using System.Linq;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -69,7 +70,25 @@ namespace PTC_Systems
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ClientSelect();
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+            {
+                Response.Redirect("Clients.aspx?Clientid=" + test.SelectedValue);
+            }
+
+        public void ClientSelect()
+        {
+            using (var clientTB = new db_ptcDataContext())
+            {
+                test.DataSource= from Client in clientTB.Clients
+                                 orderby Client.ClientName
+                                 select new { Client.ClientName, Client.ClientId };
+                test.DataTextField = "ClientName";
+                test.DataValueField = "ClientId";
+                test.DataBind();
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

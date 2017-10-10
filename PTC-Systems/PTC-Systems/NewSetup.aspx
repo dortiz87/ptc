@@ -412,7 +412,7 @@
                                     <li>
                                         <button type="button" class="btn btn-default prev-step">Previous</button></li>
                                     <li>
-                                        <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
+                                        <button ID="finish" type="button" runat="server" class="btn btn-primary btn-info-full next-step" oncserverlick="Wizard1_FinishButton_Click">Save and continue</button></li>
                                 </ul>
                         </div>
                             <!--Complete execute wizard blahh-->
@@ -431,4 +431,5 @@
     </section>
    </div>
 </div>   
+</div>
 </asp:Content>

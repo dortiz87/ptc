@@ -157,6 +157,15 @@ namespace PTC_Systems {
         protected global::System.Web.UI.WebControls.GridView propview;
         
         /// <summary>
+        /// addproperty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton addproperty;
+        
+        /// <summary>
         /// hfClientid control.
         /// </summary>
         /// <remarks>
@@ -175,13 +184,13 @@ namespace PTC_Systems {
         protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1;
         
         /// <summary>
-        /// wzClientName control.
+        /// wzClient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientName;
+        protected global::System.Web.UI.WebControls.TextBox wzClient;
         
         /// <summary>
         /// wzClientActiveDate control.
