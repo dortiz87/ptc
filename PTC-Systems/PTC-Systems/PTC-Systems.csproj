@@ -454,9 +454,6 @@
     </Compile>
     <Content Include="App_Code\PDFCheckBoxFieldType.cs" />
     <Content Include="App_Code\PDFFieldType.cs" />
-    <Compile Include="App_Code\PDFHelper.cs" />
-    <Content Include="App_Code\PDFOtherFieldType.cs" />
-    <Content Include="App_Code\PDFTextFieldType.cs" />
     <Compile Include="appealform.aspx.cs">
       <DependentUpon>appealform.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -464,6 +461,9 @@
     <Compile Include="appealform.aspx.designer.cs">
       <DependentUpon>appealform.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\PDFHelper.cs" />
+    <Content Include="App_Code\PDFOtherFieldType.cs" />
+    <Content Include="App_Code\PDFTextFieldType.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

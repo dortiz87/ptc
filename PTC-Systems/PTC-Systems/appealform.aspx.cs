@@ -14,7 +14,7 @@ namespace PTC_Systems
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
         protected void BtnGeneratePDF_Click(object sender, EventArgs e)
         {
@@ -33,6 +33,14 @@ namespace PTC_Systems
             PDFHelper.ReturnPDF(pdfContents, "Completed-W9.pdf");
 
 
+        }
+
+        protected void appealformselect()
+        {
+            using (var parcelstb = new db_ptcDataContext())
+            {
+               
+            }
         }
     }
 }
