@@ -11,21 +11,22 @@ namespace PTC_Systems
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ClientSelect();
+           // ClientSelect();
 
         }
+        //Originally used for client drop-down moved to nav bar -DO
 
-        public void ClientSelect()
+        /*public void ClientSelect()
         {
-            using (var clientTB = new db_ptcDataContext())
-            {
+           using (var clientTB = new db_ptcDataContext())
+           {
                 dd1.DataSource = from Client in clientTB.Clients
                                  orderby Client.ClientName
                                  select new { Client.ClientName, Client.ClientId };
-                dd1.DataTextField = "ClientName";
-                dd1.DataValueField = "ClientId";
-                dd1.DataBind();
-            }
+              dd1.DataTextField = "ClientName";
+              dd1.DataValueField = "ClientId";
+              dd1.DataBind();
+           }
         }
 
 
@@ -35,6 +36,6 @@ namespace PTC_Systems
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("Clients.aspx?Clientid=" + dd1.SelectedValue);
-        }
+        }*/
     }
 }

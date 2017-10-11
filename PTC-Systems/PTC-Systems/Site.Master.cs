@@ -88,6 +88,8 @@ namespace PTC_Systems
                 test.DataTextField = "ClientName";
                 test.DataValueField = "ClientId";
                 test.DataBind();
+
+                test.Items.Insert(0, new ListItem("Search Client", "NA"));
             }
         }
 

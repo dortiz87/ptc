@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="newsetup.aspx.cs" Inherits="PTC_Systems.newsetup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <!DOCTYPE html>
+    <!DOCTYPE html5>
 
 
 <html><body></body>
@@ -101,8 +101,8 @@
                                     <input runat="server" type="text" class="form-control" id="wzClientAddressLine1" placeholder="Main Office Address" />
                                 </div>
                                 <div class="col-xs-3 col-md-3">
-                                    <label for="lbclientcontact">Main Contact</label>
-                                    <select runat="server" class="form-control" id="ClientContactdd"></select>
+                               <label for="lbclientaddressline1">Client Contact</label>
+                                    <asp:DropDownList ID="ClientContactdd1" runat="server" AppendDataBoundItems="true" AutoPostBack="true"  CssClass="btn btn-default dropdown-toggle" />
                                 </div>
                             </div>
                             <div class="row">
@@ -166,7 +166,7 @@
                         </ul>
                     </div>
 
-                     <!--Step 2 I'm Watching You-->
+                     <!--Enter Property Information-->
 
                     <div class="tab-pane" role="tabpanel" id="step2">
                         <h3><strong>Property Details</strong></h3>
@@ -275,7 +275,7 @@
                             <li><button runat="server" type="button" class="btn btn-primary next-step" >Save and continue</button></li>
                         </ul>
                     </div>
-                        <!--Step 3 Yes You!-->
+                        <!-- Enter Parcel Information (Query)-->
 
                     <div class="tab-pane" role="tabpanel" id="step3">
                         <div class="step2">
@@ -283,7 +283,7 @@
                             <div class="row">
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbParcelId">Enter Parcel Number</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelId" placeholder="Parcel Number" />
+                                    <input runat="server" type="text" class="form-control" id="wzParcelPropId" placeholder="Parcel Number" />
                                 </div>
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbParcelcounty">Enter County</label>
@@ -300,7 +300,7 @@
                                     <input runat="server" type="text" class="form-control" id="wzParcelGeoId" placeholder="Geographic Id" />
                                 </div>
                                 <div class="col-xs-4 col-md-4">
-                                    <label for="lbparcelgeoid">Geographic Id</label>
+                                    <label for="lbparcelgeoid">Legal Desc</label>
                                     <textarea runat="server" class="form-control" id="wzParcelLegalDesc" rows="1" placeholder="Legal Description" />
                                 </div>
                             </div>
@@ -324,11 +324,11 @@
 
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbpropertycd">Property Use Code</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelPropertyUseCode" placeholder="Use Code" />
+                                    <input runat="server" type="text" class="form-control" id="wzParcelPropUseCd" placeholder="Use Code" />
                                 </div>
                                 <div class="col-xs-3 col-md-3">
                                     <label for="lbpropertyusedesc">Property Use Description</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelPropertyUseDesc" placeholder="Use Description" />
+                                    <input runat="server" type="text" class="form-control" id="wzParcelPropUseDesc" placeholder="Use Description" />
                                 </div>
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbparcellbneighborhoodname">Neighborhood Name</label>
@@ -337,6 +337,7 @@
 
                             </div>
                             <div class="row">
+                                <div><h2>Owner Information</h2></div>
                                 <div class="col-md-4">
                                     <label for="lbparcelownername">Owner Name</label>
                                     <input runat="server" type="text" class="form-control" id="wzParcelOwnerName" placeholder="Owner Name" />
@@ -366,29 +367,48 @@
                                 </div>
                             </div>
                             <div class="row">
-
+                                <div><h2>Situs Information</h2></div>
                                 <div class="col-xs-4 col-md-4">
-                                    <label for="lbparceladdress">Location Address</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelAdressLine2" placeholder="Address" />
+                                    <label for="lbparceladdress">Situs Address Line 1</label>
+                                    <input runat="server" type="text" class="form-control" id="wzParcelAddressLine2" placeholder="Situs Street" />
                                 </div>
+                                
                                  <div class="col-xs-2 col-md-2">
                                     <label for="lbparcelacres">Year Built</label>
                                     <input runat="server" type="text" class="form-control" id="wzParcelCharYearBuilt" placeholder="Year Built" />
                                 </div>
-                            </div>                  
+                            </div> 
+                            <div class="row">
+                             
+                                <div class="col-xs-4 col-md-4">
+                                    <label for="lbparceladdressAddressCity">Situs City</label>
+                                    <input runat="server" type="text" class="form-control" id="wzParcelSitusCity" placeholder="Situs City" />
+                                </div>
+                                 <div class="col-xs-4 col-md-4">
+                                    <label for="lbparceladdressZip">Situs Zip Code</label>
+                                    <input runat="server" type="text" class="form-control" id="wzParcelSitusZip" placeholder="Situs Zip" />
+                                </div>
+                            </div>                
                             <div class="row">
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbparcelacres">Acres</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelAcres" placeholder="Acres" />
+                                    <input runat="server" type="text" class="form-control" id="wzParcelCharAcres" placeholder="Acres" />
                                 </div>
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbparecelgba">Gross Building Area</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelGBA" placeholder="GBA" />
+                                    <input runat="server" type="text" class="form-control" id="wzParcelCharGBA" placeholder="GBA" />
                                 </div>
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbparcelnla">Net Leasable Area</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelNLA" placeholder="NLA" />
+                                    <input runat="server" type="text" class="form-control" id="wzParcelCharNLA" placeholder="NLA" />
                                 </div>
+                            </div>
+                             <div class="row">
+                                <div class="auto-style1">
+                                    <label for="lbParcelNotes">Notes</label>
+                                    <textarea runat="server" class="form-control" id="wzParcelNotes" rows="4"></textarea>
+                                </div>
+                 
                             </div>
 
                         </div>
@@ -412,7 +432,7 @@
                                     <li>
                                         <button type="button" class="btn btn-default prev-step">Previous</button></li>
                                     <li>
-                                        <button ID="finish" type="button" runat="server" class="btn btn-primary btn-info-full next-step" oncserverlick="Wizard1_FinishButton_Click">Save and continue</button></li>
+                                        <button ID="finish" type="button" runat="server" class="btn btn-primary btn-info-full next-step" onserverclick="Wizard1_FinishButton_Click">Save and continue</button></li>
                                 </ul>
                         </div>
                             <!--Complete execute wizard blahh-->
@@ -431,5 +451,5 @@
     </section>
    </div>
 </div>   
-</div>
+
 </asp:Content>

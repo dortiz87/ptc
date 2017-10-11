@@ -10,16 +10,8 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Client Look Up</h2>
-            <p dir="ltr">
-                Client:
-                <asp:DropDownList ID="dd1" runat="server" Height="18px" Width="249px" AppendDataBoundItems="True" AutoPostBack="True" EnableTheming="True">
-                </asp:DropDownList>
-&nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" BorderStyle="Groove" Text="Search" OnClick="Button1_Click" />
-            </p>
-            <p>
-                &nbsp;</p>
+            
+            <h2>Hello World</h2>
         </div>
 
         <div class="col-md-4">
