@@ -43,15 +43,15 @@ namespace PTC_Systems
 
                 using (var contactTB = new db_ptcDataContext())
             {
-                PropertyContactdd.DataSource = from Contact in contactTB.Contacts
+                PropertyContactdd1.DataSource = from Contact in contactTB.Contacts
                                                orderby Contact.ContactLastname
                                                select new { Contact.ContactLastname, Contact.ContactFirstName, Contact.Contactid, ContactFullName = string.Format("{0},{1}", Contact.ContactLastname, Contact.ContactFirstName) };
 
-                PropertyContactdd.DataTextField = "ContactFullName";
-                PropertyContactdd.DataValueField = "Contactid";
-                PropertyContactdd.DataBind();
+                PropertyContactdd1.DataTextField = "ContactFullName";
+                PropertyContactdd1.DataValueField = "Contactid";
+                PropertyContactdd1.DataBind();
 
-                PropertyContactdd.Items.Insert(0, new ListItem("Select Contact", "NA"));
+                PropertyContactdd1.Items.Insert(0, new ListItem("Select Contact", "NA"));
             }
         }
         public void Wizard1_FinishButton_Click(object sender, EventArgs e)
@@ -69,8 +69,8 @@ namespace PTC_Systems
 		@ClientAddressCity = @ClientAddressCity,
 		@ClientAddressState = @ClientAddressState,
 		@ClientAddressZip = @ClientAddressZip,
-		@ClientNotes = @ClientNotes";
-		/*@PropertyContactid = @PropertyContactid,
+		@ClientNotes = @ClientNotes,
+		@PropertyContactid = @PropertyContactid,
 		@PropertyName = @PropertyName,
 		@InternalCode = @InternalCode,
 		@PropertyCounty = @PropertyCounty,
@@ -90,9 +90,32 @@ namespace PTC_Systems
 		@PropertyFlagIncomeProducing = @PropertyFlagIncomeProducing,
 		@PropertyFlagIEReceived = @PropertyFlagIEReceived,
 		@PropertyFlagRRReceived = @PropertyFlagRRReceived,
-		@PropertyFlagAOAReceived = @PropertyFlagAOAReceived";
-		//@PropertyAOAExpDate = @PropertyAOAExpDate";*/
- 
+		@PropertyFlagAOAReceived = @PropertyFlagAOAReceived,
+		@PropertyAOAExpDate = @PropertyAOAExpDate,
+        @ParcelActiveDate = @ParcelActiveDate,
+        @ParcelPropId = @ParcelPropId,
+        @ParcelGeoId = @ParcelGeoId,
+        @ParcelDBA = @ParcelDBA,
+        @ParcelSitusStreetprefx = @ParcelSitusStreetprefx,
+        @ParcelSitusStreet = @ParcelSitusStreet,
+        @ParcelSitusStreetSuffix = @ParcelSitusStreetSuffix,
+        @ParcelSitusCity = @ParcelSitusCity,
+        @ParcelSitusZip = @ParcelSitusZip,
+        @ParcelLegalDesc = @ParcelLegalDesc,
+        @ParcelOwnerName = @ParcelOwnerName,
+        @ParcelOwnerAddressLine1 = @ParcelOwnerAddressLine1,
+        @ParcelOwnerAddressLine2 = @ParcelOwnerAddressLine2,
+        @ParcelOwnerAddressCity = @ParcelOwnerAddressCity,
+        @ParcelOwnerAddressState = @ParcelOwnerAddressState,
+        @ParcelOwnerAddressZip = @ParcelOwnerAddressZip,
+        @ParcelCharGBA = @ParcelCharGBA,
+        @ParcelCharNLA = @ParcelCharNLA,
+        @ParcelCharYearBuilt = @ParcelCharYearBuilt,
+        @ParcelNotes = @ParcelNotes,
+	    @ParcelCharAcres = @ParcelCharAcres,
+	    @ParcelPropUseCd = @ParcelPropUseCd,
+	    @ParcelPropUseDesc = @ParcelPropUseDesc";
+   
 
             com = new SqlCommand(str, conn);
 
@@ -105,7 +128,7 @@ namespace PTC_Systems
             com.Parameters.AddWithValue("@ClientAddressCity", wzClientAddressCity.Value);
             com.Parameters.AddWithValue("@ClientAddressZip", wzClientAddressZip.Value);
             com.Parameters.AddWithValue("@ClientNotes", wzClientNotes.Value);
-            /*com.Parameters.AddWithValue("@PropertyContactid", PropertyContactdd.Value);
+            com.Parameters.AddWithValue("@PropertyContactid", PropertyContactdd1.SelectedValue);
             com.Parameters.AddWithValue("@PropertyName", wzPropertyName.Value);
             com.Parameters.AddWithValue("@InternalCode", wzInternalCode.Value);
             com.Parameters.AddWithValue("@PropertyCounty", wzPropertyCounty.Value);
@@ -126,7 +149,34 @@ namespace PTC_Systems
             com.Parameters.AddWithValue("@PropertyFlagIEReceived", cbIEExpected.Checked);
             com.Parameters.AddWithValue("@PropertyFlagRRReceived", cbRRExpected.Checked);
             com.Parameters.AddWithValue("@PropertyFlagAOAReceived", cbAOAReceived.Checked);
-          */
+            com.Parameters.AddWithValue("@PropertyAOAExpDate", wzClientAOAExpDate.Value);
+            com.Parameters.AddWithValue("@ParcelActiveDate", wzParcelActiveDate.Value);
+            com.Parameters.AddWithValue("@ParcelPropId", wzParcelPropId.Value);
+            com.Parameters.AddWithValue("@ParcelGeoId", wzParcelGeoId.Value);
+            com.Parameters.AddWithValue("@ParcelDBA", wzParcelDBA.Value);
+            com.Parameters.AddWithValue("@ParcelSitusStreetprefx", wzParcelSitusStreetprefx.Value);
+            com.Parameters.AddWithValue("@ParcelSitusStreet", wzParcelSitusStreet.Value);
+            com.Parameters.AddWithValue("@ParcelSitusStreetSuffix", wzParcelSitusStreetSuffix.Value);
+            com.Parameters.AddWithValue("@ParcelSitusCity", wzParcelSitusCity.Value);
+            com.Parameters.AddWithValue("@ParcelSitusZip", wzParcelSitusZip.Value);
+            com.Parameters.AddWithValue("@ParcelLegalDesc", wzParcelLegalDesc.Value);
+            com.Parameters.AddWithValue("@ParcelOwnerName", wzParcelOwnerName.Value);
+            com.Parameters.AddWithValue("@ParcelOwnerAddressLine1", wzParcelOwnerAddressLine1.Value);
+            com.Parameters.AddWithValue("@ParcelOwnerAddressLine2", wzParcelOwnerAddressLine2.Value);
+            com.Parameters.AddWithValue("@ParcelOwnerAddressCity", wzParcelOwnerAddressCity.Value);
+            com.Parameters.AddWithValue("@ParcelOwnerAddressState", wzParcelOwnerAddressState.Value);
+            com.Parameters.AddWithValue("@ParcelOwnerAddressZip", wzParcelOwnerAddressZip.Value);
+            com.Parameters.AddWithValue("@ParcelCharGBA", wzParcelCharGBA1.Value);
+            com.Parameters.AddWithValue("@ParcelCharNLA", wzParcelCharNLA1.Value);
+            com.Parameters.AddWithValue("@ParcelCharYearBuilt", wzParcelCharYearBuilt1.Value);
+            com.Parameters.AddWithValue("@ParcelNotes", wzParcelNotes.Value);
+            com.Parameters.AddWithValue("@ParcelCharAcres", wzParcelCharAcre.Value);
+            com.Parameters.AddWithValue("@ParcelPropUseCd", wzParcelPropUseCd.Value);
+            com.Parameters.AddWithValue("@ParcelPropUseDesc", wzParcelPropUseDesc1.Value);
+
+
+
+
 
             com.ExecuteNonQuery();
             conn.Close();
@@ -137,12 +187,11 @@ namespace PTC_Systems
         {
             db_ptcDataContext ADsearch = new db_ptcDataContext();
 
-            
 
-           
 
-                //int AD;
-                {
+
+            // int AD;
+            {
                 var lookup = (
                     from tb in ADsearch.SearchAppraisalDistrictDatas
                     where tb.prop_id.ToString() == wzParcelPropId.Value
@@ -167,27 +216,28 @@ namespace PTC_Systems
                         tb.year_built,
                         tb.prop_use_cd,
                         tb.prop_use_desc,
+                       
 
                     }).FirstOrDefault();
 
                
 
                 wzParcelGeoId.Value = lookup.geo_id;
-                wzParcelType.Value = lookup.prop_type_cd;
+                //wzParcelType.Value = lookup.prop_type_cd;
                 wzParcelLegalDesc.Value = lookup.legal_desc;
-                wzParcelAddressLine2.Value = lookup.situs_street;
+                wzParcelSitusStreet.Value = lookup.situs_street;
                 wzParcelOwnerName.Value = lookup.py_owner_name + ' ' + lookup.py_addr_line1;
-                wzParcelOwnerAddress.Value = lookup.py_addr_line2;
+                wzParcelOwnerAddressLine1.Value = lookup.py_addr_line2;
                 wzParcelOwnerAddressCity.Value = lookup.py_addr_city;
                 wzParcelOwnerAddressState.Value = lookup.py_addr_state;
                 wzParcelOwnerAddressZip.Value = lookup.py_addr_zip + '-' + lookup.py_addr_zip_cass;
                 wzParcelDBA.Value = lookup.property_name;
-                wzParcelCharAcres.Value = lookup.land_acres;
-                wzParcelCharGBA.Value = lookup.gross_building_area;
-                wzParcelCharNLA.Value = lookup.net_rentable_area;
+                wzParcelCharAcre.Value = lookup.land_acres;
+                wzParcelCharGBA1.Value = lookup.gross_building_area;
+                wzParcelCharNLA1.Value = lookup.net_rentable_area;
                 wzParcelPropUseCd.Value = lookup.prop_use_cd;
-                /*wzParcelCharYearBuilt = lookup.year_built;*/
-                wzParcelPropUseDesc.Value = lookup.prop_use_desc;
+                wzParcelCharYearBuilt1.Value = lookup.year_built.ToString();
+                wzParcelPropUseDesc1.Value = lookup.prop_use_desc;
 
                
 

@@ -175,13 +175,13 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlInputText wzPropertyAddressLine1;
         
         /// <summary>
-        /// PropertyContactdd control.
+        /// PropertyContactdd1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect PropertyContactdd;
+        protected global::System.Web.UI.WebControls.DropDownList PropertyContactdd1;
         
         /// <summary>
         /// wzPropertyAddressLine2 control.
@@ -319,33 +319,6 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlButton Button1;
         
         /// <summary>
-        /// wzParcelGeoId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelGeoId;
-        
-        /// <summary>
-        /// wzParcelLegalDesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea wzParcelLegalDesc;
-        
-        /// <summary>
-        /// wzParcelType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelType;
-        
-        /// <summary>
         /// wzParcelDBA control.
         /// </summary>
         /// <remarks>
@@ -355,13 +328,58 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelDBA;
         
         /// <summary>
-        /// wzparcelneighborhoodcd control.
+        /// wzParcelActiveDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzparcelneighborhoodcd;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzParcelActiveDate;
+        
+        /// <summary>
+        /// wzParcelGeoId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelGeoId;
+        
+        /// <summary>
+        /// wzParcelCharAcre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzParcelCharAcre;
+        
+        /// <summary>
+        /// wzParcelCharGBA1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzParcelCharGBA1;
+        
+        /// <summary>
+        /// wzParcelCharNLA1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzParcelCharNLA1;
+        
+        /// <summary>
+        /// wzParcelCharYearBuilt1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzParcelCharYearBuilt1;
         
         /// <summary>
         /// wzParcelPropUseCd control.
@@ -373,22 +391,22 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelPropUseCd;
         
         /// <summary>
-        /// wzParcelPropUseDesc control.
+        /// wzParcelPropUseDesc1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelPropUseDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzParcelPropUseDesc1;
         
         /// <summary>
-        /// Text3 control.
+        /// wzParcelNotes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea wzParcelNotes;
         
         /// <summary>
         /// wzParcelOwnerName control.
@@ -400,13 +418,22 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelOwnerName;
         
         /// <summary>
-        /// wzParcelOwnerAddress control.
+        /// wzParcelOwnerAddressLine1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelOwnerAddress;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelOwnerAddressLine1;
+        
+        /// <summary>
+        /// wzParcelOwnerAddressLine2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelOwnerAddressLine2;
         
         /// <summary>
         /// wzParcelOwnerAddressCity control.
@@ -436,22 +463,40 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelOwnerAddressZip;
         
         /// <summary>
-        /// wzParcelAddressLine2 control.
+        /// wzParcelLegalDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelAddressLine2;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea wzParcelLegalDesc;
         
         /// <summary>
-        /// wzParcelCharYearBuilt control.
+        /// wzParcelSitusStreetprefx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelCharYearBuilt;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelSitusStreetprefx;
+        
+        /// <summary>
+        /// wzParcelSitusStreet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelSitusStreet;
+        
+        /// <summary>
+        /// wzParcelSitusStreetSuffix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelSitusStreetSuffix;
         
         /// <summary>
         /// wzParcelSitusCity control.
@@ -470,42 +515,6 @@ namespace PTC_Systems {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelSitusZip;
-        
-        /// <summary>
-        /// wzParcelCharAcres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelCharAcres;
-        
-        /// <summary>
-        /// wzParcelCharGBA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelCharGBA;
-        
-        /// <summary>
-        /// wzParcelCharNLA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzParcelCharNLA;
-        
-        /// <summary>
-        /// wzParcelNotes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea wzParcelNotes;
         
         /// <summary>
         /// finish control.

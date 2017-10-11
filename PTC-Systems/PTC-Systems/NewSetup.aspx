@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="col-xs-3 col-md-3">
                                <label for="lbclientaddressline1">Client Contact</label>
-                                    <asp:DropDownList ID="ClientContactdd1" runat="server" AppendDataBoundItems="true" AutoPostBack="true"  CssClass="btn btn-default dropdown-toggle" />
+                                    <asp:DropDownList ID="ClientContactdd1" runat="server" AppendDataBoundItems="true" AutoPostBack="true"  CssClass="form-control" />
                                 </div>
                             </div>
                             <div class="row">
@@ -198,9 +198,10 @@
                                     <input runat="server" type="text" class="form-control" id="wzPropertyAddressLine1" placeholder="Property Address" />
                                 </div>
                                 <div class="col-xs-3 col-md-3">
-                                    <label for="lbclientcontact">Property Contact</label>
-                                    <select runat="server" class="form-control" id="PropertyContactdd"></select>
+                                    <label for="lbclientcontact">Property Contact</label>                                
+                                    <asp:DropDownList ID="PropertyContactdd1" runat="server" AppendDataBoundItems="true" AutoPostBack="true"  CssClass="form-control" />
                                 </div>
+                         
                             </div>
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
@@ -280,136 +281,7 @@
                     <div class="tab-pane" role="tabpanel" id="step3">
                         <div class="step2">
 
-                            <div class="row">
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbParcelId">Enter Parcel Number</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelPropId" placeholder="Parcel Number" />
-                                </div>
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbParcelcounty">Enter County</label>
-                                    <input runat="server" type="text" class="form-control" required="required" id="wzParcelCounty" placeholder="County" />
-                                    </div>
-                                    <div class="col-md-1">
-                                    <button ID="Button1" runat="server" class="btn btn-default" onserverclick="Button1_Click">Search</button>  
-                                        </div>                               
-                            </div>
-                            <hr />
-                            <div class="row">
-                                <div class="col-xs-3 col-md-3">
-                                    <label for="lbparcelgeoid">Geographic Id</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelGeoId" placeholder="Geographic Id" />
-                                </div>
-                                <div class="col-xs-4 col-md-4">
-                                    <label for="lbparcelgeoid">Legal Desc</label>
-                                    <textarea runat="server" class="form-control" id="wzParcelLegalDesc" rows="1" placeholder="Legal Description" />
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                <div class=" col-xs-2 col-md-2">
-                                    <label for="lbparceltype">Parcel Type</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelType" placeholder="Type" />
-                                </div>
-                                <div class="col-xs-3 col-md-3">
-                                    <label for="lbdba">Doing Business As</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelDBA" placeholder="Doing Business As" />
-                                </div>
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbneighborhoodcd">Neighborhood Code</label>
-                                    <input runat="server" type="text" class="form-control" id="wzparcelneighborhoodcd" placeholder="Hood Code" />
-                                </div>
-
-                            </div>
-                            <div class="row">
-
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbpropertycd">Property Use Code</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelPropUseCd" placeholder="Use Code" />
-                                </div>
-                                <div class="col-xs-3 col-md-3">
-                                    <label for="lbpropertyusedesc">Property Use Description</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelPropUseDesc" placeholder="Use Description" />
-                                </div>
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbparcellbneighborhoodname">Neighborhood Name</label>
-                                    <input runat="server" type="text" class="form-control" id="Text3" placeholder="Neighborhood Name" />
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div><h2>Owner Information</h2></div>
-                                <div class="col-md-4">
-                                    <label for="lbparcelownername">Owner Name</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelOwnerName" placeholder="Owner Name" />
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-xs-4 col-md-4">
-                                    <label for="lbparcelowner">Owner Address</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddress" placeholder="Owner Address" />
-                                </div>
-
-
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lnparcelowneraddresscity">City</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressCity" placeholder="City" />
-                                </div>
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lnparcelowneraddressstate">State</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressState" placeholder="State" />
-                                </div>
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lnparcelowneraddressZip">Zip Code</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressZip" placeholder="Zip Code" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div><h2>Situs Information</h2></div>
-                                <div class="col-xs-4 col-md-4">
-                                    <label for="lbparceladdress">Situs Address Line 1</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelAddressLine2" placeholder="Situs Street" />
-                                </div>
-                                
-                                 <div class="col-xs-2 col-md-2">
-                                    <label for="lbparcelacres">Year Built</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelCharYearBuilt" placeholder="Year Built" />
-                                </div>
-                            </div> 
-                            <div class="row">
-                             
-                                <div class="col-xs-4 col-md-4">
-                                    <label for="lbparceladdressAddressCity">Situs City</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelSitusCity" placeholder="Situs City" />
-                                </div>
-                                 <div class="col-xs-4 col-md-4">
-                                    <label for="lbparceladdressZip">Situs Zip Code</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelSitusZip" placeholder="Situs Zip" />
-                                </div>
-                            </div>                
-                            <div class="row">
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbparcelacres">Acres</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelCharAcres" placeholder="Acres" />
-                                </div>
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbparecelgba">Gross Building Area</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelCharGBA" placeholder="GBA" />
-                                </div>
-                                <div class="col-xs-2 col-md-2">
-                                    <label for="lbparcelnla">Net Leasable Area</label>
-                                    <input runat="server" type="text" class="form-control" id="wzParcelCharNLA" placeholder="NLA" />
-                                </div>
-                            </div>
-                             <div class="row">
-                                <div class="auto-style1">
-                                    <label for="lbParcelNotes">Notes</label>
-                                    <textarea runat="server" class="form-control" id="wzParcelNotes" rows="4"></textarea>
-                                </div>
-                 
-                            </div>
+                            
 
                         </div>
                         
@@ -420,20 +292,160 @@
                     </div>
                         <!--Step 4-->
 
-                            <div class="tab-pane" role="tabpanel" id="step4">
-                                <div class="step2">
-                                    <div>
-                                    
+                        <div class="tab-pane" role="tabpanel" id="step4">
+                            <div class="step2">
+                                <div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbParcelId">Enter Parcel Number</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelPropId" placeholder="Parcel Number" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbParcelcounty">Enter County</label>
+                                        <input runat="server" type="text" class="form-control" required="required" id="wzParcelCounty" placeholder="County" />
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button id="Button1" runat="server" class="btn btn-default" onserverclick="Button1_Click">Search</button>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <h3>Parcel Characteristics</h3>
+                                    <div class="col-xs-4 col-md-4">
+                                        <label for="lbdba">Doing Business As</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelDBA" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbparcelgeoid">Parcel Active Date</label>
+                                        <input runat="server" type="date" class="form-control" id="wzParcelActiveDate" />
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class=" col-xs-4 col-md-4">
+                                        <label for="lbparcelgeoid">Geo-ID</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelGeoId" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbdba">Acres</label>
+                                        <input runat="server" type="number" class="form-control" id="wzParcelCharAcre" />
                                     </div>
 
-                                    
+
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbgba">GBA</label>
+                                        <input runat="server" type="number" class="form-control" id="wzParcelCharGBA1" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbnla">NLA</label>
+                                        <input runat="server" type="number" class="form-control" id="wzParcelCharNLA1" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbyearbuilt">Year Built</label>
+                                        <input runat="server" type="number" class="form-control" id="wzParcelCharYearBuilt1" />
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-2 col-md-2">
+                                        <label for="lbusevode">Use Code</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelPropUseCd" />
+                                    </div>
+                                    <div class="col-xs-4 col-md-4">
+                                        <label for="lbnla">Use Description</label>
+                                        <input runat="server" type="number" class="form-control" id="wzParcelPropUseDesc1" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-6">
+                                        <label for="lbusevode">Notes</label>
+                                        <textarea runat="server" rows="2" class="form-control" id="wzParcelNotes" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <h2>Owner Information</h2>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <div class="col-sm-6 col-md-6">
+                                        <label for="lbparcelownername">Owner Name</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelOwnerName" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-4">
+                                        <label for="lbparcelowneraddressline1">Address Line 1</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressLine1" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-4">
+                                        <label for="lbparcelowneraddressline2">Address Line 2</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressLine2" />
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 col-md-2">
+                                        <label for="lbParcelOwnerAddressCity">City</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressCity" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2">
+                                        <label for="lbParcelOwnerAddressState">State</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressState" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2">
+                                        <label for="lbParcelOwnerAddressZip">Zip</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelOwnerAddressZip" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h2>Situs Information</h2>
+                                    <br />
+                                    <br />
+                                    <div class="col-sm-6 col-md-6">
+                                        <label for="lbLegalDescription">Legal Description</label>
+                                        <textarea runat="server" rows="2" class="form-control" id="wzParcelLegalDesc" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-1 col-md-1">
+                                        <label for="lbSitusPrefx">Situs Prefx</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelSitusStreetprefx" />
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <label for="lbSitusStreet">Situs</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelSitusStreet" />
+                                    </div>
+                                    <div class="col-sm-1 col-md-1">
+                                        <label for="lbSitusPrefx">Situs Suffix</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelSitusStreetSuffix" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 col-md-2">
+                                        <label for="lbSitusCity">City</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelSitusCity" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2">
+                                        <label for="lbSitusZip">Zip</label>
+                                        <input runat="server" type="text" class="form-control" id="wzParcelSitusZip" />
+                                    </div>
+                                </div>
+
                             </div>
-                                <ul class="list-inline pull-right">
-                                    <li>
-                                        <button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                    <li>
-                                        <button ID="finish" type="button" runat="server" class="btn btn-primary btn-info-full next-step" onserverclick="Wizard1_FinishButton_Click">Save and continue</button></li>
-                                </ul>
+                            <ul class="list-inline pull-right">
+                                <li>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                <li>
+                                    <button id="finish" type="button" runat="server" class="btn btn-primary btn-info-full next-step" onserverclick="Wizard1_FinishButton_Click">Save and continue</button></li>
+                            </ul>
                         </div>
                             <!--Complete execute wizard blahh-->
                     <div class="tab-pane" role="tabpanel" id="complete">
