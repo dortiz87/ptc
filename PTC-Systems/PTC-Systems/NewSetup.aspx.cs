@@ -13,11 +13,15 @@ namespace PTC_Systems
     {
         public SqlConnection conn = new SqlConnection(@"Data Source = daenerys-one.database.windows.net; Initial Catalog = ptc; Persist Security Info=True;User ID = ptcadmin; Password=B11x55otc");
 
+      
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+          
+           
             ClientContactSelect();
             PropertyContactSelect();
+          
         }
 
         protected void ClientContactSelect()
@@ -179,15 +183,17 @@ namespace PTC_Systems
 
 
             com.ExecuteNonQuery();
+            
             conn.Close();
 
         }
+
         
         protected void Button1_Click(object sender, EventArgs e)
         {
-            db_ptcDataContext ADsearch = new db_ptcDataContext();
 
-
+            
+                db_ptcDataContext ADsearch = new db_ptcDataContext();
 
 
             // int AD;
@@ -195,7 +201,7 @@ namespace PTC_Systems
                 var lookup = (
                     from tb in ADsearch.SearchAppraisalDistrictDatas
                     where tb.prop_id.ToString() == wzParcelPropId.Value
-                   
+
                     select new
                     {
                         tb.geo_id,
@@ -216,11 +222,11 @@ namespace PTC_Systems
                         tb.year_built,
                         tb.prop_use_cd,
                         tb.prop_use_desc,
-                       
+
 
                     }).FirstOrDefault();
 
-               
+
 
                 wzParcelGeoId.Value = lookup.geo_id;
                 //wzParcelType.Value = lookup.prop_type_cd;
@@ -233,17 +239,17 @@ namespace PTC_Systems
                 wzParcelOwnerAddressZip.Value = lookup.py_addr_zip + '-' + lookup.py_addr_zip_cass;
                 wzParcelDBA.Value = lookup.property_name;
                 wzParcelCharAcre.Value = lookup.land_acres;
-                wzParcelCharGBA1.Value = lookup.gross_building_area;
-                wzParcelCharNLA1.Value = lookup.net_rentable_area;
+                wzParcelCharGBA1.Value = Convert.ToInt64(lookup.gross_building_area).ToString("###,###");
+                wzParcelCharNLA1.Value = Convert.ToInt64(lookup.net_rentable_area).ToString("##,##");
                 wzParcelPropUseCd.Value = lookup.prop_use_cd;
                 wzParcelCharYearBuilt1.Value = lookup.year_built.ToString();
                 wzParcelPropUseDesc1.Value = lookup.prop_use_desc;
 
-               
+
 
             }
-
-           }
+           
+        }
 
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {

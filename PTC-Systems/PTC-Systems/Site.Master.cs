@@ -75,21 +75,21 @@ namespace PTC_Systems
 
         protected void Button1_Click(object sender, EventArgs e)
             {
-                Response.Redirect("Clients.aspx?Clientid=" + test.SelectedValue);
+                Response.Redirect("Clients.aspx?Clientid=" + ClientDropDownList.SelectedValue);
             }
 
         public void ClientSelect()
         {
             using (var clientTB = new db_ptcDataContext())
             {
-                test.DataSource= from Client in clientTB.Clients
+                ClientDropDownList.DataSource= from Client in clientTB.Clients
                                  orderby Client.ClientName
                                  select new { Client.ClientName, Client.ClientId };
-                test.DataTextField = "ClientName";
-                test.DataValueField = "ClientId";
-                test.DataBind();
+                ClientDropDownList.DataTextField = "ClientName";
+                ClientDropDownList.DataValueField = "ClientId";
+                ClientDropDownList.DataBind();
 
-                test.Items.Insert(0, new ListItem("Search Client", "NA"));
+                ClientDropDownList.Items.Insert(0, new ListItem("Search Client", "NA"));
             }
         }
 
