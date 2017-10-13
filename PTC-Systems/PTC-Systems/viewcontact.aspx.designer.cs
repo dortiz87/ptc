@@ -13,129 +13,138 @@ namespace PTC_Systems {
     public partial class viewcontact {
         
         /// <summary>
-        /// ContactSaluation control.
+        /// Contact_Datagrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactSaluation;
+        protected global::System.Web.UI.WebControls.GridView Contact_Datagrid;
         
         /// <summary>
-        /// ContactFirstName control.
+        /// fmContactSaluation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactFirstName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactSaluation;
         
         /// <summary>
-        /// ContactLastName control.
+        /// fmContactFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactLastName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactFirstName;
         
         /// <summary>
-        /// ContactAddressLine1 control.
+        /// fmContactLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactAddressLine1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactLastName;
         
         /// <summary>
-        /// ContactAddressLine2 control.
+        /// fmContactAddressLine1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactAddressLine2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactAddressLine1;
         
         /// <summary>
-        /// ContactAddressCity control.
+        /// fmContactAddressLine2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactAddressCity;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactAddressLine2;
         
         /// <summary>
-        /// ContactAddressState control.
+        /// fmContactAddressCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactAddressState;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactAddressCity;
         
         /// <summary>
-        /// ContactAddressZip control.
+        /// fmContactAddressState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactAddressZip;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactAddressState;
         
         /// <summary>
-        /// ContactAddressEmailAddress control.
+        /// fmContactAddressZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ContactAddressEmailAddress;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactAddressZip;
         
         /// <summary>
-        /// ContactAddressAltEmailAddress control.
+        /// fmContactAddressEmailAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactAddressAltEmailAddress;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fmContactAddressEmailAddress;
         
         /// <summary>
-        /// ContactBusinessNumber control.
+        /// fmContactAddressAltEmailAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ContactBusinessNumber;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactAddressAltEmailAddress;
         
         /// <summary>
-        /// ContactBusinessNumberExt control.
+        /// fmContactBusinessNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ContactBusinessNumberExt;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fmContactBusinessNumber;
         
         /// <summary>
-        /// ContactCellularNumber control.
+        /// fmContactBusinessNumberExt1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ContactCellularNumber;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fmContactBusinessNumberExt1;
         
         /// <summary>
-        /// ContactFaxNumber control.
+        /// fmContactCellularNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ContactFaxNumber;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fmContactCellularNumber;
+        
+        /// <summary>
+        /// fmContactFaxNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fmContactFaxNumber;
     }
 }

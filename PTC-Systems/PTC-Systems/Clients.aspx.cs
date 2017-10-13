@@ -75,7 +75,7 @@ namespace PTC_Systems
                 wzClient.Text= ClientData.ClientName;
                 wzClientAddressLine1.Value = ClientData.ClientAddressLine1;
                 wzClientAddressLine2.Value = ClientData.ClientAddressLine2;
-
+                wzClientAddressCity.Value = ClientData.ClientAddressCity;
 
             }
         }
