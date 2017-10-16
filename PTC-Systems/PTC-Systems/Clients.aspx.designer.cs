@@ -184,31 +184,22 @@ namespace PTC_Systems {
         protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1;
         
         /// <summary>
-        /// wzClient control.
+        /// udClientName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wzClient;
+        protected global::System.Web.UI.WebControls.TextBox udClientName;
         
         /// <summary>
-        /// wzClientActiveDate control.
+        /// udClientAddressLine1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzClientActiveDate;
-        
-        /// <summary>
-        /// wzClientAddressLine1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressLine1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText udClientAddressLine1;
         
         /// <summary>
         /// ClientContactdd control.
@@ -220,93 +211,48 @@ namespace PTC_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlSelect ClientContactdd;
         
         /// <summary>
-        /// wzClientAddressLine2 control.
+        /// udClientAddressLine2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressLine2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText udClientAddressLine2;
         
         /// <summary>
-        /// wzClientAddressCity control.
+        /// udClientAddressCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressCity;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText udClientAddressCity;
         
         /// <summary>
-        /// wzClientAddressState control.
+        /// udClientAddressState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText wzClientAddressState;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText udClientAddressState;
         
         /// <summary>
-        /// wzClientAddressZip control.
+        /// udClientAddressZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzClientAddressZip;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl udClientAddressZip;
         
         /// <summary>
-        /// wzClientNotes control.
+        /// udClientNotes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea wzClientNotes;
-        
-        /// <summary>
-        /// cbIncomeProducing control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbIncomeProducing;
-        
-        /// <summary>
-        /// cbIEExpected control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbIEExpected;
-        
-        /// <summary>
-        /// cbRRExpected control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbRRExpected;
-        
-        /// <summary>
-        /// cbAOAReceived control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbAOAReceived;
-        
-        /// <summary>
-        /// wzClientAOAExpDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl wzClientAOAExpDate;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea udClientNotes;
     }
 }

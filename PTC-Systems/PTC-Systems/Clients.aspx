@@ -118,86 +118,55 @@
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
                                     <label for="lbClient">Client Name</label>
-                                    <asp:TextBox id="wzClient" runat="server" CssClass="form-control" />
-                                </div>
-                                <div class="col-xs-3 col-md-3">
-                                    <label for="lbclientactivedate">Date Activated</label>
-                                    <input runat="server" type="date" class="form-control" id="wzClientActiveDate" />
-                                </div>
+                                    <asp:TextBox id="udClientName" runat="server" CssClass="form-control" />
+                                </div>                              
                             </div>
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
                                     <label for="lbclientaddressline1">Address Line 1</label>
-                                    <input runat="server" type="text" class="form-control" id="wzClientAddressLine1" placeholder="Main Office Address" />
+                                    <input runat="server" class="form-control" id="udClientAddressLine1" placeholder="Main Office Address" />
                                 </div>
                                 <div class="col-xs-3 col-md-3">
-                                    <label for="lbclientcontact">Main Contact</label>
+                                    <label for="udclientcontact">Main Contact</label>
                                     <select runat="server" class="form-control" id="ClientContactdd"></select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
                                     <label for="lbclientaddressline2">Address Line 2</label>
-                                    <input runat="server" type="text" class="form-control" id="wzClientAddressLine2" placeholder="Optional" />
+                                    <input runat="server" type="text" class="form-control" id="udClientAddressLine2" placeholder="Optional" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbaddresscity">City</label>
-                                    <input runat="server" type="text" class="form-control" id="wzClientAddressCity" placeholder="City" />
+                                    <input runat="server" type="text" class="form-control" id="udClientAddressCity" placeholder="City" />
                                 </div>
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbClientState">State</label>
-                                    <input runat="server" type="text" class="form-control" id="wzClientAddressState" placeholder="State" />
+                                    <input runat="server" type="text" class="form-control" id="udClientAddressState" placeholder="State" />
                                 </div>
                                 <div class="col-xs-2 col-md-2">
                                     <label for="lbClientZip">Zip Code</label>
-                                    <input runat="server" type="email" class="form-control" id="wzClientAddressZip" placeholder="Zip Code" />
+                                    <input runat="server" type="email" class="form-control" id="udClientAddressZip" placeholder="Zip Code" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="lbClientNotes">Notes</label>
-                                    <textarea runat="server" class="form-control" id="wzClientNotes" rows="4"></textarea>
+                                    <textarea runat="server" class="form-control" id="udClientNotes" rows="4"></textarea>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <label>
-                                        <input runat="server" type="checkbox" id="cbIncomeProducing" />
-                                        Income Producing</label>
-                                </div>
-                                <div class="col-md-2">
-                                    <label>
-                                        <input runat="server" type="checkbox" id="cbIEExpected" />
-                                        Income & Expense</label>
-                                </div>
-                                <div class="col-md-2">
-                                    <label>
-                                        <input runat="server" type="checkbox" id="cbRRExpected" />
-                                        Rent Roll</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <label>
-                                        <input runat="server" type="checkbox" id="cbAOAReceived" />
-                                        Appointment of Agent</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="lbaoaexpirationdate">AOA Expiration Date</label>
-                                    <input runat="server" type="date" class="form-control" id="wzClientAOAExpDate" />
-                                </div>
-                            </div>
+                            </div>                                                                     
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
+               <div class="modal-footer pull-right">
+          <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal" >Save & Close</button>
+        </div>
+        <div class="modal-footer">
+            <asp:LinkButton runat="server" OnClick="Save_Click" Text="test"></asp:LinkButton>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
         </div>   
     </div>
     

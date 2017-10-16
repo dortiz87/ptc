@@ -50,6 +50,7 @@ namespace PTC_Systems
                         c.ClientAddressState,
                         c.ClientAddressCity,
                         c.ClientAddressZip,
+                        c.ClientNotes,
                         con.ContactSalutation,
                         con.ContactFirstName,
                         con.ContactLastname,
@@ -72,47 +73,43 @@ namespace PTC_Systems
                 lblastname.Text = ClientData.ContactLastname;
                 lbcellphone.Text = Convert.ToInt64(ClientData.ContactCellularNumber).ToString("(###) ###-####");
                 lbbusphone.Text = Convert.ToInt64(ClientData.ContactBusinessNumber).ToString("(###) ###-####");
-                wzClient.Text= ClientData.ClientName;
-                wzClientAddressLine1.Value = ClientData.ClientAddressLine1;
-                wzClientAddressLine2.Value = ClientData.ClientAddressLine2;
-                wzClientAddressCity.Value = ClientData.ClientAddressCity;
+                udClientName.Text= ClientData.ClientName;
+                udClientAddressLine1.Value = ClientData.ClientAddressLine1;
+                udClientAddressLine2.Value = ClientData.ClientAddressLine2;
+                udClientAddressCity.Value = ClientData.ClientAddressCity;
+                udClientAddressState.Value = ClientData.ClientAddressState;
+                udClientAddressZip.Value = ClientData.ClientAddressZip;
+                udClientNotes.Value = ClientData.ClientNotes;
 
             }
         }
 
-       
-       
-        
+        protected void Save_Click(object sender, EventArgs e)
+        {
+            db_ptcDataContext updateClientData = new db_ptcDataContext();
 
-        /* public void GetPropInfo()
-         {
-             db_ptcDataContext clientdatacontext = new db_ptcDataContext();
+            int cid;
 
-             int cid;
+            bool IsIntValue = Int32.TryParse(hfClientid.Value, out cid);
 
-             bool IsIntValue = Int32.TryParse(hfClientid.Value, out cid);
+            if (IsIntValue)
+            {
+                var querydata =
+                from c in updateClientData.Clients
+                where c.ClientId == cid
+                select c;
 
-             if (IsIntValue)
-             {
-                 var proplist = (
-                     from p in clientdatacontext.Properties
-                     where p.PropertyClientId == cid
-                     select new
-                     {
-                       Property_Name = p.PropertyName,
-                       Count =  p.PropertyCounty,
-                       Primary_Use = p.PropertyPrimaryUse
+                foreach (Client c in querydata)
+                {
+                    
+                }
 
-                     }).ToList();
+                updateClientData.SubmitChanges();
+                            
+            }
 
-                 //propview.DataSource = proplist;
-                // propview.DataBind();
-
-
-             }
-    }*/
-
-
+            
+        }
     }
 
   
