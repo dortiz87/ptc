@@ -7,16 +7,25 @@ using System.Web.UI.WebControls;
 
 namespace PTC_Systems
 {
+
     public partial class viewcontact : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+          
             Populate_contact_table();
+
+            if (IsPostBack)
+            {
+                Response.Write("ok");
+            }
         }
 
         private void Populate_contact_table()
         {
+            
+
             using (db_ptcDataContext contact_dc = new db_ptcDataContext())
 
             {
@@ -40,7 +49,9 @@ namespace PTC_Systems
    
         protected void Save_Click(object sender, EventArgs e)
         {
+            
             var ContactTable = new db_ptcDataContext();
+            
             {
                 Contact cont = new Contact();
 
@@ -55,7 +66,7 @@ namespace PTC_Systems
                 ContactTable.Contacts.InsertOnSubmit(cont);
                 ContactTable.SubmitChanges();
 
-                    
+                Response.Redirect("~/viewcontact.aspx");
                 
             }
 

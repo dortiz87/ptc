@@ -2167,7 +2167,7 @@ namespace PTC_Systems
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contactid", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contactid", DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Contactid
 		{
 			get
