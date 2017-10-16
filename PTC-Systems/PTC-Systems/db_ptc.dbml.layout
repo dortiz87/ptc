@@ -40,14 +40,14 @@
         <elementListCompartment Id="c6d95129-e1ac-441c-85d4-a7a4445f0060" absoluteBounds="2.64, 5.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.625 : 4.75); (3.625 : 3.80930826822917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.625 : 4.75); (3.625 : 3.80930826822917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/db_ptcDataContext/Contact/Contact_Client" />
       <nodes>
         <classShapeMoniker Id="ffd0bdcc-5bfd-4486-9caa-a40e096291bb" />
         <classShapeMoniker Id="d531064a-1405-4173-87f3-a758c551ec46" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.625 : 6.09211344401042); (4.75 : 6.09211344401042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.625 : 6.09211344401042); (4.75 : 6.09211344401042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/db_ptcDataContext/Contact/Contact_Property" />
       <nodes>
         <classShapeMoniker Id="ffd0bdcc-5bfd-4486-9caa-a40e096291bb" />

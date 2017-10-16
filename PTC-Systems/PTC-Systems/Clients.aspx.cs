@@ -101,7 +101,7 @@ namespace PTC_Systems
 
                 foreach (Client c in querydata)
                 {
-                    
+                    c.ClientName = udClientName.Text; 
                 }
 
                 updateClientData.SubmitChanges();

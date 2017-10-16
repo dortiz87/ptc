@@ -8,7 +8,7 @@
       <Column Name="ClientInactiveDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="ClientLogo" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="ClientActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="ClientName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="ClientAddressLine1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="ClientAddressLine2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="ClientAddressCity" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
