@@ -184,6 +184,15 @@ namespace PTC_Systems {
         protected global::System.Web.UI.WebControls.TextBox udClientName;
         
         /// <summary>
+        /// ClientContactdd1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ClientContactdd1;
+        
+        /// <summary>
         /// udClientAddressLine1 control.
         /// </summary>
         /// <remarks>
@@ -191,15 +200,6 @@ namespace PTC_Systems {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText udClientAddressLine1;
-        
-        /// <summary>
-        /// ClientContactdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ClientContactdd;
         
         /// <summary>
         /// udClientAddressLine2 control.

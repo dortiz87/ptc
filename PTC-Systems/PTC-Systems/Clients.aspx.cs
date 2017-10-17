@@ -17,8 +17,8 @@ namespace PTC_Systems
 
 
             {
-                
-                
+
+                    ClientContactSelect();
                     GetClientInfo();
                     /* GetPropInfo();*/
                 
@@ -55,6 +55,7 @@ namespace PTC_Systems
                             c.ClientAddressCity,
                             c.ClientAddressZip,
                             c.ClientNotes,
+                            c.ClientContactid,
                             con.ContactSalutation,
                             con.ContactFirstName,
                             con.ContactLastname,
@@ -84,9 +85,25 @@ namespace PTC_Systems
                     udClientAddressState.Value = ClientData.ClientAddressState;
                     udClientAddressZip.Value = ClientData.ClientAddressZip;
                     udClientNotes.Value = ClientData.ClientNotes;
-
+                   
                 }
             }
+        }
+
+        protected void ClientContactSelect()
+        {
+            using (var contactTB = new db_ptcDataContext())
+            {
+                ClientContactdd2.DataSource = from Contact in contactTB.Contacts
+                                              orderby Contact.ContactLastname
+                                              select new { Contact.ContactLastname, Contact.ContactFirstName, Contact.Contactid, ContactFullName = string.Format("{0},{1}", Contact.ContactLastname, Contact.ContactFirstName)};
+
+                ClientContactdd2.DataTextField = "ContactFullName";
+                ClientContactdd2.DataValueField = "Contactid";
+                ClientContactdd2.DataBind();
+            }
+
+
         }
 
         protected void Save_Click(object sender, EventArgs e)
@@ -101,10 +118,11 @@ namespace PTC_Systems
             {
                 var testquery = (from c in updateClientData.Clients
                                  where c.ClientId == cid
-                                 join con in updateClientData.Contacts on c.ClientContactid equals con.Contactid                               
-                                 select new { c, con }).Single();
+                                 join con in updateClientData.Contacts on c.ClientContactid equals con.Contactid
+                                 select new { c, con }).FirstOrDefault();
 
                                     testquery.c.ClientName = udClientName.Text;
+                                    testquery.c.ClientContactid = Convert.ToInt32(ClientContactdd2.SelectedValue);
                                     testquery.c.ClientAddressLine1 = udClientAddressLine1.Value;
                                     testquery.c.ClientAddressLine2 = udClientAddressLine2.Value;
                                     testquery.c.ClientAddressCity = udClientAddressCity.Value;
@@ -116,6 +134,8 @@ namespace PTC_Systems
 
                 updateClientData.SubmitChanges();
 
+
+                
 
 
             }

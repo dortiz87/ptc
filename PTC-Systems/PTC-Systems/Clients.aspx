@@ -120,16 +120,17 @@
                                     <label for="lbClient">Client Name</label>
                                     <asp:TextBox ID="udClientName" runat="server" CssClass="form-control" />
                                 </div>
+                                <div class="col-xs-3 col-md-3">
+                               <label for="lbclientaddressline1">Client Contact</label>
+                                    <asp:DropDownList ID="ClientContactdd1" runat="server" AppendDataBoundItems="true" AutoPostBack="false"  CssClass="form-control" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
                                     <label for="lbclientaddressline1">Address Line 1</label>
                                     <input runat="server" class="form-control" id="udClientAddressLine1" placeholder="Main Office Address" />
                                 </div>
-                                <div class="col-xs-3 col-md-3">
-                                    <label for="udclientcontact">Main Contact</label>
-                                    <select runat="server" class="form-control" id="ClientContactdd"></select>
-                                </div>
+                            
                             </div>
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
@@ -161,7 +162,7 @@
                     </div>
                 </div>
                 <div class="modal-footer pull-right">
-                    <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal">Save & Close</button>
+                    <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal" >Save & Close</button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
