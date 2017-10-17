@@ -99,16 +99,20 @@ namespace PTC_Systems
 
             if (IsIntValue)
             {
-                Client cli = updateClientData.Clients.Single
-                             (n => n.ClientId == cid);
+                var testquery = (from c in updateClientData.Clients
+                                 where c.ClientId == cid
+                                 join con in updateClientData.Contacts on c.ClientContactid equals con.Contactid                               
+                                 select new { c, con }).Single();
 
-                cli.ClientName =  udClientName.Text;
-                cli.ClientAddressLine1 = udClientAddressLine1.Value;
-                cli.ClientAddressLine2 = udClientAddressLine2.Value;
-                cli.ClientAddressCity = udClientAddressCity.Value;
-                cli.ClientAddressState = udClientAddressState.Value;
-                cli.ClientAddressZip = udClientAddressZip.Value;
-                cli.ClientNotes = udClientNotes.Value;
+                                    testquery.c.ClientName = udClientName.Text;
+                                    testquery.c.ClientAddressLine1 = udClientAddressLine1.Value;
+                                    testquery.c.ClientAddressLine2 = udClientAddressLine2.Value;
+                                    testquery.c.ClientAddressCity = udClientAddressCity.Value;
+                                    testquery.c.ClientAddressState = udClientAddressState.Value;
+                                    testquery.c.ClientAddressZip = udClientAddressZip.Value;
+                                    testquery.c.ClientNotes = udClientNotes.Value;
+
+
 
                 updateClientData.SubmitChanges();
 
