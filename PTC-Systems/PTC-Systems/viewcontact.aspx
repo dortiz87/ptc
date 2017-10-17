@@ -122,7 +122,7 @@
        </div>
         </div>
           <div class="modal-footer pull-right">
-          <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal" >Save & Close</button>
+          <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal"  >Save & Close</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

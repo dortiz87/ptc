@@ -90,7 +90,7 @@
                     <br />
                     <button runat="server" type="button" onclick="GetClientWizard_Click" class="btn btn-link" data-toggle="modal" data-target="#editclientdetails">Edit Client Details</button>
                 </div>
-                <div><button runat="server" id="addproperty" type="button" class ="btn btn-link">Add Property</button></div>
+                <div><button runat="server" type="button" class="btn btn-link" data-toggle="modal" data-target="#InsertPropertyDetails">Add Property</button></div>
             </div>
             <span style="font-size: small">
                 <asp:HiddenField ID="hfClientid" runat="server" />
@@ -103,10 +103,10 @@
         </div>
     </div>
 
-   <!-- Modal -->
+   <!-- Edit Client Details Modal -->
     <div class="modal fade" id="editclientdetails" role="dialog">
         <div class="modal-dialog modal-lg">
-   <!-- Begin Modal content-->
+            <!-- Begin Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -118,8 +118,8 @@
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
                                     <label for="lbClient">Client Name</label>
-                                    <asp:TextBox id="udClientName" runat="server" CssClass="form-control" />
-                                </div>                              
+                                    <asp:TextBox ID="udClientName" runat="server" CssClass="form-control" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-3 col-md-3">
@@ -156,20 +156,137 @@
                                     <label for="lbClientNotes">Notes</label>
                                     <textarea runat="server" class="form-control" id="udClientNotes" rows="4"></textarea>
                                 </div>
-                            </div>                                                                     
+                            </div>
                         </div>
                     </div>
                 </div>
-               <div class="modal-footer pull-right">
-          <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal" >Save & Close</button>
+                <div class="modal-footer pull-right">
+                    <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal">Save & Close</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer">
-            <asp:LinkButton runat="server" OnClick="Save_Click" Text="test"></asp:LinkButton>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-        </div>   
     </div>
-    
+
+    <!-- Insert Property Details Modal -->
+    <div class="modal fade" id="InsertPropertyDetails" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Begin Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Create New Property</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="spacing">                          
+                            <div class="row">
+                                <div class="col-xs-3 col-md-3">
+                                    <label for="lbPropertyName">Property Name</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyName" placeholder="Property Name" />
+                                </div>
+
+
+                                <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertyCode">Internal Code</label>
+                                    <input runat="server" type="text" class="form-control" id="wzInternalCode" placeholder="Internal Code" />
+                                </div>
+                                <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertyActiveDate">Active Date</label>
+                                    <input runat="server" type="date" class="form-control" id="wzPropertyActiveDate" />
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-xs-3 col-md-3">
+                                    <label for="lbPropertyAddressLine1">Address Line 1</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyAddressLine1" placeholder="Property Address" />
+                                </div>
+                                <div class="col-xs-3 col-md-3">
+                                    <label for="lbclientcontact">Property Contact</label>                                
+                                    <asp:DropDownList ID="PropertyContactdd1" runat="server" AppendDataBoundItems="true" AutoPostBack="false"  CssClass="form-control" />
+                                </div>
+                         
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 col-md-3">
+                                    <label for="lbPropertyAddressLine2">Address Line 2</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyAddressLine2" placeholder="Optional" />
+                                </div>
+                                <div class="col-xs-3 col-md-3">
+                                    <label for="lbPropertyAddressLine2">County</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyCounty" placeholder="County" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertyAddressCity">City</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyAddressCity" placeholder="City" />
+                                </div>
+                                <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertyAddressState">State</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyAddressState" placeholder="State" />
+                                </div>
+                                <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertyAddressZip">Zip Code</label>
+                                    <input runat="server" required="required" type="text" class="form-control" id="wzPropertyAddressZip" placeholder="Zip Code" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-cs-2 col-md-2">
+                                    <label for="lbPropertyYearBuilt">Year Built</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyCharYearBuilt" placeholder="Year Built" />
+                                </div>
+                                <div class="col-xs-4 col-md-4">
+                                    <label for="lbPropertyUse">Property Use</label>
+                                    <select runat="server" name="dbpropertyuse" id="wzPropertyPrimaryuse" class="form-control">
+                                        <option>Property Use</option>
+                                        <option>SINGLE FAMILY</option>
+                                        <option>RURAL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                 <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertyUnits">Number of Units</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyCharUnits" placeholder="Units" />
+                                </div>
+                                <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertygba">Gross Building Area</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyCharGBA" placeholder="GBA" />
+                                </div>
+                                <div class="col-xs-2 col-md-2">
+                                    <label for="lbPropertynla">Net Leasable Area</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyCharNLA" placeholder="NLA" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 col-md-3">
+                                    <label for="lbPropertySalesDate">Date of Purchase</label>
+                                    <input runat="server" type="date" class="form-control" id="wzPropertyInfoSalesDate" />
+                                </div>
+                                <div class="col-xs-3 col-md-3">
+                                    <label for="lbPropertySalesPrice">Purchase Price</label>
+                                    <input runat="server" type="text" class="form-control" id="wzPropertyInfoSalesPrice" placeholder="Purchase Amount" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pull-right">
+                    <button runat="server" type="button" class="btn btn-default" onserverclick="Save_Click" data-dismiss="modal">Save & Close</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" contentplaceholderid="rightcolumn">
